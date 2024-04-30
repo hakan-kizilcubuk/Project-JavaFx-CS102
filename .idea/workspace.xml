@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/AvatarPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/LoginpageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/AvatarPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/LoginPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (5).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (6).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (7).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/avatar (8).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/logo.png" afterDir="false" />
+    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="Login Pane and Avatar Page Pane is added">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/userProfile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/add-media.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/add-media.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/download-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/download-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/download.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/pp.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/pp.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +149,7 @@
       <workItem from="1714481164551" duration="14000" />
       <workItem from="1714481263202" duration="1341000" />
       <workItem from="1714485005958" duration="716000" />
+      <workItem from="1714498439331" duration="2769000" />
     </task>
     <servers />
   </component>
@@ -171,5 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Login Pane and Avatar Page Pane is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Pane and Avatar Page Pane is added" />
   </component>
 </project>
