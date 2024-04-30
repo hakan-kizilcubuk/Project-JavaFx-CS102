@@ -74,7 +74,7 @@
                <children>
                   <ImageView fitHeight="99.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@add%20media.png" />
+                        <Image url="@add-media.png" />
                      </image>
                   </ImageView>
                </children>
