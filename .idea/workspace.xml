@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="" />
+    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="Login Pane and Avatar Page Pane is added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,6 +141,7 @@
       <workItem from="1714463742162" duration="120000" />
       <workItem from="1714481164551" duration="14000" />
       <workItem from="1714481263202" duration="319000" />
+      <workItem from="1714508248957" duration="19000" />
     </task>
     <servers />
   </component>
