@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="Login Pane and Avatar Page Pane is added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/LoginpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/LoginpageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/LoginPage.fxml" afterDir="false" />
-    </list>
+<<<<<<< HEAD
+    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="Login Pane and Avatar Page Pane is added" />
+=======
+    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="" />
+>>>>>>> parent of 0978f15 (Update)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,17 +30,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;hakan-kizilcubuk&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hakan-kizilcubuk/Project-JavaFx-CS102.git&quot;,
     &quot;accountId&quot;: &quot;a94837f9-5355-41ea-86ab-2ca0d7c9c03e&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -50,8 +49,8 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 6
-    }</component>
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2fHt8E8CIqcF2znoXnZQoYEB6XB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -170,9 +169,12 @@
       <workItem from="1714463742162" duration="120000" />
       <workItem from="1714481164551" duration="14000" />
       <workItem from="1714481263202" duration="319000" />
+<<<<<<< HEAD
       <workItem from="1714508248957" duration="19000" />
       <workItem from="1714509338262" duration="297000" />
-      <workItem from="1714544926615" duration="986000" />
+      <workItem from="1714544926615" duration="1414000" />
+=======
+>>>>>>> parent of 0978f15 (Update)
     </task>
     <servers />
   </component>
