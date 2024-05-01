@@ -8,13 +8,15 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.Objects;
+
 public class LoginpageController {
     @FXML
     private Label welcomeText;
 
     @FXML
     ImageView logo;
-    Image myLogo = new Image(getClass().getResourceAsStream("/images/logo.png"));
+    Image myLogo = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/logo.png")));
 
     @FXML
     private TextField emailusernameTextField;

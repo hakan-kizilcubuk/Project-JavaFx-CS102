@@ -9,25 +9,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="257.0" layoutY="95.0" prefHeight="64.0" prefWidth="252.0">
          <children>
             <ImageView fitHeight="58.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="90.0" fitWidth="261.0" layoutX="-10.0" layoutY="-28.0">
-               <image>
-                  <Image url="@logo.png" />
-               </image>
-            </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="67.0" layoutY="210.0" prefHeight="210.0" prefWidth="299.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 15px;">
+      <Pane layoutX="36.0" layoutY="212.0" prefHeight="210.0" prefWidth="299.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 15px;">
          <children>
-            <TextField fx:id="emailusernameTextField" layoutX="29.0" layoutY="44.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-border-color: #0186D1; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="E-mail / username">
+            <TextField fx:id="emailusernameTextField" layoutX="29.0" layoutY="44.0" prefHeight="26.0" prefWidth="250.0" promptText="Email/Username" style="-fx-background-color: #F5F5F5; -fx-border-color: #0186D1; -fx-border-radius: 10px; -fx-background-radius: 10px;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <TextField fx:id="passwordTextFieldLogin" layoutX="28.0" layoutY="95.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-border-color: #0186D1; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Password">
+            <TextField fx:id="passwordTextFieldLogin" layoutX="28.0" layoutY="95.0" prefHeight="26.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #F5F5F5; -fx-border-color: #0186D1; -fx-background-radius: 10px; -fx-border-radius: 10px;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
@@ -38,25 +33,25 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="424.0" layoutY="187.0" prefHeight="272.0" prefWidth="299.0">
+      <Pane layoutX="393.0" layoutY="181.0" prefHeight="272.0" prefWidth="299.0">
          <children>
-            <TextField fx:id="nameTextField" layoutX="25.0" layoutY="3.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;" text="Name">
+            <TextField fx:id="nameTextField" layoutX="25.0" layoutY="3.0" prefHeight="26.0" prefWidth="250.0" promptText="Name" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <TextField fx:id="usernameTextField" layoutX="25.0" layoutY="43.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;" text="Username">
+            <TextField fx:id="usernameTextField" layoutX="25.0" layoutY="43.0" prefHeight="26.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <TextField fx:id="emailTextField" layoutX="25.0" layoutY="83.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;" text="E-Mail">
+            <TextField fx:id="emailTextField" layoutX="25.0" layoutY="83.0" prefHeight="26.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <TextField fx:id="asswordTextFieldSignup" layoutX="25.0" layoutY="123.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;" text="Password">
+            <TextField fx:id="asswordTextFieldSignup" layoutX="25.0" layoutY="123.0" prefHeight="26.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <TextField fx:id="confirmPasswordTextField" layoutX="25.0" layoutY="163.0" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;" text="Password(again)">
+            <TextField fx:id="confirmPasswordTextField" layoutX="25.0" layoutY="163.0" prefHeight="26.0" prefWidth="250.0" promptText="Password(again)" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #737373;">
                <font>
                   <Font size="11.0" />
                </font></TextField>
@@ -72,6 +67,11 @@
             </Button>
          </children>
       </Pane>
-      <Line endX="-100.0" endY="243.99996948242188" layoutX="509.0" layoutY="188.0" opacity="0.37" startX="-100.0" stroke="#0186d1" />
+      <Line endX="-100.0" endY="243.99996948242188" layoutX="460.0" layoutY="195.0" opacity="0.37" startX="-100.0" stroke="#0186d1" />
+      <ImageView fitHeight="90.0" fitWidth="261.0" layoutX="230.0" layoutY="63.0">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
