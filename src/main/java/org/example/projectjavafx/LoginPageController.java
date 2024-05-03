@@ -64,7 +64,7 @@ public class LoginPageController{
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
-        String verifyLogin = "'SELECT count(1) FROM userinfo WHERE userName = " + emailusernameTextField.getText() + "' AND password = '" + passwordTextFieldLogin.getText() + " '";
+        String verifyLogin = "SELECT count(1) FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "' AND password = '" + passwordTextFieldLogin.getText() + "'";
 
         try {
             Statement statement = connectDatabase.createStatement();
