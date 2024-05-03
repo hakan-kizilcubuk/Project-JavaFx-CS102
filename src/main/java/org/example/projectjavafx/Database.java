@@ -9,16 +9,15 @@ public class Database {
 
     public Connection getConnection(){
         String databaseName = "user-project";
-        String databaseUser = "root";
-        String databasePassword = "Zbaki+2751";
-        String url = "jdbc:mysql://localhost/" + databaseName;
+        String databaseUser = "";
+        String databasePassword = "";
+        String url = "jdbc:mysql://localhost:3306/" + databaseName;
 
         try{
             Class.forName("com.mysql.jdbc.Driver");
             databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
         }catch (Exception e){
             e.printStackTrace();
-            e.getCause();
         }
 
         return databaseLink;
