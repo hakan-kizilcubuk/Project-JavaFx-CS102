@@ -21,10 +21,8 @@ import java.util.ResourceBundle;
 
 public class LoginPageController{
 
-    @FXML
-    private Label welcomeText;
-    /*ImageView logo;
-    Image myLogo = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/logo.png")));*/
+
+
 
     @FXML
     private TextField emailusernameTextField;
@@ -38,6 +36,8 @@ public class LoginPageController{
     private TextField usernameTextField;
     @FXML
     private TextField emailTextField;
+
+    @FXML
     private TextField passwordTextFieldSignup;
 
     @FXML
@@ -61,10 +61,10 @@ public class LoginPageController{
 
 
     public void validateLogin() {
-        Database connectDatabaseNow = new Database();
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
-        String verifyLogin = "'SELECT count(1) FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "' AND password = '" + passwordTextFieldLogin.getText() + " ";
+        String verifyLogin = "'SELECT count(1) FROM userinfo WHERE userName = " + emailusernameTextField.getText() + "' AND password = '" + passwordTextFieldLogin.getText() + " '";
 
         try {
             Statement statement = connectDatabase.createStatement();
@@ -80,7 +80,6 @@ public class LoginPageController{
             }
         } catch (Exception e) {
             e.printStackTrace();
-            e.getCause();
         }
     }
 }
