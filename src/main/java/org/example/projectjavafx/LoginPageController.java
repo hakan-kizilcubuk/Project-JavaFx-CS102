@@ -20,10 +20,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LoginPageController{
+
     @FXML
     private Label welcomeText;
-
-
     /*ImageView logo;
     Image myLogo = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/logo.png")));*/
 
@@ -52,20 +51,13 @@ public class LoginPageController{
     public void loginButtonOnAction(ActionEvent event) {
         if (!emailusernameTextField.getText().isBlank() && !passwordTextFieldLogin.getText().isBlank()) {
             invalidValidLabel.setText("Trying to login");
+            validateLogin();
         }
         else
         {
             invalidValidLabel.setText("Please enter a valid username and password");
         }
     }
-
-
-    public void loginButtonAction(ActionEvent event) {
-        if (usernameTextField.getText().isEmpty() == false && passwordTextFieldLogin.getText().isEmpty() == false) {
-            validateLogin();
-        }
-    }
-
 
 
     public void validateLogin() {
