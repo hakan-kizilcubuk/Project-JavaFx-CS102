@@ -21,7 +21,6 @@ public class User {
         this.userId = id;
         this.userName= user_name;
         this.userEmail=email;
-
     }
 
     public void changeProfilePicture(String picturePath){
