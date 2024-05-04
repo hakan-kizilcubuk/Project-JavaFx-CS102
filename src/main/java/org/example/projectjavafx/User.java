@@ -17,18 +17,17 @@ public class User {
 
     public User(String user_name,int id, String password,String email)
     {
-        this.userName= user_name;
-        this.userId = id;
         this.userPassword= password;
+        this.userId = id;
+        this.userName= user_name;
         this.userEmail=email;
-        
+
     }
 
     public void changeProfilePicture(String picturePath){
 
 
     }
-
     public void addFriend(User user){
 
         friends.add(user);
