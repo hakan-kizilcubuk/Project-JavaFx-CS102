@@ -15,6 +15,7 @@ import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -72,10 +73,10 @@ public class LoginPageController{
 
             while (resultSet.next()) {
                 if (resultSet.getInt(1) == 1) {
-                    emailusernameTextField.setText("Valid login!");
+                    invalidValidLabel.setText("Valid login!");
                 }
                 else {
-                    emailusernameTextField.setText("Invalid login! Try again");
+                    invalidValidLabel.setText("Invalid login! Try again");
                 }
             }
         } catch (Exception e) {
