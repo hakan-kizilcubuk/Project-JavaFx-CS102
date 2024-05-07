@@ -98,12 +98,12 @@ public class LoginPageController{
     public void signupUser(){
         if (passwordTextFieldSignup.getText().equals(confirmPasswordTextField.getText()))
         {
-            signUpLabel.setText("Password matches!");
+            signUpPasswordLabel.setText("Password matches!");
         }
 
         else
         {
-            signUpLabel.setText("Password do not matches!");
+            signUpPasswordLabel.setText("Password do not matches!");
         }
     }
 }
