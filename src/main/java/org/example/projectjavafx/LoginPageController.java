@@ -49,6 +49,12 @@ public class LoginPageController{
     @FXML
     private Label invalidValidLabel;
 
+    @FXML
+    private Label signUpLabel;
+
+    @FXML
+    private Label signUpPasswordLabel;
+
     public void loginButtonOnAction(ActionEvent event) {
         if (!emailusernameTextField.getText().isBlank() && !passwordTextFieldLogin.getText().isBlank()) {
             invalidValidLabel.setText("Trying to login");
@@ -81,6 +87,23 @@ public class LoginPageController{
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void signUpButtonOnAction(ActionEvent event) {
+        signUpLabel.setText("User registered succesfully!!");
+        signupUser();
+    }
+
+    public void signupUser(){
+        if (passwordTextFieldSignup.getText().equals(confirmPasswordTextField.getText()))
+        {
+            signUpLabel.setText("Password matches!");
+        }
+
+        else
+        {
+            signUpLabel.setText("Password do not matches!");
         }
     }
 }
