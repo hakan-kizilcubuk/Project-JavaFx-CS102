@@ -1,4 +1,4 @@
-package org.example.projectjavafx;
+package org.example.csmainmenu;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -1,16 +1,425 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.projectjavafx.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="150.0" layoutX="10.0" layoutY="20.0" preserveRatio="true">
+         <image>
+            <Image url="@logo-sc-new.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="184.0" layoutY="70.0" prefHeight="443.0" prefWidth="353.0" style="-fx-effect: none; -fx-border-color: white;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="529.0" prefWidth="332.0" style="-fx-background-color: white; -fx-border-color: white; -fx-effect: none;">
+               <children>
+                  <Pane prefHeight="161.0" prefWidth="333.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: F5F5F5; -fx-border-radius: 10;">
+                     <children>
+                        <Group layoutX="8.0" layoutY="9.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="9.0" text="UserName" />
+                           </children>
+                        </Group>
+                        <TextArea editable="false" layoutX="2.0" layoutY="46.0" prefHeight="52.0" prefWidth="327.0" style="-fx-background-color: white; -fx-effect: none; -fx-border-color: white; -fx-pref-column-count: 2;" text="In what years War of Independence of Turkey&#10;took place? " />
+                        <Group layoutX="14.0" layoutY="98.0">
+                           <children>
+                              <Label style="-fx-text-fill: #0186D1;" text="#Branch" textFill="#0186d1" />
+                              <Label layoutX="52.0" text="•" />
+                              <Label layoutX="64.0" text="AnswerNumber" />
+                           </children>
+                        </Group>
+                        <Group layoutX="9.0" layoutY="122.0">
+                           <children>
+                              <Button layoutX="4.0" layoutY="-1.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="74.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="40.0" layoutY="5.0" text="save" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@bookmark.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <Group layoutX="96.0" layoutY="118.0">
+                           <children>
+                              <Button layoutX="7.0" layoutY="2.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="130.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="42.0" layoutY="7.0" text="4/5 challenging" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plugin.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@profile-user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="167.0" prefHeight="161.0" prefWidth="333.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: F5F5F5; -fx-border-radius: 10;">
+                     <children>
+                        <Group layoutX="8.0" layoutY="9.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="9.0" text="UserName" />
+                           </children>
+                        </Group>
+                        <TextArea editable="false" layoutX="2.0" layoutY="46.0" prefHeight="52.0" prefWidth="327.0" style="-fx-background-color: white; -fx-effect: none; -fx-border-color: white; -fx-pref-column-count: 2;" text="In what years War of Independence of Turkey&#10;took place? " />
+                        <Group layoutX="14.0" layoutY="98.0">
+                           <children>
+                              <Label style="-fx-text-fill: #0186D1;" text="#Branch" textFill="#0186d1" />
+                              <Label layoutX="52.0" text="•" />
+                              <Label layoutX="64.0" text="AnswerNumber" />
+                           </children>
+                        </Group>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@profile-user.png" />
+                           </image>
+                        </ImageView>
+                        <Group layoutX="91.0" layoutY="120.0">
+                           <children>
+                              <Button layoutX="7.0" layoutY="2.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="130.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="42.0" layoutY="7.0" text="4/5 challenging" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plugin.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <Group layoutX="9.0" layoutY="123.0">
+                           <children>
+                              <Button layoutX="4.0" layoutY="-1.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="74.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="40.0" layoutY="5.0" text="save" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@bookmark.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="334.0" prefHeight="161.0" prefWidth="333.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: F5F5F5; -fx-border-radius: 10;">
+                     <children>
+                        <Group layoutX="8.0" layoutY="9.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="9.0" text="UserName" />
+                           </children>
+                        </Group>
+                        <TextArea editable="false" layoutX="2.0" layoutY="46.0" prefHeight="52.0" prefWidth="327.0" style="-fx-background-color: white; -fx-effect: none; -fx-border-color: white; -fx-pref-column-count: 2;" text="In what years War of Independence of Turkey&#10;took place? " />
+                        <Group layoutX="14.0" layoutY="98.0">
+                           <children>
+                              <Label style="-fx-text-fill: #0186D1;" text="#Branch" textFill="#0186d1" />
+                              <Label layoutX="52.0" text="•" />
+                              <Label layoutX="64.0" text="AnswerNumber" />
+                           </children>
+                        </Group>
+                        <Group layoutX="96.0" layoutY="118.0" />
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@profile-user.png" />
+                           </image>
+                        </ImageView>
+                        <Group layoutX="10.0" layoutY="126.0">
+                           <children>
+                              <Button layoutX="4.0" layoutY="-1.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="74.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="40.0" layoutY="5.0" text="save" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@bookmark.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <Group layoutX="95.0" layoutY="122.0">
+                           <children>
+                              <Button layoutX="7.0" layoutY="2.0" minHeight="-Infinity" minWidth="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="130.0" style="-fx-border-radius: 100; -fx-background-color: F5F5F5; -fx-background-radius: 100; -fx-effect: none;" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="42.0" layoutY="7.0" text="4/5 challenging" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@plugin.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane layoutX="13.0" layoutY="69.0" prefHeight="312.0" prefWidth="160.0" style="-fx-border-radius: 10; -fx-background-color: white; -fx-border-color: F5F5F5; -fx-stroke: green;">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" style="-fx-background-color: white;" text="Branches" />
+            <Group layoutX="9.0" layoutY="29.0">
+               <children>
+                  <Group>
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutY="42.0">
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="4.0" layoutY="84.0">
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="4.0" layoutY="126.0">
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="4.0" layoutY="168.0">
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="4.0" layoutY="210.0">
+                     <children>
+                        <Label text="#History">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="17.0" text="23.786 questions">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Button layoutX="2.0" layoutY="276.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="156.0" style="-fx-effect: none; -fx-background-color: white; -fx-text-fill: #737373; -fx-background-radius: 100;" text="see more" />
+         </children>
+      </Pane>
+      <Pane layoutX="547.0" layoutY="70.0" prefHeight="321.0" prefWidth="160.0" style="-fx-border-radius: 10; -fx-background-color: white; -fx-border-color: F5F5F5;">
+         <children>
+            <Group layoutX="9.0" layoutY="30.0">
+               <children>
+                  <Label layoutY="9.0" text="1.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Label layoutX="7.0" layoutY="6.0" style="-fx-background-color: white;" text="ranking" />
+            <Group layoutX="9.0" layoutY="76.0" />
+            <Button layoutX="2.0" layoutY="283.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="156.0" style="-fx-effect: none; -fx-background-color: white; -fx-text-fill: #737373; -fx-background-radius: 100;" text="see more" />
+            <Group layoutX="9.0" layoutY="74.0">
+               <children>
+                  <Label layoutY="9.0" text="2.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="9.0" layoutY="116.0">
+               <children>
+                  <Label layoutY="9.0" text="3.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="9.0" layoutY="156.0">
+               <children>
+                  <Label layoutY="9.0" text="4.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="9.0" layoutY="198.0">
+               <children>
+                  <Label layoutY="9.0" text="5.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="9.0" layoutY="241.0">
+               <children>
+                  <Label layoutY="9.0" text="6.">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="9.0" text="UserName" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@profile-user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+         </children></Pane>
+      <Pane layoutX="191.0" layoutY="21.0" prefHeight="35.0" prefWidth="333.0" style="-fx-background-color: white; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 1;">
+         <children>
+            <TextField layoutX="2.0" layoutY="1.0" prefHeight="32.0" prefWidth="298.0" promptText="add question" style="-fx-background-radius: 100; -fx-background-color: white;">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="2.0" minWidth="28.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" style="-fx-border-radius: 100; -fx-background-color: #0186D1; -fx-background-radius: 100; -fx-effect: none;" text="+" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="546.0" layoutY="21.0" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: white; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 1;">
+         <children>
+            <Group layoutX="45.0" layoutY="4.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="6.0" text="35" textAlignment="CENTER" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@star.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="98.0" layoutY="2.0">
+               <children>
+                  <Button alignment="CENTER" layoutX="2.0999984741210938" layoutY="2.0999999046325684" mnemonicParsing="false" prefHeight="29.0" prefWidth="51.0" style="-fx-background-radius: 100; -fx-background-color: #F5F5F5; -fx-effect: none; -fx-text-fill: black;" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@more.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@profile-user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
