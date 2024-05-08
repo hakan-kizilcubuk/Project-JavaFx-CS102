@@ -20,9 +20,7 @@ import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class LoginPageController{
-
-
+public class LoginPageController {
 
 
     @FXML
@@ -59,9 +57,7 @@ public class LoginPageController{
         if (!emailusernameTextField.getText().isBlank() && !passwordTextFieldLogin.getText().isBlank()) {
             invalidValidLabel.setText("Trying to login");
             validateLogin();
-        }
-        else
-        {
+        } else {
             invalidValidLabel.setText("Please enter a valid username and password");
         }
     }
@@ -80,8 +76,7 @@ public class LoginPageController{
             while (resultSet.next()) {
                 if (resultSet.getInt(1) == 1) {
                     invalidValidLabel.setText("Valid login!");
-                }
-                else {
+                } else {
                     invalidValidLabel.setText("Invalid login! Try again");
                 }
             }
@@ -91,19 +86,34 @@ public class LoginPageController{
     }
 
     public void signUpButtonOnAction(ActionEvent event) {
-        signUpLabel.setText("User registered succesfully!!");
-        signupUser();
+        if (passwordTextFieldSignup.getText().equals(confirmPasswordTextField.getText())) {
+            signupUser();
+            signUpPasswordLabel.setText("Password matches!");
+            signUpLabel.setText("User registered succesfully!!");
+        } else {
+            signUpPasswordLabel.setText("Password do not matches!");
+        }
     }
 
-    public void signupUser(){
-        if (passwordTextFieldSignup.getText().equals(confirmPasswordTextField.getText()))
-        {
-            signUpPasswordLabel.setText("Password matches!");
-        }
+    public void signupUser() {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
 
-        else
-        {
-            signUpPasswordLabel.setText("Password do not matches!");
+        String name = nameTextField.getText();
+        String username = usernameTextField.getText();
+        String email = emailTextField.getText();
+        String password = passwordTextFieldSignup.getText();
+
+        String insertFields = "INSERT INTO userinfo (name, username, email, coin, password) VALUES ('";
+        String insertValues = name + "','" + username + "','" + email + "','" + 0 + "','" + password + "')";
+        String insertToRegister = insertFields + insertValues;
+
+        try {
+            Statement statement = connectDatabase.createStatement();
+            statement.executeUpdate(insertToRegister);
+            signUpPasswordLabel.setText("User has been registered succesfully!");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
