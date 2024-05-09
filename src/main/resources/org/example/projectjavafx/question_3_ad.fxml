@@ -15,7 +15,7 @@
       <Text fill="#737373" layoutX="71.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user" wrappingWidth="23.5625" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="613.0" layoutY="27.0">
          <image>
-            <Image url="@../../download.png" />
+            <Image url="@download.2.png" />
          </image>
       </ImageView>
       <Text fill="#737373" layoutX="643.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="35">
