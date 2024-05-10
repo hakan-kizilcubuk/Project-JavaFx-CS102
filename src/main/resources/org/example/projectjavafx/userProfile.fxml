@@ -1,96 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.userProfileController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="57.0" layoutY="40.0" prefHeight="49.0" prefWidth="190.0">
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="1.0" prefHeight="80.0" prefWidth="720.0">
          <children>
-            <Text fx:id="myAccountLabel" fill="#0168d1" layoutX="8.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account Info">
-               <font>
-                  <Font name="Roboto" size="24.0" />
-               </font>
-            </Text>
-         </children>
-      </Pane>
-      <Pane layoutX="66.0" layoutY="90.0" prefHeight="50.0" prefWidth="262.0">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9f9f9" height="50.0" stroke="#efefef" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="262.0" />
-            <Circle fx:id="userAvatar" fill="#f9f9f9" layoutX="31.0" layoutY="25.0" radius="21.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" />
-            <Text fx:id="userNameText" fill="#737373" layoutX="61.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user1234">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <ImageView fx:id="coinImage" fitHeight="36.0" fitWidth="34.0" layoutX="178.0" layoutY="7.0" pickOnBounds="true">
+            <ImageView fitHeight="60.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@download.png" />
+                  <Image url="@icons/logo.png" />
                </image>
             </ImageView>
-            <Text fx:id="coinNumber" fill="#737373" layoutX="195.0" layoutY="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="35" x="23.0" y="23.0">
-               <font>
-                  <Font name="Roboto" size="18.0" />
-               </font>
-            </Text>
          </children>
-      </Pane>
-      <Pane layoutX="66.0" layoutY="156.0" prefHeight="350.0" prefWidth="262.0">
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="81.0" prefHeight="430.0" prefWidth="718.0">
          <children>
-            <Text fx:id="eMailText" fill="#737373" layoutX="-9.0" layoutY="-5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" x="23.0" y="60.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Text fx:id="editProfileText" fill="#737373" layoutX="-9.0" layoutY="-33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Profile" x="23.0" y="60.0">
-               <font>
-                  <Font name="Roboto Bold" size="14.0" />
-               </font>
-            </Text>
-            <Rectangle fx:id="emailRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="36.0" layoutX="14.0" layoutY="60.0" stroke="#e8e8e8" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="232.0" />
-            <Text fill="#737373" layoutX="8.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user124@gmail.com" x="23.0" y="60.0">
-               <font>
-                  <Font name="Roboto" size="14.0" />
-               </font>
-            </Text>
-            <Rectangle fx:id="changeProfilePictureRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="36.0" layoutX="14.0" layoutY="275.0" stroke="#e8e8e8" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="232.0" />
-            <Rectangle fx:id="deleteRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="36.0" layoutX="14.0" layoutY="175.0" stroke="#ea1212" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="232.0" />
-            <Rectangle fx:id="savedRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="36.0" layoutX="14.0" layoutY="223.0" stroke="#e8e8e8" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="232.0" />
-            <Rectangle fx:id="logOutRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="36.0" layoutX="14.0" layoutY="124.0" stroke="#e8e8e8" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="232.0" />
-            <Button fx:id="logOutButton" alignment="TOP_LEFT" layoutX="23.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Log Out" textFill="#737373" />
-            <Button fx:id="deleteButton" alignment="TOP_LEFT" layoutX="23.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Delete Account" textFill="#ea1212" />
-            <Button fx:id="savedButton" alignment="TOP_LEFT" layoutX="23.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Saved" textFill="#737373" />
-            <Button fx:id="changeProfilePicButton" alignment="TOP_LEFT" layoutX="24.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Change Profile Picture" textFill="#737373" />
+            <VBox alignment="CENTER" prefHeight="430.0" prefWidth="359.0" spacing="10.0">
+               <children>
+                  <Label text="My Account Info" textFill="#0186d1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/avatar%20(5).png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Username">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="96.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/download.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="34K">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="50.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Label text="e-mail" textFill="#797979" />
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <TextField prefHeight="26.0" prefWidth="250.0" promptText="email@gmail.com" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="50.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Label text="username" textFill="#797979" />
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <TextField prefHeight="26.0" prefWidth="250.0" promptText="username" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #0186d1; -fx-background-radius: 100;" text="log out" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #FE0707; -fx-background-radius: 100;" text="delete" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #0186d1; -fx-background-radius: 100;" text="saved" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="change profile picture" textFill="#0186d1" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="32.0" prefWidth="305.0" />
+               </children>
+               <padding>
+                  <Insets left="40.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="430.0" prefWidth="359.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label minWidth="-Infinity" text="friends" textFill="#0186d1">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="26.0" prefWidth="236.0" />
+                        <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #0186d1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add friend" textFill="#0186d1" />
+                     </children>
+                  </HBox>
+                  <ListView prefHeight="434.0" prefWidth="359.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 15;" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin></VBox>
          </children>
-      </Pane>
-      <ScrollPane fx:id="friendsScrollPane" layoutX="432.0" layoutY="115.0" prefHeight="317.0" prefWidth="250.0">
-         <content>
-            <Text fill="#737373" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends" x="150.0" y="150.0">
-               <font>
-                  <Font name="Roboto" size="14.0" />
-               </font>
-            </Text>
-         </content>
-      </ScrollPane>
-      <Pane layoutX="482.0" layoutY="440.0" prefHeight="42.0" prefWidth="150.0">
-         <children>
-            <Rectangle fx:id="addFriendRectangle" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="42.0" layoutX="1.0" stroke="#737373" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="150.0" />
-            <Button fx:id="addFriendButton" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="+ add friend" textFill="#737373" />
-         </children>
-      </Pane>
-      <ImageView fx:id="logoImage" fitHeight="74.0" fitWidth="190.0" layoutX="499.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@logo.png" />
-         </image>
-      </ImageView>
+      </HBox>
    </children>
-</AnchorPane>
+</Pane>
