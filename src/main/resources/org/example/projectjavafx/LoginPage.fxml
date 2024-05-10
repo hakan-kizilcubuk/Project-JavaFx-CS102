@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.LoginPageController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.LoginPageController">
    <children>
       <Pane layoutX="257.0" layoutY="95.0" prefHeight="64.0" prefWidth="252.0">
          <children>
@@ -29,7 +29,7 @@
                </font></TextField>
             <Button fx:id="loginButton" layoutX="99.0" layoutY="152.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="32.0" prefWidth="88.5" style="-fx-background-color: #0186D1; -fx-text-fill: FFFFFF; -fx-background-radius: 20;" text="Log in">
                <font>
-                  <Font name="Roboto" size="12.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Button>
             <Label fx:id="invalidValidLabel" layoutX="29.0" layoutY="13.0" textFill="#737373" />
@@ -62,7 +62,7 @@
                   <Font name="Roboto" size="11.0" />
                </font>
             </Text>
-            <Button fx:id="signupButton" layoutX="94.0" layoutY="231.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="32.0" prefWidth="88.5" style="-fx-background-color: #f9f9f9; -fx-text-fill: #0168d1; -fx-background-radius: 20; -fx-border-color: #0168d1; -fx-border-radius: 20px;" text="Sign up">
+            <Button fx:id="signupButton" layoutX="94.0" layoutY="231.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="32.0" prefWidth="88.5" style="-fx-background-color: #f9f9f9; -fx-text-fill: #0168d1; -fx-background-radius: 20; -fx-border-color: #0168d1; -fx-border-radius: 20px; -fx-border-width: 2;" text="Sign up">
                <font>
                   <Font name="Roboto" size="12.0" />
                </font>
@@ -74,7 +74,7 @@
             </Label>
          </children>
       </Pane>
-      <Line endX="-100.0" endY="243.99996948242188" layoutX="460.0" layoutY="195.0" opacity="0.37" startX="-100.0" stroke="#0186d1" />
+      <Line endX="-100.0" endY="243.99996948242188" layoutX="460.0" layoutY="195.0" opacity="0.37" startX="-100.0" stroke="#0186d1" strokeWidth="2.0" />
       <ImageView fitHeight="90.0" fitWidth="261.0" layoutX="230.0" layoutY="63.0">
          <image>
             <Image url="@logo.png" />
