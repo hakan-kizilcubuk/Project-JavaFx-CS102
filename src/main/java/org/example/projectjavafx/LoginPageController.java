@@ -3,13 +3,17 @@ package org.example.projectjavafx;
 import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 
 import java.net.URL;
@@ -76,6 +80,7 @@ public class LoginPageController {
             while (resultSet.next()) {
                 if (resultSet.getInt(1) == 1) {
                     invalidValidLabel.setText("Valid login!");
+                    mainMenuOpen();
                 } else {
                     invalidValidLabel.setText("Invalid login! Try again");
                 }
@@ -113,6 +118,18 @@ public class LoginPageController {
             statement.executeUpdate(insertToRegister);
             signUpPasswordLabel.setText("User has been registered succesfully!");
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void mainMenuOpen()
+    {
+        try {
+            Parent root = FXMLLoader.load((getClass().getResource("MainMenu.fxml")));
+            Stage mainMenuStage = new Stage();
+            mainMenuStage.setScene(new Scene(root, 720, 512));
+            mainMenuStage.show();
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
