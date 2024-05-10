@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.MainMenuController">
    <top>
@@ -28,7 +29,10 @@
             <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="46.0" />
             <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="40.0" prefWidth="350.0">
                <children>
-                  <Button fx:id="addQuestionButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#questionButtonOnAction" prefHeight="30.0" prefWidth="331.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add question" textAlignment="CENTER" textFill="#0186d1" />
+                  <Button fx:id="addQuestionButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#questionButtonOnAction" prefHeight="30.0" prefWidth="331.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add question" textAlignment="CENTER" textFill="#0186d1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
                </children>
             </HBox>
             <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="46.0" HBox.hgrow="ALWAYS" />
