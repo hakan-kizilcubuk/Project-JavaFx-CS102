@@ -34,7 +34,7 @@ public class MainMenuController implements Initializable {
 
     private List<Post> posts;
 
-    @Override
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         posts = new ArrayList<>(posts());
 
@@ -50,7 +50,7 @@ public class MainMenuController implements Initializable {
                 PostController postController = fxmlloader.getController();
                 postController.setData(posts.get(i));
 
-                if ( columns == 1)
+                if (columns == 1)
                 {
                     columns = 0;
                     ++rows;
