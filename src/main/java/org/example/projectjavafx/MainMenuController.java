@@ -34,7 +34,7 @@ public class MainMenuController implements Initializable {
         try {
             for ( int i = 0; i < posts.size(); i++ ) {
                 FXMLLoader fxmlloader = new FXMLLoader();
-                fxmlloader.setLocation(getClass().getResource("/fxml/post.fxml"));
+                fxmlloader.setLocation(getClass().getResource("post.fxml"));
                 VBox box = fxmlloader.load();
                 PostController postController = fxmlloader.getController();
                 postController.setData(posts.get(i));
