@@ -8,7 +8,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-public class userProfileController {
+public class UserProfileController {
 
     @FXML
     private Button addFriendButton;
