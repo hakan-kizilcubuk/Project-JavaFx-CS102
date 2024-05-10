@@ -7,6 +7,8 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -21,6 +23,15 @@ public class MainMenuController implements Initializable {
 
     @FXML
     private GridPane postGrid;
+
+    @FXML
+    private Button addQuestionButton;
+
+    @FXML
+    void questionButtonOnAction(ActionEvent event) {
+
+    }
+
     private List<Post> posts;
 
     @Override
