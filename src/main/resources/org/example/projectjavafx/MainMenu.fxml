@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.MainMenuController">
    <top>
-      <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>
@@ -36,7 +36,7 @@
                </children>
             </HBox>
             <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="46.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="68.0" spacing="20.0">
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="68.0" spacing="5.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 100; -fx-border-radius: 100;">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
@@ -46,7 +46,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="70.0" spacing="10.0">
+                  <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="70.0" spacing="5.0">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -56,28 +56,174 @@
                         <Label maxWidth="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="30.0" text="34" textAlignment="CENTER" />
                      </children>
                   </HBox>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/more.png" />
                      </image>
                   </ImageView>
                </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+               </padding>
             </HBox>
          </children>
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="442.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="435.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #F5F5F5;" BorderPane.alignment="CENTER">
          <children>
             <Label text="Branch" />
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
          <BorderPane.margin>
             <Insets left="15.0" />
          </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </VBox>
    </left>
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" BorderPane.alignment="CENTER">
         <content>
             <GridPane fx:id="postGrid">
               <rowConstraints>
@@ -87,4 +233,337 @@
         </content>
       </ScrollPane>
    </center>
+   <right>
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="433.0" prefWidth="200.0" style="-fx-border-radius: 13; -fx-background-radius: 13; -fx-border-color: #F5F5F5;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="ranking" />
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="1." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="2." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="3." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="4." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="5." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="6." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="7." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="8." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="9." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="10." />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/avatar%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="username">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/download.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="34K">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </right>
 </BorderPane>
