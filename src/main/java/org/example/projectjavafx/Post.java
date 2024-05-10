@@ -1,4 +1,4 @@
-package org.example.mainmenuquizhub;
+package org.example.projectjavafx;
 
 public class Post {
     private int answers;

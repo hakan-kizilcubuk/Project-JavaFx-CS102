@@ -1,4 +1,4 @@
-package org.example.mainmenuquizhub;
+package org.example.projectjavafx;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
