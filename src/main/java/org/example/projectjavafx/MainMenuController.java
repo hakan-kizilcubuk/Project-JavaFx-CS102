@@ -122,7 +122,8 @@ public class MainMenuController implements Initializable {
         }
     }
 
-    public void setUserProfileButtonOnAction(ActionEvent actionEvent) {
+
+    public void userProfileButtonOnAction(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load((getClass().getResource("UserProfile.fxml")));
             Stage mainMenuStage = new Stage();

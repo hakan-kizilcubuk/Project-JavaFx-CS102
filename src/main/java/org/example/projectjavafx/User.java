@@ -76,4 +76,8 @@ public class User {
     public void setUserCoin(int userCoin){
         this.userCoin = userCoin;
     }
+
+    public String getUserEmail(){
+        return this.userEmail;
+    }
 }

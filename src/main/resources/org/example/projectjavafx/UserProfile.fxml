@@ -71,7 +71,7 @@
                         <Label text="e-mail" textFill="#797979" />
                         <HBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <TextField prefHeight="26.0" prefWidth="250.0" promptText="email@gmail.com" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                              <TextField fx:id="emailTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
                               <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
                                  <font>
                                     <Font name="System Bold" size="13.0" />
@@ -85,7 +85,7 @@
                         <Label text="username" textFill="#797979" />
                         <HBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <TextField prefHeight="26.0" prefWidth="250.0" promptText="username" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                              <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
                               <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
                                  <font>
                                     <Font name="System Bold" size="13.0" />

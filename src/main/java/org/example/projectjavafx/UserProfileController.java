@@ -1,14 +1,21 @@
 package org.example.projectjavafx;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-public class UserProfileController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UserProfileController implements Initializable {
+
+    private User user;
 
     @FXML
     private Button addFriendButton;
@@ -70,4 +77,18 @@ public class UserProfileController {
     @FXML
     private Text userNameText;
 
+    @FXML
+    private TextField emailTextField;
+
+    @FXML
+    private TextField usernameTextField;
+
+    public void setEmail(){
+        emailTextField.setText(LoginPageController.user.g);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
