@@ -57,11 +57,7 @@
                         <Label fx:id="coinLabel" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="30.0" text="34" textAlignment="CENTER" />
                      </children>
                   </HBox>
-                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/more.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="userProfileButton" mnemonicParsing="false" onAction="#userProfileButtonOnAction" style="-fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2;" text="Button" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
@@ -73,50 +69,145 @@
    <left>
       <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="435.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #F5F5F5;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="17.0" prefWidth="64.0" text="Branches" />
+            <Label text="Branch" />
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="79.0" style="-fx-background-color: white;" text="#History">
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
                      <font>
-                        <Font name="Roboto Medium" size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="146.0" style="-fx-background-color: 0;" text="#General Knowledge">
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
                      <font>
-                        <Font name="Roboto Medium" size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="71.0" style="-fx-background-color: 0;" text="#Sports">
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
                      <font>
-                        <Font name="Roboto Medium" size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="71.0" style="-fx-background-color: 0;" text="#Science">
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
                      <font>
-                        <Font name="Roboto Medium" size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="91.0" style="-fx-background-color: 0;" text="#Geography">
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
                      <font>
-                        <Font name="Roboto Medium" size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="question number" textFill="#868686">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </children>
