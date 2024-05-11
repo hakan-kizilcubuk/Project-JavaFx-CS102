@@ -80,4 +80,8 @@ public class User {
     public String getUserEmail(){
         return this.userEmail;
     }
+
+    public String getUserId(){
+        return this.userId;
+    }
 }

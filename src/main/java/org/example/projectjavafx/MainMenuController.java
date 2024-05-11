@@ -27,6 +27,8 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
 
+    protected static User newUser = LoginPageController.user;
+
     @FXML
     private Button userProfileButton;
 
@@ -49,18 +51,22 @@ public class MainMenuController implements Initializable {
 
     public void setUserNameLabel ()
     {
-        userNameLabel.setText(LoginPageController.user.getUserName());
+        userNameLabel.setText(MainMenuController.newUser.getUserName());
     }
 
     public void setCoinLabel()
     {
-        coinLabel.setText(LoginPageController.user.getUserCoin() + "");
+        coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
 
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUserNameLabel();
         setCoinLabel();
+        newUser.setUserEmail(LoginPageController.user.getUserEmail());
+        newUser.setUserName(LoginPageController.user.getUserName());
+        newUser.setUserCoin(LoginPageController.user.getUserCoin());
+        newUser.setUserId(LoginPageController.user.getUserId());
         posts = new ArrayList<>(posts());
 
         int columns = 0;
@@ -113,10 +119,10 @@ public class MainMenuController implements Initializable {
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load((getClass().getResource("AddQuestion.fxml")));
-            Stage mainMenuStage = new Stage();
-            mainMenuStage.setScene(new Scene(root, 720, 512));
-            mainMenuStage.show();
+            Parent newRoot = FXMLLoader.load((getClass().getResource("AddQuestion.fxml")));
+            Stage addQuestionStage = new Stage();
+            addQuestionStage.setScene(new Scene(newRoot, 720, 512));
+            addQuestionStage.show();
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,10 +131,10 @@ public class MainMenuController implements Initializable {
 
     public void userProfileButtonOnAction(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load((getClass().getResource("UserProfile.fxml")));
-            Stage mainMenuStage = new Stage();
-            mainMenuStage.setScene(new Scene(root, 720, 512));
-            mainMenuStage.show();
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("UserProfile.fxml")));
+            Stage profilePageStage = new Stage();
+            profilePageStage.setScene(new Scene(rootAnother, 720, 512));
+            profilePageStage.show();
         }catch (Exception e) {
             e.printStackTrace();
         }
