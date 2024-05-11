@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 import java.awt.*;
 
@@ -23,6 +24,11 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
 
+    private User user;
+
+    @FXML
+    private Label userNameLabel;
+
     @FXML
     private GridPane postGrid;
 
@@ -32,8 +38,14 @@ public class MainMenuController implements Initializable {
 
     private List<Post> posts;
 
+    public void setUserNameLabel ()
+    {
+        userNameLabel.setText(user.getUserName());
+    }
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setUserNameLabel();
         posts = new ArrayList<>(posts());
 
         int columns = 0;

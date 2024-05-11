@@ -81,6 +81,9 @@ public class LoginPageController {
                 if (resultSet.getInt(1) == 1) {
                     invalidValidLabel.setText("Valid login!");
                     mainMenuOpen();
+                    String idOfUser = "SELECT iduserAccounts FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "'";
+                    String emailOfUser = "SELECT email FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "'";
+                    User newUser = new User(emailusernameTextField.getText(), idOfUser, passwordTextFieldLogin.getText(), emailOfUser, 0 );
                 } else {
                     invalidValidLabel.setText("Invalid login! Try again");
                 }

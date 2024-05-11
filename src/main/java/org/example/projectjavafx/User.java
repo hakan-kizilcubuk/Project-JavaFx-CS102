@@ -3,7 +3,7 @@ package org.example.projectjavafx;
 import java.util.ArrayList;
 
 public class User {
-    private int userId;
+    private String userId;
     private String userName;
     private ArrayList<Question> userQuestions;
     private ArrayList<Question> savedQuestions;
@@ -15,7 +15,7 @@ public class User {
     private int userRank;
 
 
-    public User(String user_name,int id, String password,String email, int userCoin)
+    public User(String user_name,String id, String password,String email, int userCoin)
     {
         this.userPassword= password;
         this.userId = id;
@@ -45,5 +45,10 @@ public class User {
 
     public ArrayList<User> getFriends() {
     return friends;
+    }
+
+    public String getUserName()
+    {
+        return userName;
     }
 }

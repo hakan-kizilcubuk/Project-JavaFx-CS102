@@ -29,13 +29,14 @@
             <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="46.0" />
             <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="40.0" prefWidth="350.0">
                <children>
-                  <Button fx:id="addQuestionButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#addQuestionButtonOnAction" prefHeight="30.0" prefWidth="331.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add question" textAlignment="CENTER" textFill="#0186d1">
+                  <Button fx:id="addQuestionButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#addQuestionButtonOnAction" prefHeight="30.0" prefWidth="289.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add question" textAlignment="CENTER" textFill="#0186d1">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font></Button>
                </children>
             </HBox>
             <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="46.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="userNameLabel" prefHeight="18.0" prefWidth="98.0" text="username" />
             <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="68.0" spacing="5.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 100; -fx-border-radius: 100;">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
