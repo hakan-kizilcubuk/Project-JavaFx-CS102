@@ -4,11 +4,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.awt.*;
 
@@ -106,6 +109,13 @@ public class MainMenuController implements Initializable {
     }
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
-
+        try {
+            Parent root = FXMLLoader.load((getClass().getResource("AddQuestion.fxml")));
+            Stage mainMenuStage = new Stage();
+            mainMenuStage.setScene(new Scene(root, 720, 512));
+            mainMenuStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
