@@ -24,6 +24,7 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
 
+
     private User user;
 
     @FXML
@@ -40,7 +41,7 @@ public class MainMenuController implements Initializable {
 
     public void setUserNameLabel ()
     {
-        userNameLabel.setText(user.getUserName());
+        userNameLabel.setText(LoginPageController.user.getUserName());
     }
 
 

@@ -51,4 +51,21 @@ public class User {
     {
         return userName;
     }
+
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+
+    public void setUserPassword(String userPassword){
+        this.userPassword = userPassword;
+    }
+
+    public void setUserId(String id){
+        this.userId = id;
+    }
+
+    public void setUserEmail(String email)
+    {
+        this.userEmail = email;
+    }
 }

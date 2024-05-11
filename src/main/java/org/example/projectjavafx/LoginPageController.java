@@ -21,11 +21,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LoginPageController {
 
+    protected static User user = new User("","","","",0);
 
     @FXML
     private TextField emailusernameTextField;
@@ -80,10 +82,13 @@ public class LoginPageController {
             while (resultSet.next()) {
                 if (resultSet.getInt(1) == 1) {
                     invalidValidLabel.setText("Valid login!");
-                    mainMenuOpen();
                     String idOfUser = "SELECT iduserAccounts FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "'";
                     String emailOfUser = "SELECT email FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "'";
-                    User newUser = new User(emailusernameTextField.getText(), idOfUser, passwordTextFieldLogin.getText(), emailOfUser, 0 );
+                    user.setUserEmail(emailOfUser);
+                    user.setUserName(emailusernameTextField.getText());
+                    user.setUserPassword(passwordTextFieldLogin.getText());
+                    user.setUserId(idOfUser);
+                    mainMenuOpen();
                 } else {
                     invalidValidLabel.setText("Invalid login! Try again");
                 }
@@ -136,4 +141,5 @@ public class LoginPageController {
             e.printStackTrace();
         }
     }
+
 }
