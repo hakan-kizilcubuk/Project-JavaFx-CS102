@@ -57,11 +57,7 @@
                         <Label fx:id="coinLabel" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="30.0" text="34" textAlignment="CENTER" />
                      </children>
                   </HBox>
-                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/more.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="userProfileButton" mnemonicParsing="false" onAction="#userProfileButtonOnAction" style="-fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2;" text="Button" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
