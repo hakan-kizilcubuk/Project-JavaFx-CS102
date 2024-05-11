@@ -54,7 +54,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label maxWidth="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="30.0" text="34" textAlignment="CENTER" />
+                        <Label fx:id="coinLabel" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="17.0" prefWidth="30.0" text="34" textAlignment="CENTER" />
                      </children>
                   </HBox>
                   <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

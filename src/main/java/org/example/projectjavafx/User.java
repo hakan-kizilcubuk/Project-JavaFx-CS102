@@ -68,4 +68,12 @@ public class User {
     {
         this.userEmail = email;
     }
+
+    public int getUserCoin(){
+        return this.userCoin;
+    }
+
+    public void setUserCoin(int userCoin){
+        this.userCoin = userCoin;
+    }
 }

@@ -24,6 +24,8 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
 
+    @FXML
+    private Label coinLabel;
 
     private User user;
 
@@ -44,9 +46,15 @@ public class MainMenuController implements Initializable {
         userNameLabel.setText(LoginPageController.user.getUserName());
     }
 
+    public void setCoinLabel()
+    {
+        coinLabel.setText(LoginPageController.user.getUserCoin() + "");
+    }
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUserNameLabel();
+        setCoinLabel();
         posts = new ArrayList<>(posts());
 
         int columns = 0;
