@@ -84,7 +84,7 @@ public class UserProfileController implements Initializable {
     private TextField usernameTextField;
 
     public void setEmail(){
-        emailTextField.setText(LoginPageController.user.g);
+        emailTextField.setText(LoginPageController.user.getUserEmail());
     }
 
     @Override
