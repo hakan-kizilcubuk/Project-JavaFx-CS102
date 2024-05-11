@@ -28,6 +28,9 @@ import java.util.ResourceBundle;
 public class MainMenuController implements Initializable {
 
     @FXML
+    private Button userProfileButton;
+
+    @FXML
     private Label coinLabel;
 
     private User user;
@@ -111,6 +114,17 @@ public class MainMenuController implements Initializable {
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load((getClass().getResource("AddQuestion.fxml")));
+            Stage mainMenuStage = new Stage();
+            mainMenuStage.setScene(new Scene(root, 720, 512));
+            mainMenuStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setUserProfileButtonOnAction(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load((getClass().getResource("UserProfile.fxml")));
             Stage mainMenuStage = new Stage();
             mainMenuStage.setScene(new Scene(root, 720, 512));
             mainMenuStage.show();
