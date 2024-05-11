@@ -6,9 +6,11 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -27,10 +29,6 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button addQuestionButton;
 
-    @FXML
-    void questionButtonOnAction(ActionEvent event) {
-
-    }
 
     private List<Post> posts;
 
@@ -49,7 +47,6 @@ public class MainMenuController implements Initializable {
                 VBox box = fxmlloader.load();
                 PostController postController = fxmlloader.getController();
                 postController.setData(posts.get(i));
-
                 if (columns == 1)
                 {
                     columns = 0;
@@ -85,5 +82,9 @@ public class MainMenuController implements Initializable {
         }
 
         return posts;
+    }
+
+    public void addQuestionButtonOnAction(ActionEvent actionEvent) {
+
     }
 }

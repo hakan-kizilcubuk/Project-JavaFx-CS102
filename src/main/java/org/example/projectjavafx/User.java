@@ -15,13 +15,13 @@ public class User {
     private int userRank;
 
 
-    public User(String user_name,int id, String password,String email)
+    public User(String user_name,int id, String password,String email, int userCoin)
     {
         this.userPassword= password;
         this.userId = id;
         this.userName= user_name;
         this.userEmail=email;
-
+        this.userCoin=userCoin;
     }
 
     public void changeProfilePicture(String picturePath){
