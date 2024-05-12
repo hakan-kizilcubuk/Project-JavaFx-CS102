@@ -173,6 +173,8 @@ public class MainMenuController implements Initializable {
 
     private List<Post> posts;
 
+
+
     public void setUserNameLabel ()
     {
         userNameLabel.setText(MainMenuController.newUser.getUserName());
@@ -182,6 +184,11 @@ public class MainMenuController implements Initializable {
     {
         coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
+
+    private ArrayList<User> firstTen = new ArrayList<User>();
+
+
+
 
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -223,9 +230,10 @@ public class MainMenuController implements Initializable {
 
     private List<Post> posts() {
 
+        int questionNo = findNoOfQuestions();
         List<Post> posts = new ArrayList<>();
 
-        for( int i = 1; i < 10; i++ )
+        for( int i = 1; i <= questionNo; i++ )
         {
             Post post = new Post();
 
@@ -241,6 +249,27 @@ public class MainMenuController implements Initializable {
         }
 
         return posts;
+    }
+
+    public int findNoOfQuestions()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String noOfQuestions = "SELECT COUNT(*) AS row_count FROM question";
+
+        try{
+            Statement statement = connectDatabase.createStatement();
+            ResultSet resultSet = statement.executeQuery(noOfQuestions);
+            resultSet.next();
+            int rowCount = resultSet.getInt("row_count");
+
+            return rowCount;
+        }catch(Exception e){
+            e.printStackTrace();
+            return -1;
+        }
+
     }
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
