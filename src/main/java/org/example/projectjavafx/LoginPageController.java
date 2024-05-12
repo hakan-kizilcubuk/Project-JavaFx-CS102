@@ -124,9 +124,6 @@ public class LoginPageController {
         try {
             Statement statement = connectDatabase.createStatement();
             statement.executeUpdate(insertToRegister);
-            // to add the new registered user into arraylist of whole users.
-            WholeUsers users = new WholeUsers();
-            users.addUser( user);
             signUpPasswordLabel.setText("User has been registered succesfully!");
         } catch (Exception e) {
             e.printStackTrace();

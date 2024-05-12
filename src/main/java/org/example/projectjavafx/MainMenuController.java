@@ -173,8 +173,6 @@ public class MainMenuController implements Initializable {
 
     private List<Post> posts;
 
-    private WholeUsers users = new WholeUsers();
-
     public void setUserNameLabel ()
     {
         userNameLabel.setText(MainMenuController.newUser.getUserName());
@@ -185,64 +183,6 @@ public class MainMenuController implements Initializable {
         coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
 
-    private ArrayList<User> firstTen = new ArrayList<User>();
-
-    public void findFirstTen()
-    {
-        for ( int i = 0; i <= users.getUsers().size() - 1; i++)
-        {
-            for ( int j = 0; j < users.getUsers().size() - i - 1; j++)
-            {
-                if ( users.getUsers().get(j).getUserCoin() > users.getUsers().get(j+1).getUserCoin())
-                {
-                    int temp = users.getUsers().get(j).getUserCoin();
-                    users.getUsers().get(j).setUserCoin(users.getUsers().get(j+1).getUserCoin());
-                    users.getUsers().get(j+1).setUserCoin(temp);
-                }
-            }
-        }
-
-        for ( int i = 0; i < 10; i++)
-        {
-            firstTen.add(users.getUsers().get(i));
-        }
-    }
-
-    public void initilizeRankingTable( ArrayList<User> firstTen )
-    {
-        findFirstTen();
-
-        firstRankingUserName.setText(firstTen.get(0).getUserName());
-        firstRankingCoinNumber.setText(firstTen.get(0).getUserCoin() + "");
-
-        secondRankingUserName.setText(firstTen.get(1).getUserName());
-        secondRankingCoinNumber.setText(firstTen.get(1).getUserCoin() + "");
-
-        thirdRankingUsername.setText(firstTen.get(2).getUserName());
-        thirdRankingCoinNumber.setText(firstTen.get(2).getUserCoin() + "");
-
-        fourthRankingUsername.setText(firstTen.get(3).getUserName());
-        fourthRankingCoinNumber.setText(firstTen.get(3).getUserCoin() + "");
-
-        fifthRankingUserName.setText(firstTen.get(4).getUserName());
-        fifthRankingCoinNumber.setText(firstTen.get(4).getUserCoin() + "");
-
-        sixthRankingUsername.setText(firstTen.get(5).getUserName());
-        sixthRankingCoinNumber.setText(firstTen.get(5).getUserCoin() + "");
-
-        seventhRankingUsername.setText(firstTen.get(6).getUserName());
-        seventhRankingCoinNumber.setText(firstTen.get(6).getUserCoin() + "");
-
-        eightRankingUsername.setText(firstTen.get(7).getUserName());
-        eightRankingCoinNumber.setText(firstTen.get(7).getUserCoin() + "");
-
-        ninthRankingUsername.setText(firstTen.get(8).getUserName());
-        ninthRankingCoinNumber.setText(firstTen.get(8).getUserCoin() + "");
-
-        tenthRankingUsername.setText(firstTen.get(9).getUserName());
-        tenthRankingCoinNumber.setText(firstTen.get(9).getUserCoin() + "");
-    }
-
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUserNameLabel();
@@ -251,7 +191,7 @@ public class MainMenuController implements Initializable {
         newUser.setUserName(LoginPageController.user.getUserName());
         newUser.setUserCoin(LoginPageController.user.getUserCoin());
         newUser.setUserId(LoginPageController.user.getUserId());
-        initilizeRankingTable( firstTen);
+
         posts = new ArrayList<>(posts());
 
         int columns = 0;

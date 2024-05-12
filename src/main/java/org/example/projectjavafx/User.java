@@ -3,7 +3,6 @@ package org.example.projectjavafx;
 import java.util.ArrayList;
 
 public class User {
-    private static int userNumber = 0;
     private String userId;
     private String userName;
     private ArrayList<Question> userQuestions;
@@ -23,7 +22,7 @@ public class User {
         this.userName= user_name;
         this.userEmail=email;
         this.userCoin=userCoin;
-        userNumber++;
+
     }
 
     public void changeProfilePicture(String picturePath){
@@ -85,10 +84,5 @@ public class User {
 
     public String getUserId(){
         return this.userId;
-    }
-
-    public int getUserNumber()
-    {
-        return userNumber;
     }
 }
