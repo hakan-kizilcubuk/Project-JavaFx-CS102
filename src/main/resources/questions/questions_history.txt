@@ -1,6 +1,6 @@
 During what period did the title of Dictator originate?,Roman Republic,Napoleonic Europe,Soviet Union,Ottoman Empire,a
 In Japanese history, what was a Rōnin?,A banished Samurai,A young Samurai,Samurai with no lord or master,A sword making master,c
-What was Michelangelo’s last name?,Brunelleschi,Buonarroti,Botticelli,Zaniola,b
+What was last name of Michelangelo?,Brunelleschi,Buonarroti,Botticelli,Zaniola,b
 Which conflict was the shortest?,WW1,WWII,American War of Independence,American Civil War,c
 The Norwegian Explorer Roald Amundsen reached the South Pole on 14th December of which year?,1891,1901,1911,1921,c
 In what modern-day country was Stalin born?,Georgia,Germany,Russia,United States,a
@@ -13,7 +13,7 @@ Croesus was the king of Lydia (in modern-day Turkey) during the 500s BC. What is
 What was the original purpose of the Taj Mahal?,Armory,Mausoleum,Mosque,Palace,b
 Which came first?,The Bronze Age,Classical Antiquity,The Neolithic,The Paleolithic,d
 What did Costa Rica abolish in 1949?,Fossil fuels,Its military,Slavery,Taxes,b
-Which of these crops DIDN'T come from the New World?,Hemp,Maize,Tobacco,Tomatoes,a
+Which of these crops DID NOT come from the New World?,Hemp,Maize,Tobacco,Tomatoes,a
 What was Abraham Lincoln doing when he was assassinated in 1865?,Giving a speech,Inspecting the troops,Walking on the grounds of the White House,Watching a play at Ford's Theatre,d
 What country was formerly known as Southern Rhodesia?,Greece,Kenya,Uruguay,Zimbabwe,d
 What did the Qing dynasty force all men to do when they took over China in the 1600s?,Get circumcised,Serve in the army,Wear a specific hairstyle,Wear specific clothing,c
