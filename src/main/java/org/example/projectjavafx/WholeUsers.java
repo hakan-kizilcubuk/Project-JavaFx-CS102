@@ -6,7 +6,7 @@ public class WholeUsers {
     private static ArrayList<User> users;
 
     public WholeUsers() {
-        users = new ArrayList<>();
+        users = new ArrayList<User>();
     }
 
     public void addUser(User user) {
