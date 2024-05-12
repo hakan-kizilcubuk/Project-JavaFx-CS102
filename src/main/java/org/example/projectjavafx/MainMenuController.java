@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import javax.swing.text.html.ImageView;
 import java.awt.*;
 
 import java.io.IOException;
@@ -46,8 +47,133 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button addQuestionButton;
 
+    //branch question number label variables
+
+    @FXML
+    private Label branch1Number;
+
+    @FXML
+    private Label branch2Number;
+
+    @FXML
+    private Label branch3Number;
+
+    @FXML
+    private Label branch4Number;
+
+    @FXML
+    private Label branch5Number;
+
+    @FXML
+    private Label branch6Number;
+
+    @FXML
+    private Label branch7Number;
+
+    @FXML
+    private Label branch8Number;
+
+    @FXML
+    private Label branch9Number;
+
+    // rankingtable variables
+
+    @FXML
+    private ImageView FirstRankingImage;
+
+    @FXML
+    private ImageView SecondRankingImage;
+    @FXML
+    private Label eightRankingCoinNumber;
+
+    @FXML
+    private ImageView eightRankingImage;
+
+    @FXML
+    private Label eightRankingUsername;
+
+    @FXML
+    private Label fifthRankingCoinNumber;
+
+    @FXML
+    private ImageView fifthRankingImage;
+
+    @FXML
+    private Label fifthRankingUserName;
+
+    @FXML
+    private Label firstRankingCoinNumber;
+
+    @FXML
+    private Label firstRankingUserName;
+
+    @FXML
+    private Label fourthRankingCoinNumber;
+
+    @FXML
+    private ImageView fourthRankingImage;
+
+    @FXML
+    private Label fourthRankingUsername;
+
+    @FXML
+    private Label ninthRankingCoinNumber;
+
+    @FXML
+    private ImageView ninthRankingImage;
+
+    @FXML
+    private Label ninthRankingUsername;
+    @FXML
+    private Label secondRankingCoinNumber;
+
+    @FXML
+    private Label secondRankingUserName;
+
+    @FXML
+    private Label seventhRankingCoinNumber;
+
+    @FXML
+    private ImageView seventhRankingImage;
+
+    @FXML
+    private Label seventhRankingUsername;
+
+    @FXML
+    private Label sixthRankingCoinNumber;
+
+    @FXML
+    private ImageView sixthRankingImage;
+
+    @FXML
+    private Label sixthRankingUsername;
+
+    @FXML
+    private Label tenthRankingCoinNumber;
+
+    @FXML
+    private ImageView tenthRankingImage;
+
+    @FXML
+    private Label tenthRankingUsername;
+
+    @FXML
+    private Label thirdRankingCoinNumber;
+
+    @FXML
+    private ImageView thirdRankingImage;
+
+    @FXML
+    private Label thirdRankingUsername;
+
+
+
+    @FXML
+    private Label branch10Number;
 
     private List<Post> posts;
+
+    private WholeUsers users = new WholeUsers();
 
     public void setUserNameLabel ()
     {
@@ -59,6 +185,62 @@ public class MainMenuController implements Initializable {
         coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
 
+    private ArrayList<User> firstTen = new ArrayList<User>();
+
+    public void findFirstTen()
+    {
+        for ( int i = 0; i <= users.getUsers().size() - 1; i++)
+        {
+            for ( int j = 0; j < users.getUsers().size() - i - 1; j++)
+            {
+                if ( users.getUsers().get(j).getUserCoin() > users.getUsers().get(j+1).getUserCoin())
+                {
+                    int temp = users.getUsers().get(j).getUserCoin();
+                    users.getUsers().get(j).setUserCoin(users.getUsers().get(j+1).getUserCoin());
+                    users.getUsers().get(j+1).setUserCoin(temp);
+                }
+            }
+        }
+
+        for ( int i = 0; i < 10; i++)
+        {
+            firstTen.add(users.getUsers().get(i));
+        }
+    }
+
+    public void initilizeRankingTable( ArrayList<User> firstTen )
+    {
+        firstRankingUserName.setText(firstTen.get(0).getUserName());
+        firstRankingCoinNumber.setText(firstTen.get(0).getUserCoin() + "");
+
+        secondRankingUserName.setText(firstTen.get(1).getUserName());
+        secondRankingCoinNumber.setText(firstTen.get(1).getUserCoin() + "");
+
+        thirdRankingUsername.setText(firstTen.get(2).getUserName());
+        thirdRankingCoinNumber.setText(firstTen.get(2).getUserCoin() + "");
+
+        fourthRankingUsername.setText(firstTen.get(3).getUserName());
+        fourthRankingCoinNumber.setText(firstTen.get(3).getUserCoin() + "");
+
+        fifthRankingUserName.setText(firstTen.get(4).getUserName());
+        fifthRankingCoinNumber.setText(firstTen.get(4).getUserCoin() + "");
+
+        sixthRankingUsername.setText(firstTen.get(5).getUserName());
+        sixthRankingCoinNumber.setText(firstTen.get(5).getUserCoin() + "");
+
+        seventhRankingUsername.setText(firstTen.get(6).getUserName());
+        seventhRankingCoinNumber.setText(firstTen.get(6).getUserCoin() + "");
+
+        eightRankingUsername.setText(firstTen.get(7).getUserName());
+        eightRankingCoinNumber.setText(firstTen.get(7).getUserCoin() + "");
+
+        ninthRankingUsername.setText(firstTen.get(8).getUserName());
+        ninthRankingCoinNumber.setText(firstTen.get(8).getUserCoin() + "");
+
+        tenthRankingUsername.setText(firstTen.get(9).getUserName());
+        tenthRankingCoinNumber.setText(firstTen.get(9).getUserCoin() + "");
+    }
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUserNameLabel();
@@ -67,6 +249,7 @@ public class MainMenuController implements Initializable {
         newUser.setUserName(LoginPageController.user.getUserName());
         newUser.setUserCoin(LoginPageController.user.getUserCoin());
         newUser.setUserId(LoginPageController.user.getUserId());
+        initilizeRankingTable( firstTen);
         posts = new ArrayList<>(posts());
 
         int columns = 0;
@@ -80,6 +263,7 @@ public class MainMenuController implements Initializable {
                 VBox box = fxmlloader.load();
                 PostController postController = fxmlloader.getController();
                 postController.setData(posts.get(i));
+
                 if (columns == 1)
                 {
                     columns = 0;

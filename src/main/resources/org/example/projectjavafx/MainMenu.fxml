@@ -72,141 +72,171 @@
             <Label text="Branch" />
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch1Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch2Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch3Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch4Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch5Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch6Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch7Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch8Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch9Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="85.0" text="#branch name">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: white;" text="#BranchName">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
-                  </Label>
-                  <Label text="question number" textFill="#868686">
+                  </Button>
+                  <Label fx:id="branch10Number" text="question number" textFill="#868686">
                      <font>
                         <Font size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </Label>
                </children>
             </VBox>
@@ -237,12 +267,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="1." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="FirstRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="firstRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -254,7 +284,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="firstRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -269,12 +299,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="2." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="SecondRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="secondRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -286,7 +316,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="secondRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -301,12 +331,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="3." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="thirdRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="thirdRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -318,7 +348,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="thirdRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -333,12 +363,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="4." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="fourthRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="fourthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -350,7 +380,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="fourthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -365,12 +395,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="5." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="fifthRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="fifthRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -382,7 +412,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="fifthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -397,12 +427,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="6." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="sixthRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="sixthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -414,7 +444,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="sixthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -429,12 +459,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="7." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="seventhRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="seventhRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -446,7 +476,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="seventhRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -461,12 +491,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="8." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="eightRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="eightRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -478,7 +508,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="eightRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -493,12 +523,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="9." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ninthRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="ninthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -510,7 +540,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="ninthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -525,12 +555,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="10." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="tenthRankingImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="tenthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -542,7 +572,7 @@
                               <Image url="@icons/download.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="tenthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
