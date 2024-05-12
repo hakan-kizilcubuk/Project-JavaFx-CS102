@@ -210,6 +210,8 @@ public class MainMenuController implements Initializable {
 
     public void initilizeRankingTable( ArrayList<User> firstTen )
     {
+        findFirstTen();
+
         firstRankingUserName.setText(firstTen.get(0).getUserName());
         firstRankingCoinNumber.setText(firstTen.get(0).getUserCoin() + "");
 
