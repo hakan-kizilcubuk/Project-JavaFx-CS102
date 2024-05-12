@@ -9,7 +9,7 @@ What is Andromeda? , An array of radio telescopes, A bacteria that can cause dea
 How many pairs of chromosomes are in the genome of a typical person? , 1, 23, 88, 7921, b
 What is the largest moon in the Solar System? , The Earth's Moon, Europa, Ganymede, Pluto, c
 What element do organic compounds contain? , Carbon, Hydrogen, Nitrogen, Oxygen, a
-What has been the primary cause of the increase in the temperature of the Earth's atmosphere in recent decades? , Emission of carbon dioxide from the burning of fossil fuels, Increased brightness of the sun, Perturbations in the Earth's orbit, Volcanic activity, a
+What has been the primary cause of the increase in the temperature of atmosphere of  the Earth in recent decades? , Emission of carbon dioxide from the burning of fossil fuels, Increased brightness of the sun, Perturbations in the Earth's orbit, Volcanic activity, a
 What is the coldest possible temperature? , -40 °C, −273.15 °C, About -3.5 million °C, There is no limit, b
 What causes the sound of approaching objects to be at a higher pitch than receding objects? , Butterfly effect, Coriolis effect, Doppler effect, Greenhouse effect, c
 Where is the asteroid belt? , Between Earth and the Moon, Between Mars and Jupiter, Beyond Neptune, Scattered evenly throughout the Solar System, b
