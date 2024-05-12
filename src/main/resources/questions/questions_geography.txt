@@ -1,4 +1,4 @@
-Which country's borders does the Amazon River not cross? , Colombia, Peru, Brazil, Argentina, a
+Which countrys borders does the Amazon River not cross? , Colombia, Peru, Brazil, Argentina, a
 Which one is not a South American country? , Chile, New Zealand, Argentina, Peru, b
 Where on Earth are the durations of day and night equal throughout the year? , Equator, North Pole, South Pole, Tropics, a
 Which one is not a country in the Asia-Pacific region? , Philippines, Singapore, South Korea, Mozambique, d
@@ -7,7 +7,7 @@ Which one is not a river found in Asia? , Ganges, Tigris, Nile, Siberia, d
 Which of these U.S. states does NOT border Canada? , Alaska, Indiana, Maine, Minnesota, b
 Which of these countries was NOT a part of the Soviet Union? , Belarus, Georgia, Poland, Ukraine, c
 Which of these cities is NOT a national capital? , Bangkok, Cairo, Prague, Sydney, d
-Which of these cities DOESN'T border the Mediterranean Sea? , Alexandria, Barcelona, Lisbon, Monaco, c
+Which of these cities DOES NOT border the Mediterranean Sea? , Alexandria, Barcelona, Lisbon, Monaco, c
 Which of these countries was NEVER part of the British Empire? , Ireland, Kenya, New Zealand, Thailand, d
 Which of these countries has the largest population? , Iran, Germany, Brazil, Russia, c
 Which of these mountain ranges has the highest maximum elevation? , Rockies, Andes, Urals, Alps, b
