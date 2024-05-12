@@ -87,8 +87,7 @@ public class AddQuestionController implements Initializable {
 
     @FXML
     public void goBackButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) goBackButton.getScene().getWindow();
-        stage.close();
+
     }
 
     public void addQuestionToBranch(){
