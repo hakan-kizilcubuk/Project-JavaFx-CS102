@@ -1,7 +1,7 @@
 What is the longest that an elephant has ever lived?, 17 years, 49 years, 86 years, 142 years, d
 How many rings are on the Olympic flag?, None, 4, 5, 7, c
 How did Spider-Man get his powers?, Bitten by a radioactive spider, Born with them, Military experiment gone awry, Woke up with them after a strange dream, a
-In darts, what's the most points you can score with a single throw?, 20, 50, 60, 100, d
+In darts, whats the most points you can score with a single throw?, 20, 50, 60, 100, d
 Which of these animals does NOT appear in the Chinese zodiac?, Bear, Dog, Dragon, Rabbit, a
 How many holes are on a standard bowling ball?, 2, 3, 5, 10, c
 What are the main colors on the flag of Spain?, Black and yellow, Blue and white, Green and white, Red and yellow, d
@@ -11,7 +11,7 @@ Who killed Greedo?, Hannibal Lecter, Han Solo, Hermione Granger, Hercules, b
 What is taxidermy?, Another word for tax evasion, Classification of species into categories, The art of stuffing animal remains for display, The artistic trimming of hedges, c
 Where would you be most likely to see an epitaph?, At the bottom of a page, At a zoo, On a boat, On a tombstone, d
 What famous book did Marie Kondo write?, The Amazing Art of Going to the Bathroom, Eating Cheese: Why You Should Never Do It, The Life-Changing Magic of Tidying Up, The Simple Act of Making Breakfast, c
-What is the title of the rock song that starts "Jeremiah was a bullfrog"?, I Can't Go For That (No Can Do), Joy to the World, Sympathy for the Devil, Whole Lotta Love, b
+What is the title of the rock song that starts "Jeremiah was a bullfrog"?, I Cant Go For That (No Can Do), Joy to the World, Sympathy for the Devil, Whole Lotta Love, b
 Who is Jamie Oliver?, A celebrity chef, A former member of the boy band "One Direction", A Shakespearean actor, An underwear model, a
 What is Times New Roman?, A font, A mathematical function, A newspaper, A religious movement, a
 Which of the following is a portmanteau?, A man, a plan, a canal. Panama!, Brunch, Jumbo shrimp, Flamingo dancing, b
