@@ -7,9 +7,9 @@ public class Question
 {
     protected String questionId;
     protected String content;
-    protected User creator;
+    protected String creatorOfQuestion;
     protected String mediaUrl;
-    protected Branch branch;
+    protected String branch;
     protected int difficultyLevel;
     private List<String> options;
     private String correctAnswer;
@@ -18,16 +18,20 @@ public class Question
     private int time;
     private int ratioOfCorrectAnswer;
     private int answerCount;
+    protected String wrongAnswerNo1;
+    protected String wrongAnswerNo2;
+    protected String wrongAnswerNo3;
+    protected String correctAnswerNo1;
 
-    public Question()
+    public Question(String username, String wronganswer1, String wronganswer2, String wronganswer3, String correctAnswer, String branch, String question)
     {
-        options = new ArrayList<>();
-        //correctAnswer = "";
-        jokerCallAFriend = true;
-        jokerFiftyFifty = true;
-        time = 20;
-        ratioOfCorrectAnswer = 0;
-        answerCount = 0;
+        this.questionId = username;
+        this.wrongAnswerNo1 = wronganswer1;
+        this.wrongAnswerNo2 = wronganswer2;
+        this.wrongAnswerNo3 = wronganswer3;
+        this.correctAnswer = correctAnswer;
+        this.branch = branch;
+        this.content = question;
     }
 
     public void updateContent(String content)

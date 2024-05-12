@@ -50,15 +50,11 @@ public class PostController extends Application {
     DatabaseConnection connectDatabaseNow = new DatabaseConnection();
     Connection connectDatabase = connectDatabaseNow.getConnection();
 
-    public void setData( Post post) {
+    public void setData(Post post) {
 
-        post.setProfilePicSrc( "");
-        post.setUsername( "");
-        post.setMediaSrc( "");
-        post.setBranch( "");
-        post.setQuestion( "");
-        post.setAnswers( 0);
-        post.setChallenging( 0);
+        username.setText(post.getUsername());
+        question.setText(post.getQuestion());
+        branch.setText(post.getBranch());
 
     }
 }

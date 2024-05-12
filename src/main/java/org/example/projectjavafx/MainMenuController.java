@@ -18,10 +18,7 @@ import java.awt.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -233,23 +230,38 @@ public class MainMenuController implements Initializable {
         int questionNo = findNoOfQuestions();
         List<Post> posts = new ArrayList<>();
 
-        for( int i = 1; i <= questionNo; i++ )
-        {
-            Post post = new Post();
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            Connection connection = databaseConnection.getConnection();
+            String query = "SELECT username, branch, question FROM question";
 
-            post.setProfilePicSrc( "");
-            post.setUsername( "");
-            post.setMediaSrc( "");
-            post.setBranch( "");
-            post.setQuestion( "");
-            post.setAnswers( 0);
-            post.setChallenging( 0);
+            try {
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
 
-            posts.add(post);
-        }
+                while (resultSet.next()) {
+                    Post post = new Post();
 
+                    String username = resultSet.getString("username");
+                    String branch = resultSet.getString("branch");
+                    String question = resultSet.getString("question");
+
+                    post.setProfilePicSrc( "");
+                    post.setUsername(username);
+                    post.setMediaSrc( "");
+                    post.setBranch(branch);
+                    post.setQuestion(question);
+                    post.setAnswers( 0);
+                    post.setChallenging( 0);
+
+                    posts.add(post);
+                }
+            }catch(Exception e)
+            {
+                e.printStackTrace();
+            }
         return posts;
     }
+
 
     public int findNoOfQuestions()
     {
@@ -271,6 +283,8 @@ public class MainMenuController implements Initializable {
         }
 
     }
+
+
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
         try {
