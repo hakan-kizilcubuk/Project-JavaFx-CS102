@@ -147,7 +147,7 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void deleteButtonOnAction(ActionEvent event) {
-
+        deleteAccount();
     }
 
     @FXML
@@ -232,6 +232,26 @@ public class UserProfileController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public void deleteAccount()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String username = usernameLabel.getText();
+        String query = "DELETE FROM userinfo WHERE username = ?";
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.executeUpdate();
+            System.exit(0);
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUsernameLabel();
