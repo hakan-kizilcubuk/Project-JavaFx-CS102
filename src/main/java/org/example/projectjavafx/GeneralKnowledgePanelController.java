@@ -55,7 +55,7 @@ public class GeneralKnowledgePanelController implements Initializable {
         int noOfQuestions = findNoOfQuestionsFromGeneralKnowledge();
         Random rand = new Random();
 
-        int randomNoInRange = rand.nextInt(noOfQuestions);
+        int randomNoInRange = 1 + rand.nextInt(noOfQuestions);
         try {
             chooseQuestionFromGeneralKnowledge(randomNoInRange);
         } catch (SQLException e) {
@@ -111,13 +111,13 @@ public class GeneralKnowledgePanelController implements Initializable {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
-        String query = "SELECT COUNT(*) AS row_count FROM question WHERE branch = 'General Knowledge'";
+        String query = "SELECT COUNT(*) AS row_count FROM generalknowledgequestions";
         try {
             Statement statement = connectDatabase.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             if (resultSet.next()) {
-                int count = resultSet.getInt("row_count");
+                int count = resultSet.getInt(1);
                 return count;
             } else {
                 return 0;
@@ -131,7 +131,7 @@ public class GeneralKnowledgePanelController implements Initializable {
 
     public void chooseQuestionFromGeneralKnowledge(int indexOfQuestion) throws SQLException {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
-        String query = "SELECT username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question FROM question WHERE idquestion = ?";
+        String query = "SELECT username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question FROM generalknowledgequestions WHERE idgeneralknowledgequestions = ?";
 
         try (Connection connection = connectDatabaseNow.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {

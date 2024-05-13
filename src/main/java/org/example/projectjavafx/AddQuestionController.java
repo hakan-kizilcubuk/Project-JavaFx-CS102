@@ -95,6 +95,20 @@ public class AddQuestionController implements Initializable {
         String wrongAnswer3 = choice4TextField.getText();
         String authorOfQuestion = usernameLabel.getText();
 
+        if (branch.equals("General Knowledge")) {
+            String insert = "INSERT INTO generalknowledgequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insertTo = insert + insert2;
+
+            try {
+                Statement statement = connectDatabase.createStatement();
+                statement.executeUpdate(insertTo);
+                questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
         String insertFields = "INSERT INTO question (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, branch, question, noOfAnswers) VALUES ('";
         String insertValues = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + branch + "','" + question + "', '0')";
         String insertToRegister = insertFields + insertValues;
@@ -102,7 +116,6 @@ public class AddQuestionController implements Initializable {
         try {
             Statement statement = connectDatabase.createStatement();
             statement.executeUpdate(insertToRegister);
-            questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
         }catch (Exception e){
             e.printStackTrace();
         }
