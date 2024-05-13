@@ -15,78 +15,76 @@ public class User {
     private int userRank;
 
 
-    public User(String user_name,String id, String password,String email, int userCoin)
-    {
-        this.userPassword= password;
+    public User(String user_name, String id, String password, String email, int userCoin) {
+        this.userPassword = password;
         this.userId = id;
-        this.userName= user_name;
-        this.userEmail= email;
-        this.userCoin= userCoin;
+        this.userName = user_name;
+        this.userEmail = email;
+        this.userCoin = userCoin;
 
     }
 
-    public void changeProfilePicture(String picturePath){
+    public void changeProfilePicture(String picturePath) {
 
 
     }
-    public void addFriend(User user){
+
+    public void addFriend(User user) {
 
         friends.add(user);
     }
 
-    public void removeFriend(User user){
+    public void removeFriend(User user) {
 
         friends.remove(user);
     }
 
-    public void saveQuestion(Question question){
+    public void saveQuestion(Question question) {
 
         savedQuestions.add(question);
     }
 
     public ArrayList<User> getFriends() {
-    return friends;
+        return friends;
     }
 
-    public String getUserName()
-    {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName){
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public void setUserPassword(String userPassword){
+    public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
 
-    public void setUserId(String id){
+    public void setUserId(String id) {
         this.userId = id;
     }
 
-    public void setUserEmail(String email)
-    {
+    public void setUserEmail(String email) {
         this.userEmail = email;
     }
 
-    public int getUserCoin(){
+    public int getUserCoin() {
         return this.userCoin;
     }
 
-    public void setUserCoin(int userCoin){
+    public void setUserCoin(int userCoin) {
         this.userCoin = userCoin;
     }
 
-    public String getUserEmail(){
+    public String getUserEmail() {
         return this.userEmail;
     }
 
-    public String getUserId(){
+    public String getUserId() {
         return this.userId;
     }
 
-    public String getUserPassword(){
+    public String getUserPassword() {
         return this.userPassword;
     }
 }
