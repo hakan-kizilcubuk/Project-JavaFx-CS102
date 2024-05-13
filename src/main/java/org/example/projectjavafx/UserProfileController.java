@@ -10,6 +10,9 @@ import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class UserProfileController implements Initializable {
@@ -127,7 +130,7 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void changeEmailButtonOnAction(ActionEvent event) {
-
+        changePassword();
     }
 
     @FXML
@@ -148,6 +151,31 @@ public class UserProfileController implements Initializable {
     @FXML
     public void savedButtonOnAction(ActionEvent event) {
 
+    }
+
+    public void changePassword()
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connectDatabase = databaseConnection.getConnection();
+
+        String newPassword = emailTextField.getText();
+        String oldPassword = currentEmailLabel.getText();
+        String username = usernameLabel.getText();
+
+        String query = "UPDATE userinfo SET password = ? WHERE username = ?";
+
+        try
+        {
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, newPassword);
+            preparedStatement.setString(2, username);
+            preparedStatement.executeUpdate();
+
+            currentEmailLabel.setText("Current Password" + emailTextField.getText());
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
