@@ -1,13 +1,17 @@
 package org.example.projectjavafx;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -157,7 +161,14 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void savedButtonOnAction(ActionEvent event) {
-
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("SavedQuestions.fxml")));
+            Stage savedQuestionsStage = new Stage();
+            savedQuestionsStage.setScene(new Scene(rootAnother, 720, 512));
+            savedQuestionsStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void changePassword()
