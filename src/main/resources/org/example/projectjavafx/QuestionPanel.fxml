@@ -62,11 +62,11 @@
       </HBox>
       <HBox alignment="CENTER" layoutY="72.0" prefHeight="438.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: white;">
          <children>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" spacing="10.0">
                <children>
-                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@download-3.png" />
+                        <Image url="@icons/percent-50.png" />
                      </image>
                   </ImageView>
                   <VBox spacing="5.0">
@@ -133,11 +133,11 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </padding>
             </VBox>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" spacing="10.0">
                <children>
-                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@download-5.png" />
+                        <Image url="@icons/phone-call%20(1).png" />
                      </image>
                   </ImageView>
                   <VBox spacing="5.0">
