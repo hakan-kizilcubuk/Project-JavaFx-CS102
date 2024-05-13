@@ -24,9 +24,8 @@ public class User {
 
     }
 
-    public void changeProfilePicture(String picturePath) {
-
-
+    public ArrayList<User> getFriends() {
+        return friends;
     }
 
     public void addFriend(User user) {
@@ -42,10 +41,6 @@ public class User {
     public void saveQuestion(Question question) {
 
         savedQuestions.add(question);
-    }
-
-    public ArrayList<User> getFriends() {
-        return friends;
     }
 
     public String getUserName() {
