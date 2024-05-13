@@ -137,7 +137,7 @@
                <children>
                   <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/phone-call%20(1).png" />
+                        <Image url="@icons/phone-call (1).png" />
                      </image>
                   </ImageView>
                   <VBox spacing="5.0">

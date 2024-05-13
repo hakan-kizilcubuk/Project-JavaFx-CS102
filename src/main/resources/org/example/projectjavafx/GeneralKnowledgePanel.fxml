@@ -19,7 +19,7 @@
                <children>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/avatar%20(5).png" />
+                        <Image url="@icons/avatar (5).png" />
                      </image>
                   </ImageView>
                   <Label text="username">
