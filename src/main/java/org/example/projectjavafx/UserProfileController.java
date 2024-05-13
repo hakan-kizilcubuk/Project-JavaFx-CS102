@@ -207,7 +207,7 @@ public class UserProfileController implements Initializable {
         String mySQL = "UPDATE userinfo SET username = ? WHERE username = ?";
 
         try {
-            PreparedStatement updateUsername = updateDatabaseConnection.prepareStatement(insertFields);
+            PreparedStatement updateUsername = updateDatabaseConnection.prepareStatement(mySQL);
             updateUsername.setString(1, newUsername);
             updateUsername.setString(2, oldUsername);
             updateUsername.executeUpdate();

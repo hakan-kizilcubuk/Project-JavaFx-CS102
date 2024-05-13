@@ -1,6 +1,8 @@
 package org.example.projectjavafx;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -11,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class PostController extends Application {
 
@@ -38,6 +41,9 @@ public class PostController extends Application {
     @FXML
     private Label username;
 
+    @FXML
+    private Button savedButton;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -56,5 +62,31 @@ public class PostController extends Application {
         question.setText(post.getQuestion());
         branch.setText(post.getBranch());
         answers.setText(post.getAnswers() + "");
+    }
+
+    @FXML
+    public void savedButtonOnAction(ActionEvent event) {
+        saveQuestion();
+    }
+
+    public void saveQuestion(){
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String contentOfQuestion = question.getText();
+        String branchOfQuestion = branch.getText();
+        String authorOfQuestion = username.getText();
+        int noOfAnswers = Integer.parseInt(answers.getText());
+
+        String insertFields = "INSERT INTO savedquestions (username, branch, question, noOfAnswers) VALUES ('";
+        String insertValues = authorOfQuestion + "','" + branchOfQuestion + "','" + contentOfQuestion + "','" + noOfAnswers + "')";
+        String insertToRegister = insertFields + insertValues;
+
+        try {
+            Statement statement = connectDatabase.createStatement();
+            statement.executeUpdate(insertToRegister);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
