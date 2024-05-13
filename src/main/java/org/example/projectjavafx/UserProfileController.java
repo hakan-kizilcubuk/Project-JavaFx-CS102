@@ -142,6 +142,7 @@ public class UserProfileController implements Initializable {
     @FXML
     public void changeUsernameButtonOnAction(ActionEvent event) {
         changeUsername();
+        changeUsernameInQuestionTable();
     }
 
     @FXML
@@ -190,7 +191,7 @@ public class UserProfileController implements Initializable {
         DatabaseConnection database = new DatabaseConnection();
         Connection connectDatabase = database.getConnection();
 
-        String newUsername = usernameTextField.getText();;
+        String newUsername = usernameTextField.getText();
         String username = usernameLabel.getText();
 
         String query = "UPDATE userinfo SET username = ? WHERE username = ?";
@@ -210,6 +211,27 @@ public class UserProfileController implements Initializable {
         }
     }
 
+    public void changeUsernameInQuestionTable()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String newUsername = usernameTextField.getText();
+        String username = currentUsernameLabel.getText();
+
+        String query = "UPDATE question SET username = ? WHERE username = ?";
+
+        try
+        {
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, newUsername);
+            preparedStatement.setString(2, username);
+            preparedStatement.executeUpdate();
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setUsernameLabel();
