@@ -20,6 +20,12 @@ public class UserProfileController implements Initializable {
     private User user;
 
     @FXML
+    private Label succesfullyChangedLabelPassword;
+
+    @FXML
+    private Label succesfullyChangedLabelUsername;
+
+    @FXML
     private Button addFriendButton;
 
     @FXML
@@ -135,7 +141,7 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void changeUsernameButtonOnAction(ActionEvent event) {
-
+        changeUsername();
     }
 
     @FXML
@@ -171,7 +177,33 @@ public class UserProfileController implements Initializable {
             preparedStatement.setString(2, username);
             preparedStatement.executeUpdate();
 
-            currentEmailLabel.setText("Current Password" + emailTextField.getText());
+            currentEmailLabel.setText("Current Password: " + emailTextField.getText());
+            succesfullyChangedLabelPassword.setText("Succesfully Changed!");
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeUsername()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String newUsername = usernameTextField.getText();;
+        String username = usernameLabel.getText();
+
+        String query = "UPDATE userinfo SET username = ? WHERE username = ?";
+
+        try
+        {
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, newUsername);
+            preparedStatement.setString(2, username);
+            preparedStatement.executeUpdate();
+
+            currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
+            succesfullyChangedLabelUsername.setText("Succesfully Changed!");
         }catch (Exception e)
         {
             e.printStackTrace();
