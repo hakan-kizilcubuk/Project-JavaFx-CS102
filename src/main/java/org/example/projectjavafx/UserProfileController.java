@@ -20,6 +20,12 @@ public class UserProfileController implements Initializable {
     private User user;
 
     @FXML
+    private Label succesfullyChangedLabelPassword;
+
+    @FXML
+    private Label succesfullyChangedLabelUsername;
+
+    @FXML
     private Button addFriendButton;
 
     @FXML
@@ -135,12 +141,13 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void changeUsernameButtonOnAction(ActionEvent event) {
-
+        changeUsername();
+        changeUsernameInQuestionTable();
     }
 
     @FXML
     public void deleteButtonOnAction(ActionEvent event) {
-
+        deleteAccount();
     }
 
     @FXML
@@ -171,7 +178,74 @@ public class UserProfileController implements Initializable {
             preparedStatement.setString(2, username);
             preparedStatement.executeUpdate();
 
-            currentEmailLabel.setText("Current Password" + emailTextField.getText());
+            currentEmailLabel.setText("Current Password: " + emailTextField.getText());
+            succesfullyChangedLabelPassword.setText("Succesfully Changed!");
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeUsername()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String newUsername = usernameTextField.getText();
+        String username = usernameLabel.getText();
+
+        String query = "UPDATE userinfo SET username = ? WHERE username = ?";
+
+        try
+        {
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, newUsername);
+            preparedStatement.setString(2, username);
+            preparedStatement.executeUpdate();
+
+            currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
+            succesfullyChangedLabelUsername.setText("Succesfully Changed!");
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeUsernameInQuestionTable()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String newUsername = usernameTextField.getText();
+        String username = currentUsernameLabel.getText();
+
+        String query = "UPDATE question SET username = ? WHERE username = ?";
+
+        try
+        {
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, newUsername);
+            preparedStatement.setString(2, username);
+            preparedStatement.executeUpdate();
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteAccount()
+    {
+        DatabaseConnection database = new DatabaseConnection();
+        Connection connectDatabase = database.getConnection();
+
+        String username = usernameLabel.getText();
+        String query = "DELETE FROM userinfo WHERE username = ?";
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.executeUpdate();
+            System.exit(0);
         }catch (Exception e)
         {
             e.printStackTrace();
