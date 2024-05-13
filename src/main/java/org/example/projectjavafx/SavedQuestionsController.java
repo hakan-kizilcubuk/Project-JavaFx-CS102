@@ -1,5 +1,6 @@
 package org.example.projectjavafx;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -58,7 +59,7 @@ public class SavedQuestionsController implements Initializable {
     {
         List<Post> savedPosts = new ArrayList<>();
 
-        for ( int i = 0; i < 100; i++) {
+        for ( int i = 0; i < 10; i++) {
             Post savedPost = new Post();
             savedPost.setQuestion("");
             savedPost.setAnswers(0);
@@ -72,4 +73,7 @@ public class SavedQuestionsController implements Initializable {
         return savedPosts;
     }
 
+    public void goBackButtonOnAction(ActionEvent actionEvent) {
+
+    }
 }
