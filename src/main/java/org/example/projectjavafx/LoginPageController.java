@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 
 public class LoginPageController {
 
-    protected static User user = new User("","","","",0);
+    protected static User user = new User("", "", "", "", 0);
 
     @FXML
     private TextField emailusernameTextField;
@@ -130,14 +130,13 @@ public class LoginPageController {
         }
     }
 
-    public void mainMenuOpen()
-    {
+    public void mainMenuOpen() {
         try {
             Parent root = FXMLLoader.load((getClass().getResource("MainMenu.fxml")));
             Stage mainMenuStage = new Stage();
             mainMenuStage.setScene(new Scene(root, 720, 512));
             mainMenuStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

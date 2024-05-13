@@ -95,19 +95,19 @@ public class UserProfileController implements Initializable {
     @FXML
     private TextField usernameTextField;
 
-    public void setPasswordLabel(){
+    public void setPasswordLabel() {
         currentEmailLabel.setText("Current password: " + LoginPageController.user.getUserPassword());
     }
 
-    public void setCurrentUsernameLabel(){
+    public void setCurrentUsernameLabel() {
         currentUsernameLabel.setText("Current username: " + LoginPageController.user.getUserName());
     }
 
-    public void setUsernameLabel(){
+    public void setUsernameLabel() {
         usernameLabel.setText(LoginPageController.user.getUserName());
     }
 
-    public void setCoinLabel(){
+    public void setCoinLabel() {
         coinLabel.setText(LoginPageController.user.getUserCoin() + "");
     }
 
@@ -166,13 +166,12 @@ public class UserProfileController implements Initializable {
             Stage savedQuestionsStage = new Stage();
             savedQuestionsStage.setScene(new Scene(rootAnother, 720, 512));
             savedQuestionsStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void changePassword()
-    {
+    public void changePassword() {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connectDatabase = databaseConnection.getConnection();
 
@@ -182,8 +181,7 @@ public class UserProfileController implements Initializable {
 
         String query = "UPDATE userinfo SET password = ? WHERE username = ?";
 
-        try
-        {
+        try {
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, newPassword);
             preparedStatement.setString(2, username);
@@ -191,14 +189,12 @@ public class UserProfileController implements Initializable {
 
             currentEmailLabel.setText("Current Password: " + emailTextField.getText());
             succesfullyChangedLabelPassword.setText("Succesfully Changed!");
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void changeUsername()
-    {
+    public void changeUsername() {
         DatabaseConnection updateDatabase = new DatabaseConnection();
         Connection updateDatabaseConnection = updateDatabase.getConnection();
 
@@ -214,15 +210,13 @@ public class UserProfileController implements Initializable {
 
             currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
             succesfullyChangedLabelUsername.setText("Succesfully Changed!");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
-    public void changeUsernameInQuestionTable()
-    {
+    public void changeUsernameInQuestionTable() {
         DatabaseConnection database = new DatabaseConnection();
         Connection connectDatabase = database.getConnection();
 
@@ -231,33 +225,29 @@ public class UserProfileController implements Initializable {
 
         String query = "UPDATE question SET username = ? WHERE username = ?";
 
-        try
-        {
+        try {
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, newUsername);
             preparedStatement.setString(2, username);
             preparedStatement.executeUpdate();
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void deleteAccount()
-    {
+    public void deleteAccount() {
         DatabaseConnection database = new DatabaseConnection();
         Connection connectDatabase = database.getConnection();
 
         String username = usernameLabel.getText();
         String query = "DELETE FROM userinfo WHERE username = ?";
 
-        try{
+        try {
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, username);
             preparedStatement.executeUpdate();
             System.exit(0);
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

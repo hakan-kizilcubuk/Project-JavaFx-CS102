@@ -25,8 +25,7 @@ public class AvatarPageController {
     Image firstavatar = new Image(getClass().getResourceAsStream("/images/avatar (8).png"));
 
 
-    public void initialize()
-    {
+    public void initialize() {
         avatar = new ToggleGroup();
         avatar1.setToggleGroup(avatar);
         avatar2.setToggleGroup(avatar);
@@ -36,8 +35,7 @@ public class AvatarPageController {
         avatar6.setToggleGroup(avatar);
 
 
-
     }
 
 
-    }
+}
