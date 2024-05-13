@@ -199,27 +199,22 @@ public class UserProfileController implements Initializable {
 
     public void changeUsername()
     {
-        DatabaseConnection database = new DatabaseConnection();
-        Connection connectDatabase = database.getConnection();
+        DatabaseConnection updateDatabase = new DatabaseConnection();
+        Connection updateDatabaseConnection = updateDatabase.getConnection();
 
-        String newUsername = usernameTextField.getText();
-        String username = usernameLabel.getText();
+        String oldUsername = userNameText.getText();
+        String newUsername = userNameText.getText();
+        String insertFields = "UPDATE userinfo SET username = ? WHERE email = ?";
 
-        String query = "UPDATE userinfo SET username = ? WHERE username = ?";
-
-        try
-        {
-            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
-            preparedStatement.setString(1, newUsername);
-            preparedStatement.setString(2, username);
-            preparedStatement.executeUpdate();
-
-            currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
-            succesfullyChangedLabelUsername.setText("Succesfully Changed!");
-        }catch (Exception e)
-        {
+        try(PreparedStatement updateUsername = updateDatabaseConnection.prepareStatement(insertFields)) {
+            updateUsername.setString(1, newUsername);
+            updateUsername.setString(2, oldUsername);
+            updateUsername.executeUpdate();
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public void changeUsernameInQuestionTable()
