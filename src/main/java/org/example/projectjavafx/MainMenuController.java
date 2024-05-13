@@ -222,13 +222,20 @@ public class MainMenuController implements Initializable {
         coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
 
-    private ArrayList<User> firstTen = new ArrayList<User>();
+    private ArrayList<String> profileImages = new ArrayList<>();
 
-
-
-
+    public void setProfileImages( ArrayList<String> profileImages) {
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (3).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (4).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (5).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (6).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (7).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/avatar (8).png");
+        profileImages.add("src/main/resources/org/example/projectjavafx/pp.png");
+    }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setProfileImages(profileImages);
         setUserNameLabel();
         setCoinLabel();
         newUser.setUserEmail(LoginPageController.user.getUserEmail());

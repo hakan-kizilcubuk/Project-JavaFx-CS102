@@ -79,7 +79,7 @@
                                     <Image url="@star.png" />
                                  </image>
                               </ImageView>
-                              <Button mnemonicParsing="false" style="-fx-background-color: white;" text="10" underline="true" />
+                              <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: white;" text="10" underline="true" />
                            </children>
                            <padding>
                               <Insets left="5.0" right="5.0" />
