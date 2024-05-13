@@ -109,6 +109,34 @@ public class AddQuestionController implements Initializable {
             }
         }
 
+        else if (branch.equals("Geography")) {
+            String insert = "INSERT INTO geographyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insertTo = insert + insert2;
+
+            try {
+                Statement statement = connectDatabase.createStatement();
+                statement.executeUpdate(insertTo);
+                questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        else if (branch.equals("Sports")) {
+            String insert = "INSERT INTO sportsquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insertTo = insert + insert2;
+
+            try {
+                Statement statement = connectDatabase.createStatement();
+                statement.executeUpdate(insertTo);
+                questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
         String insertFields = "INSERT INTO question (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, branch, question, noOfAnswers) VALUES ('";
         String insertValues = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + branch + "','" + question + "', '0')";
         String insertToRegister = insertFields + insertValues;

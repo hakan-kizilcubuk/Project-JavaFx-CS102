@@ -55,8 +55,15 @@ public class MainMenuController implements Initializable {
     }
 
     @FXML
-    public void geographyQuestionsOnAction(ActionEvent event) {
-
+    public void geographyQuestionsButtonOnAction(ActionEvent event) {
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("GeographyQuestionPanel.fxml")));
+            Stage geographyPageStage = new Stage();
+            geographyPageStage.setScene(new Scene(rootAnother, 720, 512));
+            geographyPageStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -71,7 +78,14 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void sportsQuestionsOnAction(ActionEvent event) {
-
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("SportQuestionPanel.fxml")));
+            Stage geographyPageStage = new Stage();
+            geographyPageStage.setScene(new Scene(rootAnother, 720, 512));
+            geographyPageStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

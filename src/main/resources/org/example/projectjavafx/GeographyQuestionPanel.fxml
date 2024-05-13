@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.GeneralKnowledgePanelController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.GeographyQuestionPanelController">
    <children>
       <HBox alignment="CENTER" prefHeight="60.0" prefWidth="720.0" style="-fx-background-color: white;">
          <children>
@@ -22,7 +22,7 @@
                         <Image url="@icons/avatar (5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="usernameLabel" text="username">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -40,7 +40,7 @@
                         <Image url="@star.png" />
                      </image>
                   </ImageView>
-                  <Label text="coinNumber">
+                  <Label fx:id="coinNumberLabel" text="coinNumber">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
@@ -79,7 +79,7 @@
                                     <Image url="@star.png" />
                                  </image>
                               </ImageView>
-                              <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: white;" text="10" underline="true" />
+                              <Button fx:id="fiftyPercentButton" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fiftyPercentButtonOnAction" style="-fx-background-color: white;" text="10" underline="true" />
                            </children>
                            <padding>
                               <Insets left="5.0" right="5.0" />
@@ -119,10 +119,10 @@
                   </VBox>
                   <VBox prefWidth="100.0" spacing="10.0">
                      <children>
-                        <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
-                        <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
-                        <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
-                        <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
+                        <Button fx:id="wrongAnswer3Button" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#wrongAnswer3ButtonOnAction" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
+                        <Button fx:id="wrongAnswer2Button" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#wrongAnswer2ButtonOnAction" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
+                        <Button fx:id="wrongAnswer1Button" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#wrongAnswer1ButtonOnAction" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
+                        <Button fx:id="correctAnswerButton" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#correctAnswerButtonOnAction" prefHeight="40.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: gray; -fx-border-radius: 100; -fx-border-width: 2;" text="choice one" />
                      </children>
                      <padding>
                         <Insets top="10.0" />
@@ -150,7 +150,7 @@
                                     <Image url="@star.png" />
                                  </image>
                               </ImageView>
-                              <Button mnemonicParsing="false" style="-fx-background-color: white;" text="10" underline="true" />
+                              <Button fx:id="aiJokerButton" mnemonicParsing="false" onAction="#aiJokerButtonOnAction" style="-fx-background-color: white;" text="10" underline="true" />
                            </children>
                            <padding>
                               <Insets left="5.0" right="5.0" />

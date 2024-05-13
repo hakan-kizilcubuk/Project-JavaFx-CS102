@@ -106,7 +106,7 @@
             </VBox>
             <VBox prefWidth="100.0">
                <children>
-                  <Button fx:id="geographyQuestionsButton" mnemonicParsing="false" onAction="#geographyQuestionsOnAction" style="-fx-background-color: white;" text="#geography">
+                  <Button fx:id="geographyQuestionsButton" mnemonicParsing="false" onAction="#geographyQuestionsButtonOnAction" style="-fx-background-color: white;" text="#geography">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
