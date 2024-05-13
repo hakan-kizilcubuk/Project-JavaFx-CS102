@@ -70,31 +70,42 @@
                      <children>
                         <Label text="password" textFill="#797979" />
                         <Label fx:id="currentEmailLabel" text="Current password:" textFill="#797979" />
-                        <HBox alignment="CENTER" spacing="5.0">
+                        <VBox spacing="5.0">
                            <children>
-                              <TextField fx:id="emailTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
-                              <Button fx:id="changeEmailButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeEmailButtonOnAction" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font></Button>
+                              <Label text="successfully changed!" textFill="#4fbc43" />
+                              <HBox alignment="CENTER" spacing="5.0">
+                                 <children>
+                                    <TextField fx:id="emailTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                                    <Button fx:id="changeEmailButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeEmailButtonOnAction" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
-                        </HBox>
+                        </VBox>
                      </children>
                   </VBox>
                   <VBox prefHeight="50.0" prefWidth="100.0" spacing="5.0">
                      <children>
                         <Label text="username" textFill="#797979" />
                         <Label fx:id="currentUsernameLabel" text="Current username:" textFill="#797979" />
-                        <HBox alignment="CENTER" spacing="5.0">
+                        <VBox>
                            <children>
-                              <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
-                              <Button fx:id="changeUsernameButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeUsernameButtonOnAction" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font>
-                              </Button>
+                              <Label text="successfully  changed!" textFill="#4fbc43" />
+                              <HBox alignment="CENTER" spacing="5.0">
+                                 <children>
+                                    <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0186D1; -fx-border-width: 2; -fx-border-radius: 100;" />
+                                    <Button fx:id="changeUsernameButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeUsernameButtonOnAction" prefHeight="28.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186D1; -fx-border-width: 2;" text="change" textFill="#0186d1">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
-                        </HBox>
+                        </VBox>
                      </children>
                   </VBox>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
