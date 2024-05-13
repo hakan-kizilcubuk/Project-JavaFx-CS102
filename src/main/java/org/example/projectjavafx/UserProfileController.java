@@ -98,7 +98,6 @@ public class UserProfileController implements Initializable {
         coinLabel.setText(LoginPageController.user.getUserCoin() + "");
     }
 
-
     @FXML
     private ListView<?> addFriendList;
 
@@ -122,32 +121,32 @@ public class UserProfileController implements Initializable {
 
 
     @FXML
-    void addFriendButtonOnAction(ActionEvent event) {
+    public void addFriendButtonOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void changeEmailButtonOnAction(ActionEvent event) {
+    public void changeEmailButtonOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void changeUsernameButtonOnAction(ActionEvent event) {
+    public void changeUsernameButtonOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void deleteButtonOnAction(ActionEvent event) {
+    public void deleteButtonOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void logOutButtonOnAction(ActionEvent event) {
-
+    public void logOutButtonOnAction(ActionEvent event) {
+        System.exit(0);
     }
 
     @FXML
-    void savedButtonOnAction(ActionEvent event) {
+    public void savedButtonOnAction(ActionEvent event) {
 
     }
 
