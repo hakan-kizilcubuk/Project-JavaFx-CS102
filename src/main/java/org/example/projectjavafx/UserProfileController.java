@@ -202,16 +202,20 @@ public class UserProfileController implements Initializable {
         DatabaseConnection updateDatabase = new DatabaseConnection();
         Connection updateDatabaseConnection = updateDatabase.getConnection();
 
-        String oldUsername = usernameTextField.getText();
-        String newUsername = usernameLabel.getText();
-        String insertFields = "UPDATE userinfo SET username = ? WHERE email = ?";
+        String newUsername = usernameTextField.getText();
+        String oldUsername = usernameLabel.getText();
+        String insertFields = "UPDATE userinfo SET username = ? WHERE username = ?";
 
-        try(PreparedStatement updateUsername = updateDatabaseConnection.prepareStatement(insertFields)) {
+        try {
+            PreparedStatement updateUsername = updateDatabaseConnection.prepareStatement(insertFields);
             updateUsername.setString(1, newUsername);
             updateUsername.setString(2, oldUsername);
             updateUsername.executeUpdate();
+
+            currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
+            succesfullyChangedLabelUsername.setText("Succesfully Changed!");
         }
-        catch (SQLException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
 
