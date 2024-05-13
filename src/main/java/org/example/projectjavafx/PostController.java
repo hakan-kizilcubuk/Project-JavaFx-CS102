@@ -55,6 +55,6 @@ public class PostController extends Application {
         username.setText(post.getUsername());
         question.setText(post.getQuestion());
         branch.setText(post.getBranch());
-
+        answers.setText(post.getAnswers() + "");
     }
 }

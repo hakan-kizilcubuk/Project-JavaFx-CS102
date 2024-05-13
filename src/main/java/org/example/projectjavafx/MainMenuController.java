@@ -28,6 +28,46 @@ public class MainMenuController implements Initializable {
     protected static User newUser = LoginPageController.user;
 
     @FXML
+    private Button generalKnowledgeQuestionsButton;
+
+    @FXML
+    private Button geographyQuestionsButton;
+
+    @FXML
+    private Button historyQuestionButton;
+
+    @FXML
+    private Button scienceQuestionsButton;
+
+    @FXML
+    private Button sportsQuestionsButton;
+
+    @FXML
+    public void generalKnowledgeQuestionsOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void geographyQuestionsOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void historyQuestionsButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void scienceQuestionsButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void sportsQuestionsOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
     private Button userProfileButton;
 
     @FXML
@@ -232,7 +272,7 @@ public class MainMenuController implements Initializable {
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Connection connection = databaseConnection.getConnection();
-            String query = "SELECT username, branch, question FROM question";
+            String query = "SELECT username, branch, question, noOfAnswers FROM question";
 
             try {
                 Statement statement = connection.createStatement();
@@ -244,13 +284,14 @@ public class MainMenuController implements Initializable {
                     String username = resultSet.getString("username");
                     String branch = resultSet.getString("branch");
                     String question = resultSet.getString("question");
+                    int answerCount = resultSet.getInt("noOfAnswers");
 
                     post.setProfilePicSrc( "");
                     post.setUsername(username);
                     post.setMediaSrc( "");
                     post.setBranch(branch);
                     post.setQuestion(question);
-                    post.setAnswers( 0);
+                    post.setAnswers(answerCount);
                     post.setChallenging( 0);
 
                     posts.add(post);

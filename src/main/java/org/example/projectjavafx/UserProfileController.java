@@ -2,13 +2,12 @@ package org.example.projectjavafx;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.event.ActionEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -83,12 +82,80 @@ public class UserProfileController implements Initializable {
     @FXML
     private TextField usernameTextField;
 
-    public void setEmail(){
-        emailTextField.setText(LoginPageController.user.getUserEmail());
+    public void setPasswordLabel(){
+        currentEmailLabel.setText("Current password: " + LoginPageController.user.getUserPassword());
+    }
+
+    public void setCurrentUsernameLabel(){
+        currentUsernameLabel.setText("Current username: " + LoginPageController.user.getUserName());
+    }
+
+    public void setUsernameLabel(){
+        usernameLabel.setText(LoginPageController.user.getUserName());
+    }
+
+    public void setCoinLabel(){
+        coinLabel.setText(LoginPageController.user.getUserCoin() + "");
+    }
+
+
+    @FXML
+    private ListView<?> addFriendList;
+
+    @FXML
+    private Button changeEmailButton;
+
+    @FXML
+    private Button changeUsernameButton;
+
+    @FXML
+    private Label coinLabel;
+
+    @FXML
+    private Label currentEmailLabel;
+
+    @FXML
+    private Label currentUsernameLabel;
+
+    @FXML
+    private Label usernameLabel;
+
+
+    @FXML
+    void addFriendButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void changeEmailButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void changeUsernameButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void logOutButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void savedButtonOnAction(ActionEvent event) {
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        setUsernameLabel();
+        setCoinLabel();
+        setPasswordLabel();
+        setCurrentUsernameLabel();
     }
 }

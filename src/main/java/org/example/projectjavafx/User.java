@@ -20,8 +20,8 @@ public class User {
         this.userPassword= password;
         this.userId = id;
         this.userName= user_name;
-        this.userEmail=email;
-        this.userCoin=userCoin;
+        this.userEmail= email;
+        this.userCoin= userCoin;
 
     }
 
@@ -84,5 +84,9 @@ public class User {
 
     public String getUserId(){
         return this.userId;
+    }
+
+    public String getUserPassword(){
+        return this.userPassword;
     }
 }
