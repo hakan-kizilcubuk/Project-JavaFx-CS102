@@ -10,6 +10,9 @@ import javafx.scene.layout.VBox;
 import javafx.geometry.Insets;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -58,19 +61,41 @@ public class SavedQuestionsController implements Initializable {
     private List<Post> savedPosts()
     {
         List<Post> savedPosts = new ArrayList<>();
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        String query = "SELECT username, branch, question, noOfAnswers FROM savedquestions";
 
-        for ( int i = 0; i < 10; i++) {
-            Post savedPost = new Post();
-            savedPost.setQuestion("");
-            savedPost.setAnswers(0);
-            savedPost.setBranch("");
-            savedPost.setChallenging(0);
-            savedPost.setUsername("");
-            savedPost.setProfilePicSrc("");
-            savedPosts.add(savedPost);
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                Post post = new Post();
+
+                String username = resultSet.getString("username");
+                String branch = resultSet.getString("branch");
+                String question = resultSet.getString("question");
+                int answerCount = resultSet.getInt("noOfAnswers");
+
+                post.setProfilePicSrc( "");
+                post.setUsername(username);
+                post.setMediaSrc( "");
+                post.setBranch(branch);
+                post.setQuestion(question);
+                post.setAnswers(answerCount);
+                post.setChallenging( 0);
+
+                savedPosts.add(post);
+            }
+        }catch(Exception e)
+        {
+            e.printStackTrace();
         }
 
+
         return savedPosts;
+
+        
     }
 
     public void goBackButtonOnAction(ActionEvent actionEvent) {
