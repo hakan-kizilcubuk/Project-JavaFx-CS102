@@ -131,7 +131,7 @@ public class GeneralKnowledgePanelController implements Initializable {
 
     public void chooseQuestionFromGeneralKnowledge(int indexOfQuestion) throws SQLException {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
-        String query = "SELECT username, wronganswer1, wronganswer2, wronganswer3, correctanswer FROM question WHERE idquestion = ?";
+        String query = "SELECT username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question FROM question WHERE idquestion = ?";
 
         try (Connection connection = connectDatabaseNow.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -145,11 +145,12 @@ public class GeneralKnowledgePanelController implements Initializable {
                     wrongAnswer3Button.setText(resultSet.getString("wronganswer3"));
                     correctAnswerButton.setText(resultSet.getString("correctanswer"));
                     wrongAnswerButton.setText(resultSet.getString("wronganswer1"));
+                    question.setText(resultSet.getString("question"));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("SQLException: " + e.getMessage());
+            System.out.printf("SQLException" + e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
