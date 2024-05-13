@@ -73,11 +73,17 @@
             </Label>
             <ScrollPane prefHeight="426.0" prefWidth="720.0">
                <content>
-                  <GridPane fx:id="savedQuestionGrid" alignment="CENTER">
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="150.0" />
+                        <GridPane fx:id="savedQuestionGrid" alignment="CENTER">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <Pane prefHeight="200.0" prefWidth="150.0" />
+                     </children>
+                  </HBox>
                </content>
             </ScrollPane>
          </children>

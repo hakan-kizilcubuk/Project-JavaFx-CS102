@@ -95,11 +95,17 @@
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" BorderPane.alignment="CENTER">
          <content>
-            <GridPane fx:id="postGrid">
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
+            <HBox>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="40.0" />
+                  <GridPane fx:id="postGrid" alignment="CENTER">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Pane prefHeight="200.0" prefWidth="40.0" />
+               </children>
+            </HBox>
          </content>
       </ScrollPane>
    </center>
