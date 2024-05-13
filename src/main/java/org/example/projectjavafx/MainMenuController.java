@@ -44,7 +44,14 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void generalKnowledgeQuestionsOnAction(ActionEvent event) {
-
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("GeneralKnowledgePanel.fxml")));
+            Stage generalKnowledgePageStage = new Stage();
+            generalKnowledgePageStage.setScene(new Scene(rootAnother, 720, 512));
+            generalKnowledgePageStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

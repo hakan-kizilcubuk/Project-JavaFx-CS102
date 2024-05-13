@@ -5,9 +5,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Insets;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -23,14 +27,35 @@ public class SavedQuestionsController implements Initializable {
     private GridPane savedQuestionGrid;
     private List<Post> savedPosts;
 
+    @FXML
+    private Label usernameLabel;
+
+    @FXML
+    private Label coinNumberLabel;
+
+    @FXML
+    private Button goBackButton;
+
     int columns = 0;
     int rows = 1;
+
+    public void setCoinView()
+    {
+        coinNumberLabel.setText(LoginPageController.user.getUserCoin() + "");
+    }
+
+    public void setUsernameLabel()
+    {
+        usernameLabel.setText(LoginPageController.user.getUserName());
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
 
         int columns = 0;
         int rows = 1;
 
+        setCoinView();
+        setUsernameLabel();
         savedPosts = new ArrayList<>(savedPosts());
         try
         {
@@ -99,6 +124,7 @@ public class SavedQuestionsController implements Initializable {
     }
 
     public void goBackButtonOnAction(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) goBackButton.getScene().getWindow();
+        stage.close();
     }
 }

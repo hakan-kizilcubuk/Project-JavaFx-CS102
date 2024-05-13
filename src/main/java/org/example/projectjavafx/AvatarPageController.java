@@ -10,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class AvatarPageController {
-    @FXML
+   /* @FXML
     private Label welcomeText;
     @FXML
     private Button goBackButton;
@@ -71,7 +71,7 @@ public class AvatarPageController {
         else if (avatar4.isSelected()) {}
         else if (avatar5.isSelected()) {}
         else if (avatar6.isSelected()) {}
-    }
+    }*/
     
     }
 

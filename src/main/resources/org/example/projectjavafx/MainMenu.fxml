@@ -72,7 +72,7 @@
             <Label text="Branch" />
             <VBox prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#history">
+                  <Button fx:id="historyQuestionButton" mnemonicParsing="false" onAction="#historyQuestionsButtonOnAction" style="-fx-background-color: white;" text="#history">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -89,7 +89,7 @@
             </VBox>
             <VBox prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#sports">
+                  <Button fx:id="sportsQuestionsButton" mnemonicParsing="false" onAction="#sportsQuestionsOnAction" style="-fx-background-color: white;" text="#sports">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -106,7 +106,7 @@
             </VBox>
             <VBox prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#geography">
+                  <Button fx:id="geographyQuestionsButton" mnemonicParsing="false" onAction="#geographyQuestionsOnAction" style="-fx-background-color: white;" text="#geography">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -123,7 +123,7 @@
             </VBox>
             <VBox prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#science">
+                  <Button fx:id="scienceQuestionsButton" mnemonicParsing="false" onAction="#scienceQuestionsButtonOnAction" style="-fx-background-color: white;" text="#science">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -140,7 +140,7 @@
             </VBox>
             <VBox prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#generalKnowledge">
+                  <Button fx:id="generalKnowledgeQuestionsButton" mnemonicParsing="false" onAction="#generalKnowledgeQuestionsOnAction" style="-fx-background-color: white;" text="#generalKnowledge">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

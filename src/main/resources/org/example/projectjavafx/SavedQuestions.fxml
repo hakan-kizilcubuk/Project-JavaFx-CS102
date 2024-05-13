@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectjavafx.SavedQuestionsController">
    <children>
       <HBox alignment="CENTER" layoutX="1.0" layoutY="10.0" prefHeight="60.0" prefWidth="720.0" style="-fx-background-color: white;">
@@ -26,7 +25,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="usernameLabel" text="username">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -44,7 +43,7 @@
                         <Image url="@star.png" />
                      </image>
                   </ImageView>
-                  <Label text="coinNumber">
+                  <Label fx:id="coinNumberLabel" text="coinNumber">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>

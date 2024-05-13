@@ -31,9 +31,6 @@ import java.util.ResourceBundle;
 public class AddQuestionController implements Initializable {
 
     @FXML
-    private Button addQuestionButton;
-
-    @FXML
     private ChoiceBox<String> branchChoiceBox;
 
     @FXML
@@ -44,6 +41,9 @@ public class AddQuestionController implements Initializable {
 
     @FXML
     private TextField choice3TextField;
+
+    @FXML
+    private Button addingQuestionButton;
 
     @FXML
     private TextField choice4TextField;
@@ -74,16 +74,8 @@ public class AddQuestionController implements Initializable {
         branchChoiceBox.getItems().addAll(branch);
     }
 
-    @FXML
-    public void addQuestionButtonOnAction(ActionEvent event) {
-        if (!questionTextField.getText().isBlank() && !choice1TextField.getText().isBlank() && !choice2TextField.getText().isBlank() && !choice3TextField.getText().isBlank() && !choice4TextField.getText().isBlank() && !branchChoiceBox.getValue().isEmpty()) {
-            addQuestionToBranch();
-        }
 
-        else{
-            questionAddedLabel.setText("Some parts are missing! Fill all fields");
-        }
-    }
+
 
     @FXML
     public void goBackButtonOnAction(ActionEvent event) {
@@ -103,8 +95,8 @@ public class AddQuestionController implements Initializable {
         String wrongAnswer3 = choice4TextField.getText();
         String authorOfQuestion = usernameLabel.getText();
 
-        String insertFields = "INSERT INTO question (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, branch, question) VALUES ('";
-        String insertValues = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + branch + "','" + question + "')";
+        String insertFields = "INSERT INTO question (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, branch, question, noOfAnswers) VALUES ('";
+        String insertValues = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + branch + "','" + question + "', '0')";
         String insertToRegister = insertFields + insertValues;
 
         try {
@@ -113,6 +105,16 @@ public class AddQuestionController implements Initializable {
             questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
         }catch (Exception e){
             e.printStackTrace();
+        }
+    }
+
+    public void addingQuestionOnAction(ActionEvent actionEvent) {
+        if (!questionTextField.getText().isBlank() && !choice1TextField.getText().isBlank() && !choice2TextField.getText().isBlank() && !choice3TextField.getText().isBlank() && !choice4TextField.getText().isBlank() && !branchChoiceBox.getValue().isEmpty()) {
+            addQuestionToBranch();
+        }
+
+        else{
+            questionAddedLabel.setText("Some parts are missing! Fill all fields");
         }
     }
 }

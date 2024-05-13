@@ -87,12 +87,13 @@
                   <Insets left="10.0" />
                </padding>
             </HBox>
-            <Button fx:id="addQuestionButton" mnemonicParsing="false" onAction="#addQuestionButtonOnAction" prefHeight="37.0" prefWidth="402.0" style="-fx-background-color: #0186D1; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2; -fx-background-radius: 100;" text="add question" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font></Button>
          </children>
       </VBox>
       <Label fx:id="questionAddedLabel" layoutX="316.0" layoutY="481.0" textFill="#0186d1" />
+      <Button fx:id="addingQuestion" layoutX="160.0" layoutY="423.0" mnemonicParsing="false" onAction="#addingQuestionOnAction" prefHeight="37.0" prefWidth="402.0" style="-fx-background-color: #0186D1; -fx-border-color: #0186D1; -fx-border-radius: 100; -fx-border-width: 2; -fx-background-radius: 100;" text="add question" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
