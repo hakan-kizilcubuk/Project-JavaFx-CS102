@@ -70,19 +70,91 @@
       <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="435.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #F5F5F5;" BorderPane.alignment="CENTER">
          <children>
             <Label text="Branch" />
-            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <VBox prefWidth="100.0">
                <children>
-                  <Button fx:id="historyQuestionButton" mnemonicParsing="false" onAction="#historyQuestionsButtonOnAction" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: WHITE;" text="#History" />
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#History">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label text="answer number">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="128.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <VBox prefWidth="100.0">
                <children>
-                  <Button fx:id="scienceQuestionsButton" mnemonicParsing="false" onAction="#scienceQuestionsButtonOnAction" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: WHITE;" text="#Science" />
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#Social Sciences">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label text="answer number">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
-            <Button fx:id="generalKnowledgeQuestionsButton" mnemonicParsing="false" onAction="#generalKnowledgeQuestionsOnAction" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: WHITE;" text="#General Knowledge" />
-            <Button fx:id="geographyQuestionsButton" mnemonicParsing="false" onAction="#geographyQuestionsOnAction" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: WHITE;" text="#Geography" />
-            <Button fx:id="sportsQuestionsButton" mnemonicParsing="false" onAction="#sportsQuestionsOnAction" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: WHITE;" text="#Sports" />
+            <VBox prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#History">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label text="answer number">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#History">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label text="answer number">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="#History">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label text="answer number">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
          <BorderPane.margin>
             <Insets left="15.0" />
@@ -95,17 +167,11 @@
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" BorderPane.alignment="CENTER">
          <content>
-            <HBox>
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="40.0" />
-                  <GridPane fx:id="postGrid" alignment="CENTER">
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <Pane prefHeight="200.0" prefWidth="40.0" />
-               </children>
-            </HBox>
+            <GridPane fx:id="postGrid" alignment="CENTER">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
          </content>
       </ScrollPane>
    </center>
