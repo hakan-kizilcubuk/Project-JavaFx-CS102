@@ -140,17 +140,31 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="430.0" prefWidth="359.0" spacing="10.0">
                <children>
-                  <HBox alignment="CENTER">
+                  <VBox spacing="5.0">
                      <children>
-                        <Label minWidth="-Infinity" text="friends" textFill="#0186d1">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <Pane prefHeight="26.0" prefWidth="236.0" />
-                        <Button fx:id="addFriendButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#addFriendButtonOnAction" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #0186d1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add friend" textFill="#0186d1" />
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="51.0" text="friends:" textFill="#0186d1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="searchFriendBar" prefHeight="30.0" prefWidth="264.0" promptText="search friend" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186d1; -fx-border-width: 2;" />
+                        <HBox alignment="CENTER_RIGHT" spacing="5.0">
+                           <children>
+                              <Label fx:id="statusOfAddFriend" text="firend is added!" textFill="#1ecd44" />
+                              <Pane prefHeight="30.0" prefWidth="51.0" />
+                              <Button fx:id="addFriendButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#addFriendButtonOnAction" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #0186d1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add friend" textFill="#0186d1" />
+                              <Button fx:id="removeFriendButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeFriendButtonOnAction" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #cf0202; -fx-border-radius: 100; -fx-border-width: 2;" text="remove friend" textFill="#cf0202" />
+                           </children>
+                        </HBox>
                      </children>
-                  </HBox>
+                  </VBox>
                   <ListView fx:id="addFriendList" prefHeight="434.0" prefWidth="359.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 15;" />
                </children>
                <HBox.margin>

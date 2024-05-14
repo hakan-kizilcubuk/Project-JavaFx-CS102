@@ -16,12 +16,22 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class UserProfileController implements Initializable {
 
     private User user;
+
+    @FXML
+    private TextField searchFriendBar;
+
+    @FXML
+    private Label statusOfAddFriend;
+
+    @FXML
+    private ListView<String> addFriendList;
 
     @FXML
     private Label succesfullyChangedLabelPassword;
@@ -51,25 +61,10 @@ public class UserProfileController implements Initializable {
     private Button deleteButton;
 
     @FXML
-    private Rectangle deleteRect;
-
-    @FXML
     private Text eMailText;
 
     @FXML
-    private Text editProfileText;
-
-    @FXML
-    private Rectangle emailRect;
-
-    @FXML
-    private ScrollPane friendsScrollPane;
-
-    @FXML
     private Button logOutButton;
-
-    @FXML
-    private Rectangle logOutRect;
 
     @FXML
     private ImageView logoImage;
@@ -79,12 +74,6 @@ public class UserProfileController implements Initializable {
 
     @FXML
     private Button savedButton;
-
-    @FXML
-    private Rectangle savedRect;
-
-    @FXML
-    private Circle userAvatar;
 
     @FXML
     private Text userNameText;
@@ -112,9 +101,6 @@ public class UserProfileController implements Initializable {
     }
 
     @FXML
-    private ListView<?> addFriendList;
-
-    @FXML
     private Button changeEmailButton;
 
     @FXML
@@ -135,7 +121,13 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void addFriendButtonOnAction(ActionEvent event) {
+        addFriends(searchFriendBar.getText());
+    }
 
+
+    @FXML
+    void removeFriendButtonOnAction(ActionEvent event) {
+        removeFriends(searchFriendBar.getText());
     }
 
     @FXML
@@ -167,6 +159,56 @@ public class UserProfileController implements Initializable {
             savedQuestionsStage.setScene(new Scene(rootAnother, 720, 512));
             savedQuestionsStage.show();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadFriends()
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        try(Statement statement = connection.createStatement())
+        {
+            ResultSet resultSet = statement.executeQuery("SELECT name FROM friends");
+            while(resultSet.next())
+            {
+                addFriendList.getItems().add(resultSet.getString("name"));
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void addFriends( String name)
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (names) VALUES (?)")
+        {
+            preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+            addFriendList.getItems().add(name);
+        }
+        catch ( Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void removeFriends( String name)
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
+        {
+            preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+            addFriendList.getItems().remove(name);
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
@@ -258,5 +300,6 @@ public class UserProfileController implements Initializable {
         setCoinLabel();
         setPasswordLabel();
         setCurrentUsernameLabel();
+        loadFriends();
     }
 }
