@@ -69,7 +69,7 @@ public class ScienceQuestionPanelController implements Initializable {
 
         else{
             decreaseCoinOfUser();
-            warningCoinFifty.setText("Joker Purchased");
+            warningCoinAi.setText("Joker Purchased");
             wrongAnswer1Button.setDisable(true);
             wrongAnswer2Button.setDisable(true);
             wrongAnswer3Button.setDisable(true);

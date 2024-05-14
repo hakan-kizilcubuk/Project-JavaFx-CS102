@@ -120,7 +120,7 @@ public class GeneralKnowledgePanelController implements Initializable {
 
         else{
             decreaseCoinOfUser();
-            warningCoinFifty.setText("Joker Purchased");
+            warningCoinAi.setText("Joker Purchased");
             wrongAnswerButton.setDisable(true);
             wrongAnswer2Button.setDisable(true);
             wrongAnswer3Button.setDisable(true);

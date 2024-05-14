@@ -118,8 +118,8 @@ public class LoginPageController {
         String email = emailTextField.getText();
         String password = passwordTextFieldSignup.getText();
 
-        String insertFields = "INSERT INTO userinfo (name, username, email, coin, password) VALUES ('";
-        String insertValues = name + "','" + username + "','" + email + "','" + 0 + "','" + password + "')";
+        String insertFields = "INSERT INTO userinfo (name, username, email, coin, password, userProfilePicture) VALUES ('";
+        String insertValues = name + "','" + username + "','" + email + "','" + 0 + "','" + password + "','avatar (8).png')";
         String insertToRegister = insertFields + insertValues;
 
         try {
