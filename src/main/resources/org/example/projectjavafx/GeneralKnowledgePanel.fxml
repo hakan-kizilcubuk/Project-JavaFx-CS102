@@ -78,7 +78,7 @@
                   </ImageView>
                   <VBox spacing="5.0">
                      <children>
-                        <Label text="insufficent coin" textFill="#f20a0a" />
+                        <Label fx:id="warningCoinFifty" textFill="#f20a0a" />
                         <HBox alignment="CENTER" spacing="10.0">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -151,7 +151,7 @@
                   </ImageView>
                   <VBox spacing="5.0">
                      <children>
-                        <Label text="insufficent coin" textFill="#f20a0a" />
+                        <Label fx:id="warningCoinAi" textFill="#f20a0a" />
                         <HBox alignment="CENTER" spacing="10.0">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">

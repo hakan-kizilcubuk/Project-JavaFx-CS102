@@ -93,8 +93,8 @@ public class AddQuestionController implements Initializable {
         String authorOfQuestion = usernameLabel.getText();
 
         if (branch.equals("General Knowledge")) {
-            String insert = "INSERT INTO generalknowledgequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
-            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insert = "INSERT INTO generalknowledgequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question, noOfCorrectAnswers, noofWrongAnswers) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "', '0', '0')";
             String insertTo = insert + insert2;
 
             try {
@@ -105,8 +105,8 @@ public class AddQuestionController implements Initializable {
                 e.printStackTrace();
             }
         } else if (branch.equals("Geography")) {
-            String insert = "INSERT INTO geographyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
-            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insert = "INSERT INTO geographyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question, noOfCorrectAnswers, noOfWrongAnswers) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "', '0', '0')";
             String insertTo = insert + insert2;
 
             try {
@@ -117,8 +117,8 @@ public class AddQuestionController implements Initializable {
                 e.printStackTrace();
             }
         } else if (branch.equals("Sports")) {
-            String insert = "INSERT INTO sportsquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
-            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insert = "INSERT INTO sportsquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question, noOfCorrectAnswers, noOfWrongAnswers) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "', '0', '0')";
             String insertTo = insert + insert2;
 
             try {
@@ -129,8 +129,8 @@ public class AddQuestionController implements Initializable {
                 e.printStackTrace();
             }
         } else if (branch.equals("History")) {
-            String insert = "INSERT INTO historyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
-            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insert = "INSERT INTO historyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question, noOfCorrectAnswers, noOfWrongAnswers) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "', '0', '0')";
             String insertTo = insert + insert2;
 
             try {
@@ -141,8 +141,8 @@ public class AddQuestionController implements Initializable {
                 e.printStackTrace();
             }
         } else if (branch.equals("Science")) {
-            String insert = "INSERT INTO sciencequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
-            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
+            String insert = "INSERT INTO sciencequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question, noOfCorrectAnswers, noOfWrongAnswers) VALUES ('";
+            String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "', '0', '0')";
             String insertTo = insert + insert2;
 
             try {

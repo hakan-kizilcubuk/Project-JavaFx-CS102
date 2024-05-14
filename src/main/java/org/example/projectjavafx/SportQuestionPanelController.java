@@ -59,6 +59,12 @@ public class SportQuestionPanelController implements Initializable {
     private Label answerStatus;
 
     @FXML
+    private Label warningCoinAi;
+
+    @FXML
+    private Label warningCoinFifty;
+
+    @FXML
     private Pane stage;
 
     private int timeSeconds = 20;
@@ -106,7 +112,21 @@ public class SportQuestionPanelController implements Initializable {
 
     @FXML
     void aiJokerButtonOnAction(ActionEvent event) {
+        if (LoginPageController.user.getUserCoin() < 10)
+        {
+            warningCoinAi.setText("Insufficient Coin");
+        }
 
+        else{
+            decreaseCoinOfUser();
+            warningCoinFifty.setText("Joker Purchased");
+            wrongAnswer1Button.setDisable(true);
+            wrongAnswer2Button.setDisable(true);
+            wrongAnswer3Button.setDisable(true);
+            wrongAnswer1Button.setText("");
+            wrongAnswer2Button.setText("");
+            wrongAnswer3Button.setText("");
+        }
     }
 
     @FXML
@@ -119,7 +139,19 @@ public class SportQuestionPanelController implements Initializable {
 
     @FXML
     void fiftyPercentButtonOnAction(ActionEvent event) {
+        if (LoginPageController.user.getUserCoin() < 10)
+        {
+            warningCoinAi.setText("Insufficient Coin");
+        }
 
+        else{
+            decreaseCoinOfUser();
+            warningCoinFifty.setText("Joker Purchased");
+            wrongAnswer1Button.setDisable(true);
+            wrongAnswer2Button.setDisable(true);
+            wrongAnswer1Button.setText("");
+            wrongAnswer2Button.setText("");
+        }
     }
 
     @FXML
@@ -240,6 +272,23 @@ public class SportQuestionPanelController implements Initializable {
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
         String query = "UPDATE userinfo SET coin = coin + 10 WHERE username = ?";
+        String username = LoginPageController.user.getUserName();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void decreaseCoinOfUser()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE userinfo SET coin = coin - 10 WHERE username = ?";
         String username = LoginPageController.user.getUserName();
 
         try{
