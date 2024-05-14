@@ -61,7 +61,7 @@ public class ScienceQuestionPanelController implements Initializable {
 
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
-
+        increaseNoOfCorrectQuestions();
     }
 
     @FXML
@@ -78,6 +78,7 @@ public class ScienceQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer1ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
@@ -85,6 +86,7 @@ public class ScienceQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
@@ -92,6 +94,7 @@ public class ScienceQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
@@ -190,6 +193,39 @@ public class ScienceQuestionPanelController implements Initializable {
             e.printStackTrace();
             System.out.printf("SQLException" + e.getMessage());
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseNoOfCorrectQuestions()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE sciencequestions SET noOfCorrectAnswers = noOfCorrectAnswers + 1 WHERE correctanswer = ?";
+        String correctAnswer = correctAnswerButton.getText();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, correctAnswer);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseNoOfWrongQuestions()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE sciencequestions SET noOfWrongAnswers = noOfWrongAnswers + 1 WHERE correctanswer = ?";
+        String correctAnswer = correctAnswerButton.getText();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, correctAnswer);
+            preparedStatement.executeUpdate();
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

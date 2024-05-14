@@ -81,7 +81,7 @@ public class HistoryQuestionPanelController implements Initializable {
 
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
-
+        increaseNoOfCorrectQuestions();
     }
 
     @FXML
@@ -98,6 +98,7 @@ public class HistoryQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer1ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) wrongAnswer1Button.getScene().getWindow();
         stage.close();
     }
@@ -105,6 +106,7 @@ public class HistoryQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) wrongAnswer2Button.getScene().getWindow();
         stage.close();
     }
@@ -112,6 +114,7 @@ public class HistoryQuestionPanelController implements Initializable {
     @FXML
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
+        increaseNoOfWrongQuestions();
         Stage stage = (Stage) wrongAnswer3Button.getScene().getWindow();
         stage.close();
     }
@@ -192,6 +195,39 @@ public class HistoryQuestionPanelController implements Initializable {
             e.printStackTrace();
             System.out.printf("SQLException" + e.getMessage());
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseNoOfWrongQuestions()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE historyquestions SET noOfWrongAnswers = noOfWrongAnswers + 1 WHERE correctanswer = ?";
+        String correctAnswer = correctAnswerButton.getText();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, correctAnswer);
+            preparedStatement.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseNoOfCorrectQuestions()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE historyquestions SET noOfCorrectAnswers = noOfCorrectAnswers + 1 WHERE correctanswer = ?";
+        String correctAnswer = correctAnswerButton.getText();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, correctAnswer);
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
