@@ -190,7 +190,6 @@ public class UserProfileController implements Initializable {
             preparedStatement.setString(1, name);
             preparedStatement.executeUpdate();
             addFriendList.getItems().add(name);
-            statusOfAddFriend.setText( name + " is added.");
         }
         catch ( Exception e)
         {
@@ -207,7 +206,6 @@ public class UserProfileController implements Initializable {
             preparedStatement.setString(1, name);
             preparedStatement.executeUpdate();
             addFriendList.getItems().remove(name);
-            statusOfAddFriend.setText( name + " is removed.");
         }
         catch (Exception e)
         {
