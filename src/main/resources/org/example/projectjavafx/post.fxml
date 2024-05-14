@@ -15,11 +15,6 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fx:id="profile" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons/avatar%20(5).png" />
-               </image>
-            </ImageView>
             <Label fx:id="username" text="username" />
          </children>
          <padding>

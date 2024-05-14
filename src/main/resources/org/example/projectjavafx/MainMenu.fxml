@@ -182,11 +182,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="1." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="firstRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
@@ -214,11 +209,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="2." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="secondRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
@@ -246,11 +236,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="3." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="thirdRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -278,11 +263,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="4." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="fourthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -310,11 +290,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="5." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="fifthRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
@@ -342,11 +317,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="6." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="sixthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -374,11 +344,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="7." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="seventhRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -406,11 +371,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="8." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="eightRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -438,11 +398,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="9." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="ninthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
@@ -470,11 +425,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Label text="10." />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/avatar%20(5).png" />
-                     </image>
-                  </ImageView>
                   <Label fx:id="tenthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
