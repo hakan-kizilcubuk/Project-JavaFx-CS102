@@ -280,7 +280,7 @@ public class MainMenuController implements Initializable {
         {
             ResultSet resultSet = statement.executeQuery(sql);
 
-            for ( int i = 0; i < 10; i++)
+            for ( int i = 0; i < 2; i++)
             {
                 String username = resultSet.getString("username");
                 int coin = resultSet.getInt("coin");
@@ -294,7 +294,7 @@ public class MainMenuController implements Initializable {
             secondRankingUserName.setText(usernamesByOrder.get(1));
             secondRankingCoinNumber.setText(coinsByOrder.get(1));
 
-            thirdRankingUsername.setText(usernamesByOrder.get(2));
+            /*thirdRankingUsername.setText(usernamesByOrder.get(2));
             thirdRankingCoinNumber.setText(coinsByOrder.get(2));
 
             fourthRankingUsername.setText(usernamesByOrder.get(3));
@@ -316,7 +316,7 @@ public class MainMenuController implements Initializable {
             ninthRankingCoinNumber.setText(coinsByOrder.get(8));
 
             tenthRankingUsername.setText(usernamesByOrder.get(9));
-            tenthRankingCoinNumber.setText(coinsByOrder.get(9));
+            tenthRankingCoinNumber.setText(coinsByOrder.get(9));*/
 
         }
         catch (Exception e)
