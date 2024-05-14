@@ -68,12 +68,26 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void historyQuestionsButtonOnAction(ActionEvent event) {
-
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("HistoryQuestionPanel.fxml")));
+            Stage historyPageStage = new Stage();
+            historyPageStage.setScene(new Scene(rootAnother, 720, 512));
+            historyPageStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void scienceQuestionsButtonOnAction(ActionEvent event) {
-
+        try {
+            Parent rootAnother = FXMLLoader.load((getClass().getResource("ScienceQuestionPanel.fxml")));
+            Stage historyPageStage = new Stage();
+            historyPageStage.setScene(new Scene(rootAnother, 720, 512));
+            historyPageStage.show();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
