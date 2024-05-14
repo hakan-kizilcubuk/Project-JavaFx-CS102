@@ -185,7 +185,7 @@ public class UserProfileController implements Initializable {
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (names) VALUES (?)")
+        try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
         {
             preparedStatement.setString(1, name);
             preparedStatement.executeUpdate();
