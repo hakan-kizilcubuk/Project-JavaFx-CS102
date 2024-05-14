@@ -185,34 +185,87 @@ public class UserProfileController implements Initializable {
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
+        if ( isExistInDataBase( name))
         {
-            preparedStatement.setString(1, name);
-            preparedStatement.executeUpdate();
-            addFriendList.getItems().add(name);
-            statusOfAddFriend.setText( name + " is added.");
+            try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
+            {
+                preparedStatement.setString(1, name);
+                preparedStatement.executeUpdate();
+                addFriendList.getItems().add(name);
+                statusOfAddFriend.setText( name + " is added.");
+            }
+            catch ( Exception e)
+            {
+                e.printStackTrace();
+            }
         }
-        catch ( Exception e)
+        else if ( usernameLabel.getText().equals(name))
         {
-            e.printStackTrace();
+            statusOfAddFriend.setText("you cannot add yourself");
         }
+        else
+        {
+            statusOfAddFriend.setText("no such user has found.");
+        }
+
     }
 
     private void removeFriends( String name)
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
+        if ( isExistListView( name))
+        {
+            try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
+            {
+                preparedStatement.setString(1, name);
+                preparedStatement.executeUpdate();
+                addFriendList.getItems().remove(name);
+                statusOfAddFriend.setText( name + " is removed.");
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            statusOfAddFriend.setText( name + " is not your friend");
+        }
+
+    }
+
+    private boolean isExistInDataBase( String name)
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        String sql = "SELECT name FROM friends";
+        try(PreparedStatement preparedStatement = connection.prepareStatement(sql))
         {
             preparedStatement.setString(1, name);
-            preparedStatement.executeUpdate();
-            addFriendList.getItems().remove(name);
-            statusOfAddFriend.setText( name + " is removed.");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if ( resultSet.next() )
+            {
+                return true;
+            }
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
+        return false;
+    }
+
+    private boolean isExistListView( String name)
+    {
+        for ( String existName : addFriendList.getItems())
+        {
+            if ( existName.equals(name))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void changePassword() {
