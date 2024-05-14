@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -14,10 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 public class UserProfileController implements Initializable {
@@ -119,6 +117,8 @@ public class UserProfileController implements Initializable {
     private Label usernameLabel;
 
     private String prevUsername;
+    @FXML
+    private ImageView profileImage;
 
 
     @FXML
@@ -235,6 +235,24 @@ public class UserProfileController implements Initializable {
         return false;
     }
 
+    private void setUserProfilePicture( String username)
+    {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        String sql = "SELECT userProfilePicture FROM userinfo WHERE username = ?";
+        try(PreparedStatement preparedStatement = connection.prepareStatement(sql))
+        {
+            preparedStatement.setString(1, username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Image image = new Image(getClass().getResourceAsStream(resultSet.getString("userProfilePicture")));
+            profileImage.setImage(image);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     private boolean isExistListView(String name) {
         for (String existName : addFriendList.getItems()) {
             if (existName.equals(name)) {
@@ -334,5 +352,6 @@ public class UserProfileController implements Initializable {
         setPasswordLabel();
         setCurrentUsernameLabel();
         loadFriends();
+        setUserProfilePicture(usernameLabel.getText());
     }
 }

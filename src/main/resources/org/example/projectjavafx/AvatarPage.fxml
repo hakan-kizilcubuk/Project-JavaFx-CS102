@@ -18,12 +18,12 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="194.0" spacing="10.0">
                <children>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="profileImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="username" text="username">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -77,7 +77,7 @@
                               <Image url="@avatar%20(8).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture">
+                        <RadioButton fx:id="radio1" mnemonicParsing="false" onAction="#getProfilePicture">
                            <toggleGroup>
                               <ToggleGroup fx:id="avatar" />
                            </toggleGroup></RadioButton>
@@ -90,7 +90,7 @@
                               <Image url="@avatar%20(7).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
+                        <RadioButton fx:id="radio2" mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
@@ -100,7 +100,7 @@
                               <Image url="@avatar%20(6).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
+                        <RadioButton fx:id="radio3" mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
@@ -110,7 +110,7 @@
                               <Image url="@avatar%20(5).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
+                        <RadioButton fx:id="radio4" mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
@@ -120,7 +120,7 @@
                               <Image url="@avatar%20(4).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
+                        <RadioButton fx:id="radio5" mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
@@ -130,7 +130,7 @@
                               <Image url="@avatar%20(3).png" />
                            </image>
                         </ImageView>
-                        <RadioButton mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
+                        <RadioButton fx:id="radio6" mnemonicParsing="false" onAction="#getProfilePicture" toggleGroup="$avatar" />
                      </children>
                   </VBox>
                </children>

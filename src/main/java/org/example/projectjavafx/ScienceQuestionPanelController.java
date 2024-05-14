@@ -52,19 +52,13 @@ public class ScienceQuestionPanelController implements Initializable {
     private Button wrongAnswer3Button;
 
     @FXML
-    private Label answerStatus;
-
-    @FXML
     void aiJokerButtonOnAction(ActionEvent event) {
 
     }
 
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
-        increaseNoOfCorrectQuestions();
-        increaseCoinOfUser();
-        Stage stage = (Stage) this.stage.getScene().getWindow();
-        stage.close();
+
     }
 
     @FXML
@@ -80,26 +74,17 @@ public class ScienceQuestionPanelController implements Initializable {
 
     @FXML
     void wrongAnswer1ButtonOnAction(ActionEvent event) {
-        answerStatus.setText("WRONG ANSWER!");
-        increaseNoOfWrongQuestions();
-        Stage stage = (Stage) this.stage.getScene().getWindow();
-        stage.close();
+
     }
 
     @FXML
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
-        answerStatus.setText("WRONG ANSWER!");
-        increaseNoOfWrongQuestions();
-        Stage stage = (Stage) this.stage.getScene().getWindow();
-        stage.close();
+
     }
 
     @FXML
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
-        answerStatus.setText("WRONG ANSWER!");
-        increaseNoOfWrongQuestions();
-        Stage stage = (Stage) this.stage.getScene().getWindow();
-        stage.close();
+
     }
 
     public void setCoinView() {
@@ -119,11 +104,13 @@ public class ScienceQuestionPanelController implements Initializable {
     private int timeSeconds = 20;
     private Timeline timeLine;
 
-    private void updateTime() {
+    private void updateTime()
+    {
         timeSeconds--;
         timerLabel.setText("time: " + timeSeconds);
 
-        if (timeSeconds <= 0) {
+        if ( timeSeconds <= 0 )
+        {
             timeLine.stop();
             Stage stage = (Stage) this.stage.getScene().getWindow();
             stage.close();
@@ -144,7 +131,7 @@ public class ScienceQuestionPanelController implements Initializable {
             throw new RuntimeException(e);
         }
         timerLabel.setText("time: " + timeSeconds);
-        timeLine = new Timeline(new KeyFrame(Duration.seconds(1), e -> updateTime()));
+        timeLine = new Timeline( new KeyFrame(Duration.seconds(1), e -> updateTime()));
         timeLine.setCycleCount(Timeline.INDEFINITE);
         timeLine.play();
     }
@@ -194,56 +181,6 @@ public class ScienceQuestionPanelController implements Initializable {
             e.printStackTrace();
             System.out.printf("SQLException" + e.getMessage());
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void increaseNoOfCorrectQuestions()
-    {
-        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
-        Connection connectDatabase = connectDatabaseNow.getConnection();
-
-        String query = "UPDATE sciencequestions SET noOfCorrectAnswers = noOfCorrectAnswers + 1 WHERE correctanswer = ?";
-        String correctAnswer = correctAnswerButton.getText();
-
-        try{
-            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
-            preparedStatement.setString(1, correctAnswer);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    public void increaseNoOfWrongQuestions()
-    {
-        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
-        Connection connectDatabase = connectDatabaseNow.getConnection();
-
-        String query = "UPDATE sciencequestions SET noOfWrongAnswers = noOfWrongAnswers + 1 WHERE correctanswer = ?";
-        String correctAnswer = correctAnswerButton.getText();
-
-        try{
-            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
-            preparedStatement.setString(1, correctAnswer);
-            preparedStatement.executeUpdate();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    public void increaseCoinOfUser()
-    {
-        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
-        Connection connectDatabase = connectDatabaseNow.getConnection();
-
-        String query = "UPDATE userinfo SET coin = coin + 10 WHERE username = ?";
-        String username = LoginPageController.user.getUserName();
-
-        try{
-            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
-            preparedStatement.setString(1, username);
-            preparedStatement.executeUpdate();
-        }catch (Exception e){
             e.printStackTrace();
         }
     }
