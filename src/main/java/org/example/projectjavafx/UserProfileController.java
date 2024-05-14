@@ -321,8 +321,8 @@ public class UserProfileController implements Initializable {
         DatabaseConnection database = new DatabaseConnection();
         Connection connectDatabase = database.getConnection();
 
-        String newUsername = usernameTextField.getText();
-        String username = currentUsernameLabel.getText();
+        String newUsername = currentUsernameLabel.getText();
+        String username = usernameLabel.getText();
 
         String query = "UPDATE question SET username = ? WHERE username = ?";
 
