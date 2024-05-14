@@ -235,7 +235,7 @@ public class UserProfileController implements Initializable {
         return false;
     }
 
-    private void setUserProfilePicture( String username)
+   /*private void setUserProfilePicture( String username)
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
@@ -251,7 +251,7 @@ public class UserProfileController implements Initializable {
         {
             e.printStackTrace();
         }
-    }
+    }*/
 
     private boolean isExistListView(String name) {
         for (String existName : addFriendList.getItems()) {
@@ -352,6 +352,6 @@ public class UserProfileController implements Initializable {
         setPasswordLabel();
         setCurrentUsernameLabel();
         loadFriends();
-        setUserProfilePicture(usernameLabel.getText());
+
     }
 }

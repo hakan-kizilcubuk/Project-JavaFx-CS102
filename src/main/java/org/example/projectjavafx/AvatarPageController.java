@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class AvatarPageController {
 
-        @FXML
+        /*@FXML
         private ImageView profileImage;
         @FXML
         private ToggleGroup imageToggleGroup;
@@ -25,7 +25,7 @@ public class AvatarPageController {
     private Label username;
 
         @FXML
-        public void initialize() {
+        /*public void initialize() {
             radio1.setUserData("avatar (8).png");
             radio2.setUserData("avatar (7).png");
             radio3.setUserData("avatar (6).png");
@@ -57,7 +57,7 @@ public class AvatarPageController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 
 }
