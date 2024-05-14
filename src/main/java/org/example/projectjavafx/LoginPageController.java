@@ -88,6 +88,7 @@ public class LoginPageController {
                     user.setUserName(emailusernameTextField.getText());
                     user.setUserPassword(passwordTextFieldLogin.getText());
                     user.setUserId(idOfUser);
+                    user.setUserCoin(getCoinOfUser());
                     mainMenuOpen();
                 } else {
                     invalidValidLabel.setText("Invalid login! Try again");
@@ -139,5 +140,25 @@ public class LoginPageController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public int getCoinOfUser()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+        int coin = 0;
+        String query = "SELECT coin FROM userinfo WHERE userName = '" + emailusernameTextField.getText() + "'";
+        try{
+            Statement statement = connectDatabase.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            if(resultSet.next())
+            {
+                coin = resultSet.getInt(1);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return coin;
     }
 }

@@ -62,6 +62,9 @@ public class ScienceQuestionPanelController implements Initializable {
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
         increaseNoOfCorrectQuestions();
+        increaseCoinOfUser();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -224,6 +227,23 @@ public class ScienceQuestionPanelController implements Initializable {
         try{
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, correctAnswer);
+            preparedStatement.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseCoinOfUser()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE userinfo SET coin = coin + 10 WHERE username = ?";
+        String username = LoginPageController.user.getUserName();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, username);
             preparedStatement.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
