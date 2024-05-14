@@ -1,5 +1,8 @@
 package org.example.projectjavafx;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -265,10 +268,69 @@ public class MainMenuController implements Initializable {
         profileImages.add("src/main/resources/org/example/projectjavafx/pp.png");
     }
 
+    private void orderUsersBasedOnCoins()
+    {
+        ArrayList<String> usernamesByOrder = new ArrayList<>();
+        ArrayList<String> coinsByOrder = new ArrayList<>();
+
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) AS rank FROM users";
+        try( Statement statement = connection.createStatement() )
+        {
+            ResultSet resultSet = statement.executeQuery(sql);
+            ObservableList <User> userList = FXCollections.observableArrayList();
+
+            for ( int i = 0; i < 10; i++)
+            {
+                String username = resultSet.getString("username");
+                int coin = resultSet.getInt("coin");
+                usernamesByOrder.add(username);
+                coinsByOrder.add(String.valueOf(coin));
+            }
+
+            firstRankingUserName.setText(usernamesByOrder.get(0));
+            firstRankingCoinNumber.setText(coinsByOrder.get(0));
+
+            secondRankingUserName.setText(usernamesByOrder.get(1));
+            secondRankingCoinNumber.setText(coinsByOrder.get(1));
+
+            thirdRankingUsername.setText(usernamesByOrder.get(2));
+            thirdRankingCoinNumber.setText(coinsByOrder.get(2));
+
+            fourthRankingUsername.setText(usernamesByOrder.get(3));
+            fourthRankingCoinNumber.setText(coinsByOrder.get(3));
+
+            fifthRankingUserName.setText(usernamesByOrder.get(4));
+            fifthRankingCoinNumber.setText(coinsByOrder.get(4));
+
+            sixthRankingUsername.setText(usernamesByOrder.get(5));
+            sixthRankingCoinNumber.setText(coinsByOrder.get(5));
+
+            seventhRankingUsername.setText(usernamesByOrder.get(6));
+            seventhRankingCoinNumber.setText(coinsByOrder.get(6));
+
+            eightRankingUsername.setText(usernamesByOrder.get(7));
+            eightRankingCoinNumber.setText(coinsByOrder.get(7));
+
+            ninthRankingUsername.setText(usernamesByOrder.get(8));
+            ninthRankingCoinNumber.setText(coinsByOrder.get(8));
+
+            tenthRankingUsername.setText(usernamesByOrder.get(9));
+            tenthRankingCoinNumber.setText(coinsByOrder.get(9));
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setProfileImages(profileImages);
         setUserNameLabel();
         setCoinLabel();
+        orderUsersBasedOnCoins();
         newUser.setUserEmail(LoginPageController.user.getUserEmail());
         newUser.setUserName(LoginPageController.user.getUserName());
         newUser.setUserCoin(LoginPageController.user.getUserCoin());
@@ -338,7 +400,6 @@ public class MainMenuController implements Initializable {
         return posts;
     }
 
-
     public int findNoOfQuestions() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
@@ -358,7 +419,6 @@ public class MainMenuController implements Initializable {
         }
 
     }
-
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
         try {
