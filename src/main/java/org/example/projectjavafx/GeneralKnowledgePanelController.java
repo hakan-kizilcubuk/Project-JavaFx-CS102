@@ -21,6 +21,9 @@ import java.util.ResourceBundle;
 public class GeneralKnowledgePanelController implements Initializable {
 
     @FXML
+    private Label answerStatus;
+
+    @FXML
     private Button aiJokerButton;
 
     @FXML
@@ -127,17 +130,23 @@ public class GeneralKnowledgePanelController implements Initializable {
 
     @FXML
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
-
+        answerStatus.setText("WRONG ANSWER!");
+        Stage stage = (Stage) wrongAnswer2Button.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
-
+        answerStatus.setText("WRONG ANSWER!");
+        Stage stage = (Stage) wrongAnswer3Button.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void wrongAnswerButtonOnAction(ActionEvent event) {
-
+        answerStatus.setText("WRONG ANSWER!");
+        Stage stage = (Stage) wrongAnswerButton.getScene().getWindow();
+        stage.close();
     }
 
     public int findNoOfQuestionsFromGeneralKnowledge() {

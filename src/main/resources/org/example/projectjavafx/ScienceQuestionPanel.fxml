@@ -36,7 +36,7 @@
                         </HBox>
                         <Pane prefHeight="60.0" prefWidth="282.0">
                      <children>
-                        <Label fx:id="answerStatus" layoutX="109.0" layoutY="17.0" text="Label" textFill="#0186d1">
+                        <Label fx:id="answerStatus" layoutX="109.0" layoutY="17.0" textFill="#0186d1">
                            <font>
                               <Font size="18.0" />
                            </font>
