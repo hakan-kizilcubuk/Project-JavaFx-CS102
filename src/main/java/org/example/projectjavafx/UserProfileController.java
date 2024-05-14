@@ -185,21 +185,25 @@ public class UserProfileController implements Initializable {
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        if ( isExistInDataBase( name))
+        if (isExistInDataBase(name))
         {
-            try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
+            if (!name.equals(LoginPageController.user.getUserName()))
             {
-                preparedStatement.setString(1, name);
-                preparedStatement.executeUpdate();
-                addFriendList.getItems().add(name);
-                statusOfAddFriend.setText( name + " is added.");
+                try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
+                {
+                    preparedStatement.setString(1, name);
+                    preparedStatement.executeUpdate();
+                    addFriendList.getItems().add(name);
+                    statusOfAddFriend.setText( name + " is added.");
+                }
+                catch ( Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
-            catch ( Exception e)
-            {
-                e.printStackTrace();
-            }
+
         }
-        else if ( usernameLabel.getText().equals(name))
+        else if ( name.equals(LoginPageController.user.getUserName()))
         {
             statusOfAddFriend.setText("you cannot add yourself");
         }
@@ -239,12 +243,12 @@ public class UserProfileController implements Initializable {
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        String sql = "SELECT name FROM friends";
+        String sql = "SELECT username FROM userinfo WHERE username = ?";
         try(PreparedStatement preparedStatement = connection.prepareStatement(sql))
         {
             preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if ( resultSet.next() )
+            if ( resultSet.next())
             {
                 return true;
             }

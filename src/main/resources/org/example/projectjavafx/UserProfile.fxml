@@ -157,7 +157,7 @@
                         <TextField fx:id="searchFriendBar" prefHeight="30.0" prefWidth="264.0" promptText="search friend" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: #0186d1; -fx-border-width: 2;" />
                         <HBox alignment="CENTER_RIGHT" spacing="5.0">
                            <children>
-                              <Label fx:id="statusOfAddFriend" prefHeight="17.0" prefWidth="240.0" text="firend is added!" textFill="#1ecd44" />
+                              <Label fx:id="statusOfAddFriend" text="firend is added!" textFill="#1ecd44" />
                               <Pane prefHeight="30.0" prefWidth="51.0" />
                               <Button fx:id="addFriendButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#addFriendButtonOnAction" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #0186d1; -fx-border-radius: 100; -fx-border-width: 2;" text="+ add friend" textFill="#0186d1" />
                               <Button fx:id="removeFriendButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeFriendButtonOnAction" style="-fx-background-color: white; -fx-background-radius: 100; -fx-border-color: #cf0202; -fx-border-radius: 100; -fx-border-width: 2;" text="remove friend" textFill="#cf0202" />
