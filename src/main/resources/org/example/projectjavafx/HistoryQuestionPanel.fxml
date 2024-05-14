@@ -159,7 +159,7 @@
                                     <Image url="@star.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="aiJokerButton" mnemonicParsing="false" style="-fx-background-color: white;" text="10" underline="true" />
+                              <Button fx:id="aiJokerButton" mnemonicParsing="false" onAction="#aiJokerButtonOnAction" style="-fx-background-color: white;" text="10" underline="true" />
                            </children>
                            <padding>
                               <Insets left="5.0" right="5.0" />
