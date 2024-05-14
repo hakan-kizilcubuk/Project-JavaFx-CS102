@@ -275,7 +275,7 @@ public class MainMenuController implements Initializable {
 
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) AS rank FROM userinfo";
+        String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) FROM userinfo";
 
         try( Statement statement = connection.createStatement() )
         {
