@@ -112,6 +112,9 @@ public class SportQuestionPanelController implements Initializable {
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
         increaseNoOfCorrectQuestions();
+        increaseCoinOfUser();
+        Stage stage = (Stage) correctAnswerButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -226,6 +229,23 @@ public class SportQuestionPanelController implements Initializable {
         try{
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, correctAnswer);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void increaseCoinOfUser()
+    {
+        DatabaseConnection connectDatabaseNow = new DatabaseConnection();
+        Connection connectDatabase = connectDatabaseNow.getConnection();
+
+        String query = "UPDATE userinfo SET coin = coin + 10 WHERE username = ?";
+        String username = LoginPageController.user.getUserName();
+
+        try{
+            PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
         }
