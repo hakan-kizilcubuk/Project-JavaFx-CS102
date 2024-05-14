@@ -9,73 +9,59 @@ public class Post {
     private String profilePicSrc;
     private String question;
 
-    public String getMediaSrc()
-    {
+    public String getMediaSrc() {
         return mediaSrc;
     }
 
-    public void setMediaSrc( String src)
-    {
+    public void setMediaSrc(String src) {
         this.mediaSrc = src;
     }
 
-    public String getProfilePicSrc()
-    {
+    public String getProfilePicSrc() {
         return profilePicSrc;
     }
 
-    public void setProfilePicSrc( String src)
-    {
+    public void setProfilePicSrc(String src) {
         this.profilePicSrc = src;
     }
 
-    public int getAnswers()
-    {
+    public int getAnswers() {
         return answers;
     }
 
-    public void setAnswers( int answers)
-    {
+    public void setAnswers(int answers) {
         this.answers = answers;
     }
 
-    public String getBranch()
-    {
+    public String getBranch() {
         return branch;
     }
 
-    public void setBranch( String branch)
-    {
+    public void setBranch(String branch) {
         this.branch = branch;
     }
 
-    public int getChallenging()
-    {
+    public int getChallenging() {
         return challenging;
     }
 
-    public void setChallenging( int challenging)
-    {
+    public void setChallenging(int challenging) {
         this.challenging = challenging;
     }
 
-    public String getUsername()
-    {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername( String username)
-    {
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public String getQuestion()
-    {
+    public String getQuestion() {
         return question;
     }
 
-    public void setQuestion( String question)
-    {
+    public void setQuestion(String question) {
         this.question = question;
     }
 }

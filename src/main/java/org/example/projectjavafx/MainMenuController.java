@@ -49,7 +49,7 @@ public class MainMenuController implements Initializable {
             Stage generalKnowledgePageStage = new Stage();
             generalKnowledgePageStage.setScene(new Scene(rootAnother, 720, 512));
             generalKnowledgePageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -61,7 +61,7 @@ public class MainMenuController implements Initializable {
             Stage geographyPageStage = new Stage();
             geographyPageStage.setScene(new Scene(rootAnother, 720, 512));
             geographyPageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -83,7 +83,7 @@ public class MainMenuController implements Initializable {
             Stage geographyPageStage = new Stage();
             geographyPageStage.setScene(new Scene(rootAnother, 720, 512));
             geographyPageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -225,27 +225,23 @@ public class MainMenuController implements Initializable {
     private Label thirdRankingUsername;
 
 
-
     @FXML
     private Label branch10Number;
 
     private List<Post> posts;
 
 
-
-    public void setUserNameLabel ()
-    {
+    public void setUserNameLabel() {
         userNameLabel.setText(MainMenuController.newUser.getUserName());
     }
 
-    public void setCoinLabel()
-    {
+    public void setCoinLabel() {
         coinLabel.setText(MainMenuController.newUser.getUserCoin() + "");
     }
 
     private ArrayList<String> profileImages = new ArrayList<>();
 
-    public void setProfileImages( ArrayList<String> profileImages) {
+    public void setProfileImages(ArrayList<String> profileImages) {
         profileImages.add("src/main/resources/org/example/projectjavafx/avatar (3).png");
         profileImages.add("src/main/resources/org/example/projectjavafx/avatar (4).png");
         profileImages.add("src/main/resources/org/example/projectjavafx/avatar (5).png");
@@ -271,24 +267,22 @@ public class MainMenuController implements Initializable {
 
 
         try {
-            for ( int i = 0; i < posts.size(); i++ ) {
+            for (int i = 0; i < posts.size(); i++) {
                 FXMLLoader fxmlloader = new FXMLLoader();
                 fxmlloader.setLocation(getClass().getResource("post.fxml"));
                 VBox box = fxmlloader.load();
                 PostController postController = fxmlloader.getController();
                 postController.setData(posts.get(i));
 
-                if (columns == 1)
-                {
+                if (columns == 1) {
                     columns = 0;
                     ++rows;
                 }
 
-                postGrid.add(box, columns++,rows);
-                GridPane.setMargin(box,new Insets(10));
+                postGrid.add(box, columns++, rows);
+                GridPane.setMargin(box, new Insets(10));
             }
-        }
-        catch ( IOException e ) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -298,61 +292,58 @@ public class MainMenuController implements Initializable {
         int questionNo = findNoOfQuestions();
         List<Post> posts = new ArrayList<>();
 
-            DatabaseConnection databaseConnection = new DatabaseConnection();
-            Connection connection = databaseConnection.getConnection();
-            String query = "SELECT username, branch, question, noOfAnswers FROM question";
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Connection connection = databaseConnection.getConnection();
+        String query = "SELECT username, branch, question, noOfAnswers FROM question";
 
-            try {
-                Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery(query);
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
 
-                while (resultSet.next()) {
-                    Post post = new Post();
+            while (resultSet.next()) {
+                Post post = new Post();
 
-                    String username = resultSet.getString("username");
-                    String branch = resultSet.getString("branch");
-                    String question = resultSet.getString("question");
-                    int answerCount = resultSet.getInt("noOfAnswers");
+                String username = resultSet.getString("username");
+                String branch = resultSet.getString("branch");
+                String question = resultSet.getString("question");
+                int answerCount = resultSet.getInt("noOfAnswers");
 
-                    post.setProfilePicSrc( "");
-                    post.setUsername(username);
-                    post.setMediaSrc( "");
-                    post.setBranch(branch);
-                    post.setQuestion(question);
-                    post.setAnswers(answerCount);
-                    post.setChallenging( 0);
+                post.setProfilePicSrc("");
+                post.setUsername(username);
+                post.setMediaSrc("");
+                post.setBranch(branch);
+                post.setQuestion(question);
+                post.setAnswers(answerCount);
+                post.setChallenging(0);
 
-                    posts.add(post);
-                }
-            }catch(Exception e)
-            {
-                e.printStackTrace();
+                posts.add(post);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return posts;
     }
 
 
-    public int findNoOfQuestions()
-    {
+    public int findNoOfQuestions() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
         String noOfQuestions = "SELECT COUNT(*) AS row_count FROM question";
 
-        try{
+        try {
             Statement statement = connectDatabase.createStatement();
             ResultSet resultSet = statement.executeQuery(noOfQuestions);
             resultSet.next();
             int rowCount = resultSet.getInt("row_count");
 
             return rowCount;
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return -1;
         }
 
     }
-
 
 
     public void addQuestionButtonOnAction(ActionEvent actionEvent) {
@@ -361,7 +352,7 @@ public class MainMenuController implements Initializable {
             Stage addQuestionStage = new Stage();
             addQuestionStage.setScene(new Scene(newRoot, 720, 512));
             addQuestionStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -373,7 +364,7 @@ public class MainMenuController implements Initializable {
             Stage profilePageStage = new Stage();
             profilePageStage.setScene(new Scene(rootAnother, 720, 512));
             profilePageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

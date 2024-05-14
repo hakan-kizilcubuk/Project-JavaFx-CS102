@@ -3,8 +3,7 @@ package org.example.projectjavafx;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Question
-{
+public class Question {
     protected String questionId;
     protected String content;
     protected String creatorOfQuestion;
@@ -23,8 +22,7 @@ public class Question
     protected String wrongAnswerNo3;
     protected String correctAnswerNo1;
 
-    public Question(String username, String wronganswer1, String wronganswer2, String wronganswer3, String correctAnswer, String branch, String question)
-    {
+    public Question(String username, String wronganswer1, String wronganswer2, String wronganswer3, String correctAnswer, String branch, String question) {
         this.questionId = username;
         this.wrongAnswerNo1 = wronganswer1;
         this.wrongAnswerNo2 = wronganswer2;
@@ -34,43 +32,37 @@ public class Question
         this.content = question;
     }
 
-    public void updateContent(String content)
-    {
+    public void updateContent(String content) {
         this.content = content;
     }
 
-    public void attachMedia(String mediaLink)
-    {
+    public void attachMedia(String mediaLink) {
         this.mediaUrl = mediaLink;
     }
 
-    public void difficultyMethod(int ratioOfCorrectAnswer)
-    {
-        
+    public void difficultyMethod(int ratioOfCorrectAnswer) {
+
     }
 
-    public void calculateTimeLimit(int difficultyLevel)
-    {
+    public void calculateTimeLimit(int difficultyLevel) {
         time = difficultyLevel * time;
     }
 
-    public void answerQuestion(String userAnswer)
-    {
+    public void answerQuestion(String userAnswer) {
 
     }
-    public void isCorrect(String userAnswer)
-    {
-        if(userAnswer.equals(correctAnswer))
-        {
+
+    public void isCorrect(String userAnswer) {
+        if (userAnswer.equals(correctAnswer)) {
             answerCount++;
         }
     }
-    public void useJokerCallAFriend()
-    {
+
+    public void useJokerCallAFriend() {
         jokerCallAFriend = false;
     }
-    public void usejokerFiftyFifty()
-    {
+
+    public void usejokerFiftyFifty() {
         jokerFiftyFifty = false;
     }
 

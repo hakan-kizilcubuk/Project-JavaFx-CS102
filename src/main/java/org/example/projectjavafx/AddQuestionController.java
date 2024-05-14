@@ -62,8 +62,7 @@ public class AddQuestionController implements Initializable {
 
     private String[] branch = {"History", "General Knowledge", "Geography", "Sports", "Science"};
 
-    public void setUsernameLabel()
-    {
+    public void setUsernameLabel() {
         usernameLabel.setText(MainMenuController.newUser.getUserName());
     }
 
@@ -75,15 +74,13 @@ public class AddQuestionController implements Initializable {
     }
 
 
-
-
     @FXML
     public void goBackButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) goBackButton.getScene().getWindow();
         stage.close();
     }
 
-    public void addQuestionToBranch(){
+    public void addQuestionToBranch() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
@@ -104,12 +101,10 @@ public class AddQuestionController implements Initializable {
                 Statement statement = connectDatabase.createStatement();
                 statement.executeUpdate(insertTo);
                 questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-
-        else if (branch.equals("Geography")) {
+        } else if (branch.equals("Geography")) {
             String insert = "INSERT INTO geographyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
@@ -118,12 +113,10 @@ public class AddQuestionController implements Initializable {
                 Statement statement = connectDatabase.createStatement();
                 statement.executeUpdate(insertTo);
                 questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-
-        else if (branch.equals("Sports")) {
+        } else if (branch.equals("Sports")) {
             String insert = "INSERT INTO sportsquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
@@ -132,7 +125,7 @@ public class AddQuestionController implements Initializable {
                 Statement statement = connectDatabase.createStatement();
                 statement.executeUpdate(insertTo);
                 questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -144,7 +137,7 @@ public class AddQuestionController implements Initializable {
         try {
             Statement statement = connectDatabase.createStatement();
             statement.executeUpdate(insertToRegister);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -152,9 +145,7 @@ public class AddQuestionController implements Initializable {
     public void addingQuestionOnAction(ActionEvent actionEvent) {
         if (!questionTextField.getText().isBlank() && !choice1TextField.getText().isBlank() && !choice2TextField.getText().isBlank() && !choice3TextField.getText().isBlank() && !choice4TextField.getText().isBlank() && !branchChoiceBox.getValue().isEmpty()) {
             addQuestionToBranch();
-        }
-
-        else{
+        } else {
             questionAddedLabel.setText("Some parts are missing! Fill all fields");
         }
     }

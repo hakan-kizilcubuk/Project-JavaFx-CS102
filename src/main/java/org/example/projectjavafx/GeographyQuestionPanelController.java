@@ -1,4 +1,5 @@
 package org.example.projectjavafx;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -106,8 +107,7 @@ public class GeographyQuestionPanelController implements Initializable {
 
     }
 
-    public int findNoOfQuestionsFromGeography()
-    {
+    public int findNoOfQuestionsFromGeography() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 

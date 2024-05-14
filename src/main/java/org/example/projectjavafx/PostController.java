@@ -69,7 +69,7 @@ public class PostController extends Application {
         saveQuestion();
     }
 
-    public void saveQuestion(){
+    public void saveQuestion() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
@@ -85,7 +85,7 @@ public class PostController extends Application {
         try {
             Statement statement = connectDatabase.createStatement();
             statement.executeUpdate(insertToRegister);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

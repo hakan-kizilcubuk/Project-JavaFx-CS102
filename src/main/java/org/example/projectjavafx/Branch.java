@@ -7,7 +7,7 @@ public class Branch {
     private String branchName;
     private ArrayList<Question> questions;
 
-    public String printBranch(){
+    public String printBranch() {
         return this.branchName;
     }
 }

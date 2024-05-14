@@ -39,13 +39,11 @@ public class SavedQuestionsController implements Initializable {
     int columns = 0;
     int rows = 1;
 
-    public void setCoinView()
-    {
+    public void setCoinView() {
         coinNumberLabel.setText(LoginPageController.user.getUserCoin() + "");
     }
 
-    public void setUsernameLabel()
-    {
+    public void setUsernameLabel() {
         usernameLabel.setText(LoginPageController.user.getUserName());
     }
 
@@ -57,34 +55,28 @@ public class SavedQuestionsController implements Initializable {
         setCoinView();
         setUsernameLabel();
         savedPosts = new ArrayList<>(savedPosts());
-        try
-        {
-            for ( int i = 0; i < savedPosts.size(); i++ )
-            {
+        try {
+            for (int i = 0; i < savedPosts.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("Post.fxml"));
                 VBox box = fxmlLoader.load();
                 PostController postController = fxmlLoader.getController();
                 postController.setData(savedPosts.get(i));
 
-                if ( columns == 1)
-                {
+                if (columns == 1) {
                     columns = 0;
                     ++rows;
                 }
 
-                savedQuestionGrid.add(box, columns++,rows);
+                savedQuestionGrid.add(box, columns++, rows);
                 GridPane.setMargin(box, new Insets(10));
             }
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private List<Post> savedPosts()
-    {
+    private List<Post> savedPosts() {
         List<Post> savedPosts = new ArrayList<>();
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
@@ -102,25 +94,24 @@ public class SavedQuestionsController implements Initializable {
                 String question = resultSet.getString("question");
                 int answerCount = resultSet.getInt("noOfAnswers");
 
-                post.setProfilePicSrc( "");
+                post.setProfilePicSrc("");
                 post.setUsername(username);
-                post.setMediaSrc( "");
+                post.setMediaSrc("");
                 post.setBranch(branch);
                 post.setQuestion(question);
                 post.setAnswers(answerCount);
-                post.setChallenging( 0);
+                post.setChallenging(0);
 
                 savedPosts.add(post);
             }
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
 
         return savedPosts;
 
-        
+
     }
 
     public void goBackButtonOnAction(ActionEvent actionEvent) {

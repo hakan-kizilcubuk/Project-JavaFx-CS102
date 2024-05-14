@@ -107,8 +107,7 @@ public class SportQuestionPanelController implements Initializable {
 
     }
 
-    public int findNoOfQuestionsFromSports()
-    {
+    public int findNoOfQuestionsFromSports() {
         DatabaseConnection connectDatabaseNow = new DatabaseConnection();
         Connection connectDatabase = connectDatabaseNow.getConnection();
 
