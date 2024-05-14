@@ -279,7 +279,6 @@ public class MainMenuController implements Initializable {
         try( Statement statement = connection.createStatement() )
         {
             ResultSet resultSet = statement.executeQuery(sql);
-            ObservableList <User> userList = FXCollections.observableArrayList();
 
             for ( int i = 0; i < 10; i++)
             {

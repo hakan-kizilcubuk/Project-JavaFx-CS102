@@ -187,7 +187,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="firstRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -199,7 +199,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="firstRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -219,7 +219,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="secondRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -231,7 +231,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="secondRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -251,7 +251,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="thirdRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -263,7 +263,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="thirdRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -283,7 +283,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="fourthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -295,7 +295,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="fourthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -315,7 +315,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="fifthRankingUserName" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -327,7 +327,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="fifthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -347,7 +347,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="sixthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -359,7 +359,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="sixthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -379,7 +379,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="seventhRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -391,7 +391,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="seventhRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -411,7 +411,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="eightRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -423,7 +423,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="eightRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -443,7 +443,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="ninthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -455,7 +455,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="ninthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -475,7 +475,7 @@
                         <Image url="@icons/avatar%20(5).png" />
                      </image>
                   </ImageView>
-                  <Label text="username">
+                  <Label fx:id="tenthRankingUsername" text="username">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -487,7 +487,7 @@
                               <Image url="@star.png" />
                            </image>
                         </ImageView>
-                        <Label text="34K">
+                        <Label fx:id="tenthRankingCoinNumber" text="34K">
                            <font>
                               <Font size="12.0" />
                            </font>
