@@ -105,6 +105,8 @@
                                     <Font name="System Bold" size="13.0" />
                                  </font>
                               </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="timerLabel" text="Label" textFill="#f70606" />
                            </children>
                            <padding>
                               <Insets left="10.0" right="10.0" />

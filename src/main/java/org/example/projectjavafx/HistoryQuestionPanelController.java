@@ -1,13 +1,17 @@
 package org.example.projectjavafx;
 
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.sql.*;
@@ -48,6 +52,29 @@ public class HistoryQuestionPanelController implements Initializable {
 
     @FXML
     private Button wrongAnswer3Button;
+
+    @FXML
+    private Label timerLabel;
+
+    @FXML
+    private Pane stage;
+
+    private int timeSeconds = 20;
+    private Timeline timeLine;
+
+    private void updateTime()
+    {
+        timeSeconds--;
+        timerLabel.setText("time: " + timeSeconds);
+
+        if ( timeSeconds <= 0 )
+        {
+            timeLine.stop();
+            Stage stage = (Stage) this.stage.getScene().getWindow();
+            stage.close();
+        }
+    }
+
 
     @FXML
     void correctAnswerButtonOnAction(ActionEvent event) {
@@ -94,6 +121,11 @@ public class HistoryQuestionPanelController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        timerLabel.setText("time: " + timeSeconds);
+        timeLine = new Timeline( new KeyFrame(Duration.seconds(1), e -> updateTime()));
+        timeLine.setCycleCount(Timeline.INDEFINITE);
+        timeLine.play();
     }
 
     public void setCoinView() {
