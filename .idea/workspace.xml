@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="Login Pane and Avatar Page Pane is added">
+    <list default="true" id="84a5fc8b-5b2a-4c15-9ecd-35b5cc3d080c" name="Changes" comment="GeographyQuestionPanelController and SportQuestionPanelController methods are implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/LoginpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/LoginpageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/projectjavafx/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/projectjavafx/UserProfileController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +29,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;hakan-kizilcubuk&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hakan-kizilcubuk/Project-JavaFx-CS102.git&quot;,
     &quot;accountId&quot;: &quot;a94837f9-5355-41ea-86ab-2ca0d7c9c03e&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -60,28 +58,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Son.executor": "Run",
-    "Maven.Project-JavaFx [compile].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/SceneBuilder/SceneBuilder.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Son.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Project-JavaFx [compile].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ahmet Hakan\OneDrive\Desktop\Project-JavaFx-CS102\src\main\java\org\example\projectjavafx" />
@@ -173,7 +171,115 @@
       <workItem from="1714508248957" duration="19000" />
       <workItem from="1714509338262" duration="297000" />
       <workItem from="1714544926615" duration="986000" />
+      <workItem from="1715610190996" duration="6517000" />
+      <workItem from="1715631677820" duration="7918000" />
+      <workItem from="1715640941305" duration="3379000" />
     </task>
+    <task id="LOCAL-00001" summary="New Feature: The post number on MainMenuController is now determined by the number of questions in database">
+      <option name="closed" value="true" />
+      <created>1715525285704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525285704</updated>
+    </task>
+    <task id="LOCAL-00002" summary="The feed is working the content of the questions are visible as posts in the feed">
+      <option name="closed" value="true" />
+      <created>1715528582419</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715528582419</updated>
+    </task>
+    <task id="LOCAL-00003" summary="UserProfileController fxml and labels are changed. The necessary information of user is visible now.">
+      <option name="closed" value="true" />
+      <created>1715588437712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715588437712</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UserName can be changed now since changeUsername() method is implemented">
+      <option name="closed" value="true" />
+      <created>1715592290463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715592290463</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update on UserProfileController">
+      <option name="closed" value="true" />
+      <created>1715597745470</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715597745470</updated>
+    </task>
+    <task id="LOCAL-00006" summary="deleteAccount() method is implemented">
+      <option name="closed" value="true" />
+      <created>1715598211198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715598211198</updated>
+    </task>
+    <task id="LOCAL-00007" summary="savedPost() method is updated">
+      <option name="closed" value="true" />
+      <created>1715603318323</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715603318323</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changeUsername() updated">
+      <option name="closed" value="true" />
+      <created>1715605781491</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715605781491</updated>
+    </task>
+    <task id="LOCAL-00009" summary="saveQuestion() method is implemented">
+      <option name="closed" value="true" />
+      <created>1715609367577</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715609367577</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Methods of GeneralKnowledgePanelController() class is mostly implemented. There are some bugs, I will solve">
+      <option name="closed" value="true" />
+      <created>1715634198782</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715634198782</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update on GeneralKnowledgePanelController">
+      <option name="closed" value="true" />
+      <created>1715634924061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715634924061</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update on GeneralKnowledgePanelController() Showing question is working only solving left">
+      <option name="closed" value="true" />
+      <created>1715636568608</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715636568608</updated>
+    </task>
+    <task id="LOCAL-00013" summary="GeographyQuestionPanelController and SportQuestionPanelController methods are implemented">
+      <option name="closed" value="true" />
+      <created>1715640617590</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715640617590</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,5 +298,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="New Feature: The post number on MainMenuController is now determined by the number of questions in database" />
+    <MESSAGE value="The feed is working the content of the questions are visible as posts in the feed" />
+    <MESSAGE value="UserProfileController fxml and labels are changed. The necessary information of user is visible now." />
+    <MESSAGE value="UserName can be changed now since changeUsername() method is implemented" />
+    <MESSAGE value="Update on UserProfileController" />
+    <MESSAGE value="deleteAccount() method is implemented" />
+    <MESSAGE value="savedPost() method is updated" />
+    <MESSAGE value="changeUsername() updated" />
+    <MESSAGE value="saveQuestion() method is implemented" />
+    <MESSAGE value="Methods of GeneralKnowledgePanelController() class is mostly implemented. There are some bugs, I will solve" />
+    <MESSAGE value="Update on GeneralKnowledgePanelController" />
+    <MESSAGE value="Update on GeneralKnowledgePanelController() Showing question is working only solving left" />
+    <MESSAGE value="GeographyQuestionPanelController and SportQuestionPanelController methods are implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="GeographyQuestionPanelController and SportQuestionPanelController methods are implemented" />
   </component>
 </project>

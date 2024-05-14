@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
@@ -184,87 +185,34 @@ public class UserProfileController implements Initializable {
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        if ( !isExistInDataBase( name))
+        try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
         {
-            statusOfAddFriend.setText( name + " not found");
+            preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+            addFriendList.getItems().add(name);
+            statusOfAddFriend.setText( name + " is added.");
         }
-        else if ( usernameLabel.getText().equals(name))
+        catch ( Exception e)
         {
-            statusOfAddFriend.setText("you cannot add yourself");
+            e.printStackTrace();
         }
-        else
-        {
-            try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
-            {
-                preparedStatement.setString(1, name);
-                preparedStatement.executeUpdate();
-                addFriendList.getItems().add(name);
-                statusOfAddFriend.setText( name + " is added.");
-            }
-            catch ( Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private boolean isFriendExistInTheList(String name)
-    {
-        for ( String theName : addFriendList.getItems())
-        {
-            if ( theName.equals(name))
-            {
-                return true;
-            }
-        }
-        return false;
     }
 
     private void removeFriends( String name)
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        if ( isFriendExistInTheList( name))
+        try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
         {
-            try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
-            {
-                preparedStatement.setString(1, name);
-                preparedStatement.executeUpdate();
-                addFriendList.getItems().remove(name);
-                statusOfAddFriend.setText( name + " is removed.");
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            statusOfAddFriend.setText( name + " is not your friend.");
-        }
-    }
-
-    private boolean isExistInDataBase( String name)
-    {
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        Connection connection = databaseConnection.getConnection();
-
-        String sql = "SELECT COUNT(*) FROM friends WHERE name = ?";
-        try(PreparedStatement statement = connection.prepareStatement(sql))
-        {
-            statement.setString(1, name);
-            ResultSet resultSet = statement.executeQuery();
-            if ( resultSet.next())
-            {
-                return resultSet.getInt(1) > 0;
-            }
-
+            preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+            addFriendList.getItems().remove(name);
+            statusOfAddFriend.setText( name + " is removed.");
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
-        return false;
     }
 
     public void changePassword() {
