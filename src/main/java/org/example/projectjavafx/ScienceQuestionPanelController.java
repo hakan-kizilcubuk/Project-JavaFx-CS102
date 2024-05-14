@@ -116,13 +116,11 @@ public class ScienceQuestionPanelController implements Initializable {
     private int timeSeconds = 20;
     private Timeline timeLine;
 
-    private void updateTime()
-    {
+    private void updateTime() {
         timeSeconds--;
         timerLabel.setText("time: " + timeSeconds);
 
-        if ( timeSeconds <= 0 )
-        {
+        if (timeSeconds <= 0) {
             timeLine.stop();
             Stage stage = (Stage) this.stage.getScene().getWindow();
             stage.close();
@@ -143,7 +141,7 @@ public class ScienceQuestionPanelController implements Initializable {
             throw new RuntimeException(e);
         }
         timerLabel.setText("time: " + timeSeconds);
-        timeLine = new Timeline( new KeyFrame(Duration.seconds(1), e -> updateTime()));
+        timeLine = new Timeline(new KeyFrame(Duration.seconds(1), e -> updateTime()));
         timeLine.setCycleCount(Timeline.INDEFINITE);
         timeLine.play();
     }

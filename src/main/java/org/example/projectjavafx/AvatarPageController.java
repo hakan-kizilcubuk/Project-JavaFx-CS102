@@ -72,6 +72,6 @@ public class AvatarPageController {
         else if (avatar5.isSelected()) {}
         else if (avatar6.isSelected()) {}
     }*/
-    
-    }
+
+}
 

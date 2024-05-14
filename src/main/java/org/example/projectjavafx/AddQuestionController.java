@@ -104,8 +104,7 @@ public class AddQuestionController implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        else if (branch.equals("Geography")) {
+        } else if (branch.equals("Geography")) {
             String insert = "INSERT INTO geographyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
@@ -117,8 +116,7 @@ public class AddQuestionController implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        else if (branch.equals("Sports")) {
+        } else if (branch.equals("Sports")) {
             String insert = "INSERT INTO sportsquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
@@ -130,32 +128,28 @@ public class AddQuestionController implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        else if (branch.equals("History"))
-        {
+        } else if (branch.equals("History")) {
             String insert = "INSERT INTO historyquestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
 
-            try{
+            try {
                 Statement statement = connectDatabase.createStatement();
                 statement.executeUpdate(insertTo);
                 questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        else if (branch.equals("Science"))
-        {
+        } else if (branch.equals("Science")) {
             String insert = "INSERT INTO sciencequestions (username, wronganswer1, wronganswer2, wronganswer3, correctanswer, question) VALUES ('";
             String insert2 = authorOfQuestion + "','" + wrongAnswer1 + "','" + wrongAnswer2 + "','" + wrongAnswer3 + "','" + correctAnswer + "','" + question + "')";
             String insertTo = insert + insert2;
 
-            try{
+            try {
                 Statement statement = connectDatabase.createStatement();
                 statement.executeUpdate(insertTo);
                 questionAddedLabel.setText("Question Added to " + branchChoiceBox.getValue());
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

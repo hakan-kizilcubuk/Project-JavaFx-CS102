@@ -165,109 +165,79 @@ public class UserProfileController implements Initializable {
         }
     }
 
-    private void loadFriends()
-    {
+    private void loadFriends() {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        try(Statement statement = connection.createStatement())
-        {
+        try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery("SELECT name FROM friends");
-            while(resultSet.next())
-            {
+            while (resultSet.next()) {
                 addFriendList.getItems().add(resultSet.getString("name"));
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void addFriends( String name)
-    {
+    private void addFriends(String name) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        if (isExistInDataBase(name))
-        {
-            if (!name.equals(LoginPageController.user.getUserName()))
-            {
-                try ( PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)"))
-                {
+        if (isExistInDataBase(name)) {
+            if (!name.equals(LoginPageController.user.getUserName())) {
+                try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO friends (name) VALUES (?)")) {
                     preparedStatement.setString(1, name);
                     preparedStatement.executeUpdate();
                     addFriendList.getItems().add(name);
-                    statusOfAddFriend.setText( name + " is added.");
-                }
-                catch ( Exception e)
-                {
+                    statusOfAddFriend.setText(name + " is added.");
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
 
-        }
-        else if ( name.equals(LoginPageController.user.getUserName()))
-        {
+        } else if (name.equals(LoginPageController.user.getUserName())) {
             statusOfAddFriend.setText("you cannot add yourself");
-        }
-        else
-        {
+        } else {
             statusOfAddFriend.setText("no such user has found.");
         }
 
     }
 
-    private void removeFriends( String name)
-    {
+    private void removeFriends(String name) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        if ( isExistListView( name))
-        {
-            try ( PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?"))
-            {
+        if (isExistListView(name)) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM friends WHERE name = ?")) {
                 preparedStatement.setString(1, name);
                 preparedStatement.executeUpdate();
                 addFriendList.getItems().remove(name);
-                statusOfAddFriend.setText( name + " is removed.");
-            }
-            catch (Exception e)
-            {
+                statusOfAddFriend.setText(name + " is removed.");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        else
-        {
-            statusOfAddFriend.setText( name + " is not your friend");
+        } else {
+            statusOfAddFriend.setText(name + " is not your friend");
         }
 
     }
 
-    private boolean isExistInDataBase( String name)
-    {
+    private boolean isExistInDataBase(String name) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
         String sql = "SELECT username FROM userinfo WHERE username = ?";
-        try(PreparedStatement preparedStatement = connection.prepareStatement(sql))
-        {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if ( resultSet.next())
-            {
+            if (resultSet.next()) {
                 return true;
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
     }
 
-    private boolean isExistListView( String name)
-    {
-        for ( String existName : addFriendList.getItems())
-        {
-            if ( existName.equals(name))
-            {
+    private boolean isExistListView(String name) {
+        for (String existName : addFriendList.getItems()) {
+            if (existName.equals(name)) {
                 return true;
             }
         }
