@@ -118,6 +118,8 @@ public class UserProfileController implements Initializable {
     @FXML
     private Label usernameLabel;
 
+    private String prevUsername;
+
 
     @FXML
     public void addFriendButtonOnAction(ActionEvent event) {
@@ -301,6 +303,7 @@ public class UserProfileController implements Initializable {
 
         String newUsername = usernameTextField.getText();
         String oldUsername = usernameLabel.getText();
+        prevUsername = oldUsername;
         String mySQL = "UPDATE userinfo SET username = ? WHERE username = ?";
 
         try {
@@ -310,6 +313,7 @@ public class UserProfileController implements Initializable {
             updateUsername.executeUpdate();
 
             currentUsernameLabel.setText("Current Username: " + usernameTextField.getText());
+            usernameLabel.setText(usernameTextField.getText());
             succesfullyChangedLabelUsername.setText("Succesfully Changed!");
         } catch (Exception e) {
             e.printStackTrace();
@@ -321,15 +325,15 @@ public class UserProfileController implements Initializable {
         DatabaseConnection database = new DatabaseConnection();
         Connection connectDatabase = database.getConnection();
 
-        String newUsername = currentUsernameLabel.getText();
-        String username = usernameLabel.getText();
+        String newUsername = usernameTextField.getText();
+        String oldUsername = prevUsername;
 
         String query = "UPDATE question SET username = ? WHERE username = ?";
 
         try {
             PreparedStatement preparedStatement = connectDatabase.prepareStatement(query);
             preparedStatement.setString(1, newUsername);
-            preparedStatement.setString(2, username);
+            preparedStatement.setString(2, oldUsername);
             preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
