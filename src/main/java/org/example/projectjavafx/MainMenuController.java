@@ -270,31 +270,42 @@ public class MainMenuController implements Initializable {
 
     private void orderUsersBasedOnCoins()
     {
-        ArrayList<String> usernamesByOrder = new ArrayList<>();
-        ArrayList<String> coinsByOrder = new ArrayList<>();
+        ArrayList <String> usernamesByOrder = new ArrayList<>();
+        ArrayList <String> coinsByOrder = new ArrayList<>();
 
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
-        String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) FROM userinfo";
+        String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) AS rank FROM userinfo";
+
         try( Statement statement = connection.createStatement() )
         {
             ResultSet resultSet = statement.executeQuery(sql);
 
-            for ( int i = 0; i < 2; i++)
+            int counter = 0;
+
+            while (resultSet.next() && counter < 10)
             {
                 String username = resultSet.getString("username");
                 int coin = resultSet.getInt("coin");
                 usernamesByOrder.add(username);
                 coinsByOrder.add(String.valueOf(coin));
+                counter++;
             }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
 
+        if (!usernamesByOrder.isEmpty() && !coinsByOrder.isEmpty())
+        {
             firstRankingUserName.setText(usernamesByOrder.get(0));
             firstRankingCoinNumber.setText(coinsByOrder.get(0));
 
             secondRankingUserName.setText(usernamesByOrder.get(1));
             secondRankingCoinNumber.setText(coinsByOrder.get(1));
 
-            /*thirdRankingUsername.setText(usernamesByOrder.get(2));
+            thirdRankingUsername.setText(usernamesByOrder.get(2));
             thirdRankingCoinNumber.setText(coinsByOrder.get(2));
 
             fourthRankingUsername.setText(usernamesByOrder.get(3));
@@ -316,12 +327,7 @@ public class MainMenuController implements Initializable {
             ninthRankingCoinNumber.setText(coinsByOrder.get(8));
 
             tenthRankingUsername.setText(usernamesByOrder.get(9));
-            tenthRankingCoinNumber.setText(coinsByOrder.get(9));*/
-
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
+            tenthRankingCoinNumber.setText(coinsByOrder.get(9));
         }
     }
 
