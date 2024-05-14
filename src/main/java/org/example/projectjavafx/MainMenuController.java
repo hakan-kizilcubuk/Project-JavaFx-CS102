@@ -76,7 +76,7 @@ public class MainMenuController implements Initializable {
             Stage historyPageStage = new Stage();
             historyPageStage.setScene(new Scene(rootAnother, 720, 512));
             historyPageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -88,7 +88,7 @@ public class MainMenuController implements Initializable {
             Stage historyPageStage = new Stage();
             historyPageStage.setScene(new Scene(rootAnother, 720, 512));
             historyPageStage.show();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -268,37 +268,31 @@ public class MainMenuController implements Initializable {
         profileImages.add("src/main/resources/org/example/projectjavafx/pp.png");
     }
 
-    private void orderUsersBasedOnCoins()
-    {
-        ArrayList <String> usernamesByOrder = new ArrayList<>();
-        ArrayList <String> coinsByOrder = new ArrayList<>();
+    private void orderUsersBasedOnCoins() {
+        ArrayList<String> usernamesByOrder = new ArrayList<>();
+        ArrayList<String> coinsByOrder = new ArrayList<>();
 
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
         String sql = "SELECT username, coin, RANK() OVER (ORDER BY coin DESC) FROM userinfo";
 
-        try( Statement statement = connection.createStatement() )
-        {
+        try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(sql);
 
             int counter = 0;
 
-            while (resultSet.next() && counter < 10)
-            {
+            while (resultSet.next() && counter < 10) {
                 String username = resultSet.getString("username");
                 int coin = resultSet.getInt("coin");
                 usernamesByOrder.add(username);
                 coinsByOrder.add(String.valueOf(coin));
                 counter++;
             }
-        }
-        catch (SQLException e)
-        {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        if (!usernamesByOrder.isEmpty() && !coinsByOrder.isEmpty())
-        {
+        if (!usernamesByOrder.isEmpty() && !coinsByOrder.isEmpty()) {
             firstRankingUserName.setText(usernamesByOrder.get(0));
             firstRankingCoinNumber.setText(coinsByOrder.get(0));
 
