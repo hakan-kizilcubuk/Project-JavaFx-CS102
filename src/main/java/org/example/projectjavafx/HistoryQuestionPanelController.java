@@ -87,7 +87,7 @@ public class HistoryQuestionPanelController implements Initializable {
     void correctAnswerButtonOnAction(ActionEvent event) {
         increaseNoOfCorrectQuestions();
         increaseCoinOfUser();
-        Stage stage = (Stage) correctAnswerButton.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -114,7 +114,7 @@ public class HistoryQuestionPanelController implements Initializable {
     void fiftyPercentButtonOnAction(ActionEvent event) {
         if (LoginPageController.user.getUserCoin() < 10)
         {
-            warningCoinAi.setText("Insufficient Coin");
+            warningCoinFifty.setText("Insufficient Coin");
         }
 
         else{
@@ -137,7 +137,7 @@ public class HistoryQuestionPanelController implements Initializable {
     void wrongAnswer1ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswer1Button.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -145,7 +145,7 @@ public class HistoryQuestionPanelController implements Initializable {
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswer2Button.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -153,7 +153,7 @@ public class HistoryQuestionPanelController implements Initializable {
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswer3Button.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 

@@ -127,11 +127,6 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="change profile picture" textFill="#0186d1" underline="true">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
                   <Pane prefHeight="32.0" prefWidth="305.0" />
                </children>
                <padding>

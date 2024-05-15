@@ -134,7 +134,7 @@ public class GeneralKnowledgePanelController implements Initializable {
     void correctAnswerButtonOnAction(ActionEvent event) {
         increaseNoOfCorrectQuestions();
         increaseCoinOfUser();
-        Stage stage = (Stage) correctAnswerButton.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -166,7 +166,7 @@ public class GeneralKnowledgePanelController implements Initializable {
     void wrongAnswer2ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswer2Button.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -174,7 +174,7 @@ public class GeneralKnowledgePanelController implements Initializable {
     void wrongAnswer3ButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswer3Button.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 
@@ -182,7 +182,7 @@ public class GeneralKnowledgePanelController implements Initializable {
     void wrongAnswerButtonOnAction(ActionEvent event) {
         answerStatus.setText("WRONG ANSWER!");
         increaseNoOfWrongQuestions();
-        Stage stage = (Stage) wrongAnswerButton.getScene().getWindow();
+        Stage stage = (Stage) this.stage.getScene().getWindow();
         stage.close();
     }
 

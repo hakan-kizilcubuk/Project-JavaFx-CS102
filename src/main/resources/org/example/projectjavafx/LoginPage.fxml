@@ -57,7 +57,7 @@
                <font>
                   <Font size="11.0" />
                </font></TextField>
-            <Text fill="#737373" layoutX="26.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Use at least one upper case, lower case character and number" wrappingWidth="247.78449441908901">
+            <Text fill="#737373" layoutX="26.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Please enter your password." wrappingWidth="247.78449441908901">
                <font>
                   <Font name="Roboto" size="11.0" />
                </font>

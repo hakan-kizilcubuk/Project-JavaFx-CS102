@@ -77,14 +77,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label text="answer number">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
                </children>
             </VBox>
             <VBox prefWidth="100.0">
@@ -94,14 +86,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label text="answer number">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
                </children>
             </VBox>
             <VBox prefWidth="100.0">
@@ -111,14 +95,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label text="answer number">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
                </children>
             </VBox>
             <VBox prefWidth="100.0">
@@ -128,14 +104,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label text="answer number">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
                </children>
             </VBox>
             <VBox prefWidth="100.0">
@@ -145,14 +113,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label text="answer number">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
                </children>
             </VBox>
          </children>
