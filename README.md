@@ -27,9 +27,11 @@ In order to execute the software, the user should create a localhost in MySQL wh
 - mysql.connector.jar
 - maven
 
-- ##Weekly Schedule##
-- 
-- Week 1: Concept for the Project and Preliminary Study
+### Group Log ###
+
+## Weekly Schedule ##
+
+Week 1: Concept for the Project and Preliminary Study
 
 **Activities:** 
 - Contributed to creativity and design sessions for the QuizHub app.
