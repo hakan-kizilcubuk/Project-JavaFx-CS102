@@ -27,3 +27,34 @@ In order to execute the software, the user should create a localhost in MySQL wh
 - mysql.connector.jar
 - maven
 
+- ##Weekly Schedule##
+- 
+- Week 1: Concept for the Project and Preliminary Study
+
+**Activities:** 
+- Contributed to creativity and design sessions for the QuizHub app.
+- Researched JavaFX for the user interface and MySQL for the database.
+- To guide the design and implementation strategy, we conducted usage research on UI and API.
+
+Week 2: Class maps, UML designs, and preliminary development
+
+**Tasks:** - Worked with the team to develop thorough class maps and UML designs for QuizHub.
+- Design the MySQL database by creating tables and relationships for rankings, user data, and questions.
+- Began creating the backend logic necessary to communicate with the MySQL database.
+
+Week 3: Queries, Controllers, and Backend Development
+
+**Activities:** - Created backend controllers to manage user interactions with JavaFX user interface elements.
+- adding logic to text boxes and buttons.
+- Designed and implemented database queries to control the friends list and filter questions based on branch.
+
+### Week 4: Final Testing, UI Improvements, and Ranking Board Integration
+
+**Activities:**
+- Developed algorithms for the scoreboard feature, which computes and shows user rankings.
+- Using SceneBuilder and improved FXML files, the user interface was given a few last touches.
+- Performed extensive testing on all aspects, including scoreboards, database queries, and user interface elements.
+- Worked with the team to find and solve bugs so that the application was reliable and easy to use.
+- attended the project's final meetings to discuss any outstanding work and get ready for the presentation.
+
+
